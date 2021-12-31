@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Backend - Mini Project
 
 Membuat tabel user dengan menggunakan ORM yaitu Sequelize
@@ -13,3 +14,5 @@ feature/(nama-feature) --> develope --> production --> master
 ## Author
 
 [@wypratama]
+=======
+>>>>>>> feature/tabelDatabase

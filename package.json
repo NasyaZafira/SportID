@@ -1,19 +1,7 @@
 {
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "jsonwebtoken": "^8.5.1",
-    "passport-jwt": "^4.0.0",
-    "pg": "^8.7.1",
-    "sequelize": "^6.12.4"
-  },
-  "devDependencies": {
-    "sequelize-cli": "^6.3.0"
-  },
   "name": "sportid",
-  "description": "SportsID - Portal Berita Seputar Olahraga di Indonesia",
   "version": "1.0.0",
+  "description": "SportsID - Portal Berita Seputar Olahraga di Indonesia",
   "main": "index.js",
   "scripts": {
     "start": "node .",
@@ -29,5 +17,17 @@
   "bugs": {
     "url": "https://gitlab.com/marufr1/dteam-mini-project/issues"
   },
-  "homepage": "https://gitlab.com/marufr1/dteam-mini-project#readme"
+  "homepage": "https://gitlab.com/marufr1/dteam-mini-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
 }
