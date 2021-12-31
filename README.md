@@ -1,6 +1,6 @@
-# Team D - Mini Project SYNRGY Academy
+# Backend - Mini Project
 
-SportsID - Portal Berita Seputar Olahraga di Indonesia
+Membuat tabel user dengan menggunakan ORM yaitu Sequelize
 
 ## Reminder
 
