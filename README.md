@@ -2,12 +2,14 @@
 
 Membuat tabel user dengan menggunakan ORM yaitu Sequelize
 
-## Getting Started
+## Reminder
 
-1. Buka terminal ketik command `npm install`
-2. Masuk ke direktori migrations dengan command `cd migrations`
-2. Lalu ketik command `node user.js`
+Push dan Merge disini hanya dapat dilakukan oleh Maintainer
+
+### Branch Workflow
+
+feature/(nama-feature) --> develope --> production --> master
 
 ## Author
 
-[@marufr1]
+[@wypratama]
