@@ -11,16 +11,18 @@
 body {
     display: flex;
     flex-flow: column wrap;
-    width: 100%;
+    align-content: center;
+    background-color: #E5E5E5;
 }
 
 .navbar-tray {
     display: flex;
     flex: column wrap;
     align-self: flex-start;
-    width: 100%;
+    width: 1440px;
     height: 82px;
-    box-shadow: 2px 10px 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: whitesmoke;
+    box-shadow: 0 8px 10px -10px black;
 }
 
 .logo {
@@ -158,9 +160,8 @@ form.access button {
 .footer-tray {
     display: flex;
     flex: column wrap;
-    align-self: flex-end;
     align-items: center;
-    width: 100%;
+    width: 1440px;
     height: 210px;
     background: white;
 }
@@ -191,7 +192,7 @@ form.access button {
 .internal-tc {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 50px 0 300px;
+    margin: 0 50px 0 250px;
     width: 118px;
     height: 80px;
     order: 3;
