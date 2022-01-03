@@ -1,0 +1,222 @@
+/* HOMEPAGE */
+.homepage{
+    width: 1440px;
+    display: flex;
+}
+.flex-container-2{
+    display: flex;
+    background-color:black;
+    align-items: center;
+    flex-direction: column;
+    width: 796px;
+    margin-left: 98px;
+    margin-top: 103px;
+    height: 542px;
+}
+
+/* thumbnail */
+.flex-item-2-1{ 
+    width: 796px;  
+}
+
+/* bawahnya thumbnail */
+.flex-item-2-2{
+    width: 796px;
+    display: flex;
+}
+/* judul berita */
+.flex-item-2-2-1{
+    width: 554px;
+    margin-left: 16px;
+    margin-top: 2px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+}
+/* sebelahnya judul berita */
+.flex-item-2-2-2{
+    width: 226px;
+    display: flex;
+    flex-direction: column;
+}
+.sepak-bola{
+    height: 16px;
+    margin-left: 48px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    margin-top: 2px;
+}
+.tanggal{
+    width: 183px;
+    height: 15px;
+    margin-bottom: 15px;
+    margin-top: 48px;
+    margin-right: 22px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/* container edusport */
+.edusport{
+    display: flex;
+    background-color:black;
+    flex-direction: column;
+    width: 410px;
+    margin-left: 29px;
+    margin-top: 103px;
+    height: 542px;
+}
+.font-1{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #5B75EB;
+    margin-left: 25px;
+}
+.edusport-news{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.edunews{
+    display: flex;
+}
+.thumbnail-edu{
+    width: 126px;
+    height: 77px;
+    margin-left: 25px;
+    border-radius: 8px;
+}
+.berita-edu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+.edu-judul-berita{
+    width: 219px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+}
+.edu-jenis-berita{
+    width: 84px;
+    height: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5B75EB;
+    margin-top: 3px;
+}
+.edunews-2{
+    display: flex;
+    margin-top: 28px;
+}
+.homepage-2{
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+}
+.bagian-berita{
+    display: flex;
+    flex-direction: column;
+    width: 1102px;
+    height: 896px;
+    margin-top: 61px;
+    background: #161e27;
+}
+.iklan{
+    margin-top: 61px;
+    background: #161e27;
+    width: 231px;
+    height: 896px;
+}
+.trending-section{
+    display: flex;
+    flex-direction: column;
+    width: 944px;
+    margin-left: 98px;
+    background: black;
+    border-radius: 8px;
+    height: 427px;
+}
+.judul-trending{
+    width: 873px;
+    height: 34px;
+    margin-left: 36px;
+    margin-top: 40px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    color: #5B75EB;
+    box-shadow: 0 1.5px 0 0 rgb(170, 170, 170);
+}
+.berita-trending{
+    width: 873px;
+    margin-top: 23px;
+    margin-left: 36px;
+    display: flex;
+}
+.kolom-berita{
+    width: 286px;
+    display: flex;
+    flex-direction: column;
+}
+.kolom-berita-2{
+    width: 286px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+}
+.thumbnail-trending{
+    width: 286px;
+    height: 171px;
+    border-radius: 12px;
+}
+.trending-jenis-berita{
+    width: 140px;
+    height: 16px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5B75EB;
+    margin-top: 19px;
+}
+.trending-judul-berita{
+    width: 286px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 9px;
+    padding-bottom: 39px;
+}
+.terbaru-section{
+    width: 944px;
+    margin-left: 98px;
+    margin-top: 42px;
+    background: black;
+    border-radius: 8px;
+    height: 427px;
+}
+.iklan-2{
+    width: 892px;
+    height: 228px;
+    margin-left: 274px;
+    margin-top: 57px;
+}
