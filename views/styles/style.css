@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    background-color: #eee;
+    color: black;
+    font-size: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Kotak Login Start */
+
+.logoLogin {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.par1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.kotak_login {
+    width: 500px;
+    background-color: white;
+    margin: 90px auto;
+    padding: 30px 60px;
+    left: 50%;
+    right: 50%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form_login {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1.5px solid black;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form .input-icon {
+    position: relative;
+}
+
+form input+i {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    color: black;
+}
+
+form input:focus {
+    border: 1px solid #0099ff;
+    color: #000
+}
+
+form input:focus+i {
+    color: #0099ff;
+}
+
+.tombolLogin {
+    background: #4169E1;
+    color: white;
+    display: grid;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 0;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    ;
+}
+
+.pendaftaranAkun {
+    text-align: center;
+    margin: auto;
+}
+
+/* Kotak Login End */
