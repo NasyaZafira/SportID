@@ -172,7 +172,6 @@ form.access button {
     margin: 100px 150px 100px 150px;
     align-items: center;
     align-self: center;
-    order: 1;
 }
 
 #rights-footer {
@@ -186,7 +185,6 @@ form.access button {
     width: 80px;
     height: 80px;
     margin: 0 25px 0 50px;
-    order: 2;
 }
 
 .internal-tc {
