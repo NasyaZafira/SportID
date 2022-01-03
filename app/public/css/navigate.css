@@ -1,6 +1,6 @@
 @font-face {
     font-family: Montserrat;
-    src: url(Montserrat-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 *{
@@ -18,7 +18,7 @@ body {
 .navbar-tray {
     display: flex;
     flex: column wrap;
-    align-self: flex-start;
+    justify-content: center;
     width: 1440px;
     height: 82px;
     background-color: white;
@@ -26,7 +26,7 @@ body {
 }
 
 .logo {
-    padding: 10px 0 0 7%;
+    padding: 10px 0 0 0;
     width: 146px;
     height: 50px;
 }
@@ -96,13 +96,13 @@ form.search-bar button {
     margin-top: 21px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-image: url(search_ic.svg);
+    background-image: url(../icon/logo_light_mode.svg);
     background-size: 12px 12px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.dark-mode {
+.sublogo {
     margin: 30px 0 0 10%;
     width: 16px;
     height: 16px;
@@ -195,7 +195,6 @@ form.access button {
     margin: 0 50px 0 250px;
     width: 118px;
     height: 80px;
-    order: 3;
 }
 
 a {
@@ -209,4 +208,14 @@ a {
 a:hover {
     color: #5B75EB;
     cursor: pointer;
+}
+
+#profile-option {
+    width: 200px;
+    margin-left: 5%;
+    border-radius: 0;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+    background: transparent;
 }
