@@ -96,7 +96,7 @@ form.search-bar button {
     margin-top: 21px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-image: url(../icon/logo_light_mode.svg);
+    background-image: url(/icon/search_ic.svg);
     background-size: 12px 12px;
     background-position: center;
     background-repeat: no-repeat;

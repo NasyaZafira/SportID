@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <title> Welcome, <%# request nama user sebagai title %> </title>
     <link rel="stylesheet" href="../../public/css/navigate.css">
 </head>
 
@@ -38,11 +39,22 @@
             </div>
         </form>
 
-        <%# access class request direct page sesuai pilihan user login/register %>
-        <form class="access">
-            <button type="submit" class="login-button"> Log In </button>
-            <button type="submit" class="register-button"> Register </button>
-        </form>
+        <div class="access">
+            <%# request profile pict from database %>
+            <div class="sublogo">
+                <img src="/icon/profile_ic_light.svg" width="20px" height="20px" style="border-radius: 50%;">
+            </div>
+            <select id="profile-option">
+                <option selected hidden value="0"> Nama User <%# request nama user from database %> </option>
+                <%# request direct page to chosen options %>
+                <option value="1">
+                    Ubah Profile
+                </option>
+                <option value="2">
+                    Keluar
+                </option>
+            </select>
+        </div>
     </div>
 </body>
 
@@ -50,12 +62,11 @@
 
 <script>
     let flag = true
-    $('#moon_light').click(function(){
+    $('#moon_light').click(function () {
         if (flag == true) {
             flag = false
-            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');        
-        }
-        else {
+            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+        } else {
             flag = true
             $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
         }
