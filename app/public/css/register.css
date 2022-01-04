@@ -1,0 +1,187 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+* {
+  font-family: Montserrat;
+  font-weight: 600;
+}
+body {
+  background: #e5e5e5;
+  width: 1440px;
+}
+#card-content {
+  position: absolute;
+  width: 532px;
+  height: 843px;
+  left: 454px;
+  top: 165px;
+  background: #ffffff;
+}
+#user-nama {
+  position: absolute;
+  width: 332px;
+  height: 32px;
+  left: 570px;
+  top: 381px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#user-email {
+  position: absolute;
+  width: 332px;
+  height: 32px;
+  left: 570px;
+  top: 453px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#user-nohp {
+  position: absolute;
+  width: 332px;
+  height: 32px;
+  left: 570px;
+  top: 525px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#user-password {
+  position: absolute;
+  width: 332px;
+  height: 32px;
+  left: 570px;
+  top: 597px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#user-kodeunik {
+  position: absolute;
+  width: 332px;
+  height: 65px;
+  left: 570px;
+  top: 669px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+#submit-btn-register {
+  position: absolute;
+  width: 332px;
+  height: 40px;
+  left: 570px;
+  top: 803px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+#admin {
+  position: absolute;
+  width: 87px;
+  height: 13px;
+  left: 570px;
+  top: 672px;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height */
+  color: #5b75eb;
+}
+#katasandi {
+  position: absolute;
+  width: 280px;
+  height: 17px;
+  left: 570px;
+  top: 636px;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #5b75eb;
+}
+#pic-sportid {
+  position: absolute;
+  width: 189px;
+  height: 64px;
+  left: 626px;
+  top: 208px;
+}
+#syaratketentuan {
+  position: absolute;
+  height: 12px;
+  left: 590px;
+  top: 752px;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #000000;
+}
+#syarat{
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 12px;
+text-decoration-line: underline;
+color: #5B75EB;
+}
+.password-show-card .password-show {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 882px;
+  top: 597px;
+  cursor: pointer;
+}
+
+#pic-checkbox {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 569px;
+  top: 759px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+#loginn {
+position: absolute;
+height: 17px;
+left: 624px;
+top: 889px;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 17px;
+color: #000000;
+}
+#log {
+  font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+color: #5B75EB;
+}
+#akun {
+  position: absolute;
+  width: 344px;
+  height: 20px;
+  left: 545px;
+  top: 306px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+::placeholder {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}

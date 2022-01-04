@@ -1,0 +1,73 @@
+<div id="Card">
+    <div id="card-content">
+      <div id="card-title"></div>
+      <div class="underline-title"></div>
+    </div>
+    <form method="post" class="form">
+      <!--Nama-->
+      <label for="user-nama">&nbsp; </label>
+      <input id="user-nama" class="form-content" placeholder="Nama" type="nama" name="nama" autocomplete="on" required />
+      <div class="form-border"></div>
+      <!--Email-->
+      <label for="user-email">&nbsp; </label>
+      <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
+      <div class="form-border"></div>
+      <!--No Hp-->
+      <label for="user-no-hp">&nbsp; </label>
+      <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="nohp" autocomplete="on" required />
+      <div class="form-border"></div>
+      
+      <!--Password-->
+      <label for="user-password">&nbsp; </label>
+      <input id="user-password" class="input-control" placeholder="Password" type="Password" name="Password" required />
+      <div class="password-show-card">
+        <i class="fa fa-eye password-show"></i>
+        <!--<i class="fa fa-eye-slash" ></i> -->
+      </div>
+      <p id="katasandi">Kata sandi minimal 8 karakter berisi angka dan huruf</p>
+      
+      <!--Kode Unik-->
+      <label for="user-kodeunik">&nbsp; </label>
+      <input id="user-kodeunik" class="form-content" placeholder="Kode Unik" type="kodeunik" name="kodeunik" required />
+      <div class="form-border"></div>
+      <p id="admin">*Khusus Admin</p>
+      <!--Button Register-->
+      <input id="submit-btn-register" type="submit" name="submit" value="Register" />
+      <!--Syarat dan Ketentuan-->
+      <p id="syaratketentuan">
+        Saya setuju dengan <span> <a id="syarat" href="syarat"> Syarat dan Ketentuan</a></span> yang berlaku
+      </p>
+      <!--Daftarkan Akun Sport ID mu disini!-->
+      <p id="akun">Daftarkan akun Sport ID mu disini!</p>
+      <!--Logo Sport ID-->
+      <img id="pic-sportid" src="icon/logo_light_mode.svg" alt="sportid" />
+      <!--Logo CheckBox Syarat dan Ketentuan -->
+      <input id="pic-checkbox" type="checkbox" />
+
+      <!--Apabila sudah punya akun-->
+      <p id="loginn">
+        Sudah punya akun?<span> <a id="log" href="login"> Log In</a></span>
+      </p>
+    </form>
+  </div>
+
+  <!--Logo Hide Show Eye pada Password -->
+  <script src="jquery-latest.min.js"></script>
+  <script>
+    $(function () {
+      $(".password-show").click(function (event) {
+        $(this).toggleClass("fa-eye-slash");
+        var x = $(".input-control").attr("type");
+        if (x == "password") {
+          $(".input-control").attr("type", "text");
+        } else {
+          $(".input-control").attr("type", "password");
+        }
+      });
+    });
+  </script>
+
+  <!--Script jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--Merubah Warna Button Register on click-->
+  <script src="js/register.js"></script>
