@@ -1,11 +1,16 @@
 // load the things we need
-var express = require('express');
-// const { Sequelize } = require('sequelize')
-var app = express();
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const { Sequelize } = require('sequelize')
+const router = require('./app/router/router')
 const port = 3000;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(router)
 
 //Static Files
 app.use( express.static('public'))

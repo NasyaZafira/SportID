@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt: DataTypes.DATE
   }, {
     sequelize,
-    modelName: 'laporans',
+    modelName: 'laporan',
+    freezeTableName: true
   });
-  return laporans;
+  return laporan;
 };
