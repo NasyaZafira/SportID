@@ -5,10 +5,11 @@
 .homepage{
     width: 1440px;
     display: flex;
+    font-family: "Montserrat";
 }
 .flex-container-2{
     display: flex;
-    background-color:black;
+    background-color:white;
     align-items: center;
     flex-direction: column;
     width: 796px;
@@ -16,7 +17,6 @@
     margin-top: 103px;
     height: 542px;
 }
-
 /* thumbnail */
 .flex-item-2-1{ 
     width: 796px;  
@@ -66,7 +66,7 @@
 /* container edusport */
 .edusport{
     display: flex;
-    background-color:black;
+    background-color:white;
     flex-direction: column;
     width: 410px;
     margin-left: 29px;
@@ -136,11 +136,11 @@
     width: 1102px;
     height: 896px;
     margin-top: 61px;
-    background: #161e27;
+    background: #E5E5E5;
 }
 .iklan{
     margin-top: 61px;
-    background: #161e27;
+    background: white;
     width: 231px;
     height: 896px;
 }
@@ -149,7 +149,7 @@
     flex-direction: column;
     width: 944px;
     margin-left: 98px;
-    background: black;
+    background: #FFFFFF;
     border-radius: 8px;
     height: 427px;
 }
@@ -164,7 +164,7 @@
     font-size: 28px;
     line-height: 34px;
     color: #5B75EB;
-    box-shadow: 0 1.5px 0 0 rgb(170, 170, 170);
+    box-shadow: 0 2px 0 0 black;
 }
 .berita-trending{
     width: 873px;
@@ -212,7 +212,7 @@
     width: 944px;
     margin-left: 98px;
     margin-top: 42px;
-    background: black;
+    background: #FFFFFF;
     border-radius: 8px;
     height: 427px;
 }
@@ -227,13 +227,206 @@
     line-height: 15px;
     color: #5B75EB;
 }
+/* Homepage end */
+
+/* Navbar Start */
+.navbar-tray {
+    display: flex;
+    flex: column wrap;
+    justify-content: center;
+    width: 1440px;
+    height: 82px;
+    background-color: white;
+    box-shadow: 0 8px 10px -10px black;
+}
+
+.logo {
+    padding: 10px 0 0 0;
+    width: 146px;
+    height: 50px;
+}
+
+.highlight-ctgr {
+    width: 35%;
+    padding-left: 1%;
+    justify-content: space-around;
+}
+
+.highlight-ctgr-items {
+    font-size: 13px;
+    line-height: 16px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 5% 0 0 3%;
+}
+
+#select-sizing {
+    width: 120px;
+    margin-left: 5%;
+    border-radius: 0;
+    background: transparent;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+}
+
+#select-sizing:hover {
+    color: #5B75EB;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+}
+
+select option {
+    background: black;
+    color: white;
+    border-radius: 0%;
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 30%;
+    margin-right: 0;
+}
+
+form.search-bar input[type=text],
+select {
+    width: 347px;
+    height: 35px;
+    background: #F1F1F1;
+    border: transparent;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+form.search-bar button {
+    border: transparent;
+    width: 40px;
+    height: 32px;
+    margin-left: -50px;
+    margin-top: 21px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: url(search_ic.svg);
+    background-size: 12px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sublogo {
+    margin: 30px 0 0 10%;
+    width: 16px;
+    height: 16px;
+}
+
+.access {
+    display: flex;
+    flex: column wrap;
+    justify-content: space-between;
+}
+
+form.access button {
+    width: 68px;
+    height: 29px;
+    left: 1126px;
+    top: 26px;
+    margin: 25px 10px 0 0;
+
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.login-button {
+    background: transparent;
+}
+
+.register-button {
+    background: black;
+    color: #FFFFFF;
+}
+
+.highlight-ctgr-items:hover {
+    color: #5B75EB;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: transparent;
+    border: solid #5B75EB;
+    color: #5B75EB;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background: #5B75EB;
+    border: solid #5B75EB;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navbar End */
+
+
+/* Footer Start */
+.footer-tray {
+    display: flex;
+    flex: column wrap;
+    align-items: center;
+    width: 1440px;
+    height: 210px;
+    background: white;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.logo-footer {
+    width: 206px;
+    height: 96px;
+    margin: 100px 150px 100px 150px;
+    align-items: center;
+    align-self: center;
+    order: 1;
+}
+
+#rights-footer {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.category-tray {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80px;
+    height: 80px;
+    margin: 0 25px 0 50px;
+    order: 2;
+}
+
+.internal-tc {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 50px 0 250px;
+    width: 118px;
+    height: 80px;
+}
+
 a {
     font-style: normal;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 a:hover {
     color: #5B75EB;
     cursor: pointer;
 }
-/* Homepage end */
+
+/* Footer End */
