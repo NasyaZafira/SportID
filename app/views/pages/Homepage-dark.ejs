@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Homepage SportID Dark Mode</title>
-        <style>
-            body{
-                margin: 0%;
-                background-color: #161e27;
-                color: white;
-            }
-            @font-face{
-                font-family: Montserrat;
-                src: url('./Montserrat-Bold.ttf');
-            }
-        </style>
-        <link rel="stylesheet" href="homepageDark.css"/>
+        <%- include('../partial/headerdark') %>
     </head>
 
     <body>
-        <header>
-            <%- include ('../partial/headerdark') %>
-        </header>
+        <div class="navbar-tray">
+            <div class="logo">
+                <img src="/icon/logo_dark_mode.svg">
+            </div>
+    
+            <%# highlight category tray request direct page sesuai kategori %>
+            <div class="highlight-ctgr">
+                <button class="highlight-ctgr-items"> Sepak Bola </button>
+                <button class="highlight-ctgr-items"> Bulutangkis </button>
+                <button class="highlight-ctgr-items"> Basket </button>
+                <select id="select-sizing">
+                    <option selected hidden> Lainnya </option>
+                    <option value="1"> Voli </option>
+                    <option value="2"> Panahan </option>
+                    <option value="3"> Renang </option>
+                    <option value="4"> Bela Diri </option>
+                    <option value="5"> Angkat Besi </option>
+                    <option value="6"> Otomotif </option>
+                </select>
+            </div>
+    
+            <%# search bar request direct page sesuai yang dicari %>
+            <form class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"></button>
+    
+                <div class="sublogo">
+                    <img src="/icon/moon_ic_dark.svg" id="moon_light">
+                </div>
+            </form>
+    
+            <%# access class request direct page sesuai pilihan user login/register %>
+            <form class="access">
+                <button type="submit" class="login-button"> Log In </button>
+                <button type="submit" class="register-button"> Register </button>
+            </form>
+        </div>
+    </body>
+    
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    
+    <script>
+        let flag = true
+        $('#moon_light').click(function(){
+            if (flag == true) {
+                flag = false
+                $('#moon_light').attr('src', 'moon_ic_light.svg');        
+            }
+            else {
+                flag = true
+                $('#moon_light').attr('src', 'moon_ic_dark.svg');
+            }
+        });
+    </script>
+    
 
         <div class="homepage">
             <div class="flex-container-2">
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <img src="796x437.png">
+                    <img src="/images/796x437.png">
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -50,7 +90,7 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="126x77.png">
+                        <img src="/images/126x77.png">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -66,7 +106,7 @@
                 <div class="edunews-2">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="126x77.png">
+                        <img src="/images/126x77.png">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -82,7 +122,7 @@
                 <div class="edunews-2">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="126x77.png">
+                        <img src="/images/126x77.png">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -98,7 +138,7 @@
                 <div class="edunews-2">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="126x77.png">
+                        <img src="/images/126x77.png">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -123,7 +163,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">
+                                <img src="/images/286x171.png">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
@@ -136,7 +176,7 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">
+                                <img src="/images/286x171.png">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -149,7 +189,7 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">                       
+                                <img src="/images/286x171.png">                       
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -167,7 +207,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">
+                                <img src="/images/286x171.png">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -180,7 +220,7 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">
+                                <img src="/images/286x171.png">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -193,7 +233,7 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="286x171.png">
+                                <img src="/images/286x171.png">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -208,15 +248,13 @@
             </div>
             <div class="iklan">
                 <!-- <%# ini butuh request iklan (?) %> -->
-                <img src="231x896.png">
+                <img src="/images/231x896.png">
             </div>
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
-        <div class="iklan-2"><img src="892x228.png"></div>
+        <div class="iklan-2"><img src="/images/892x228.png"></div>
 
-        <footer>
-            <%- include ('../partial/footerlight') %>
-        </footer>
+        <%- include('../partial/footerdark') %>
     
     </body>
 
