@@ -14,7 +14,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Kotak Profile Page Start*/
+/* <------------------- Start Kotak Profile Page --------------------> */
 
 .kotak-profile {
     width: 500px;
@@ -133,4 +133,4 @@ form input:focus+i {
     padding-bottom: 20px;
 }
 
-/* Kotak Profile Page End */
+/* <------------------- End Kotak Profile Page --------------------> */
