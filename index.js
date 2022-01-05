@@ -41,12 +41,8 @@ function appInit(app) {
     app.use( express.static('app/public'))
 
     // set the view engine to ejs
-    app.set('views', 'app/views')
+    app.set('views', 'app/views/pages')
     app.set('view engine', 'ejs');
+    app.use('/', router)
 
-    // use res.render to load up an ejs view file
-    // bagian Register Page
-    app.get('/', function(req, res) {
-        res.render('pages/register');
-    });
 }
