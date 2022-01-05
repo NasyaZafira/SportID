@@ -2,13 +2,35 @@
 const express = require('express');
 const { Sequelize } = require('sequelize')
 const router = require('./app/router/router')
+const config = require('./app/config/config.json')
 const port = 3000;
+
+module.exports = config
 
 var app = express();
 appInit(app)
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
+
+    const db = new Sequelize(
+        config.development.database,
+        config.development.username,
+        config.development.password,
+        {
+            host: config.development.host,
+            dialect: config.development.dialect,
+            logging: false
+        }
+    )
+    db.authenticate()
+    .then(() => {
+        console.log('Succesfully connected to Local database')
+    })
+    .catch(thisError => {
+        console.error('Failed to connect into Local database', thisError)
+        process.exit()
+    })
   });
 
 function appInit(app) {
