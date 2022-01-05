@@ -14,7 +14,7 @@ const showEditUser = async (req, res) => {
     }).catch(error => console.error(error))
     
     //Mencantumkan halaman Profile
-    res.render('halamanProfile', {
+    res.render('profilePage', {
         title: 'Mengubah User',
         User
     })
