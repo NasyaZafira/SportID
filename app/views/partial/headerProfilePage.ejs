@@ -4,13 +4,13 @@
 
 <head>
     <title> Welcome, <%# request nama user sebagai title %> </title>
-    <link rel="stylesheet" href="/public/styles/headerProfilePageStyle.css">
+    <link rel="stylesheet" href="/styles/headerProfilePageStyle.css">
 </head>
 
 <body>
     <div class="navbar-tray">
         <div class="logo">
-            <img src="/views/img/imgLightMode/logo_light_mode.svg">
+            <img src="/styles/img/imgLightMode/logo_light_mode.svg">
         </div>
 
         <%# highlight category tray request direct page sesuai kategori %>
@@ -20,7 +20,7 @@
                 <li class="highlight-ctgr-items"> Bulutangkis </li>
                 <li class="highlight-ctgr-items"> Basket </li>
                 <li id="select-sizing">
-                    <a href="#!"> Lainnya &nbsp; <img src="/views/img/imgLightMode/arrow_down_right_ic.svg"> </a>
+                    <a href="#!"> Lainnya &nbsp; <img src="/styles/img/imgLightMode/arrow_down_right_ic.svg"> </a>
                     <div class="dropdownContain">
                         <div class="dropOut">
                             <div class="triangle"></div>
@@ -44,14 +44,14 @@
             <button type="submit"></button>
 
             <div class="sublogo">
-                <img src="/views/img/imgLightMode/moon_ic_light.svg" id="moon_light">
+                <img src="/styles/img/imgLightMode/moon_ic_light.svg" id="moon_light">
             </div>
         </form>
 
         <div class="access">
             <%# request profile pict from database %>
             <div class="sublogo">
-                <img src="/views/img/imgLightMode/profile_ic_light.svg" width="20px" height="20px"
+                <img src="/styles/img/imgLightMode/profile_ic_light.svg" width="20px" height="20px"
                     style="border-radius: 50%;">
             </div>
             <select id="profile-option">
@@ -75,10 +75,10 @@
     $('#moon_light').click(function () {
         if (flag == true) {
             flag = false
-            $('#moon_light').attr('src', '/views/img/imgLightMode/moon_ic_dark.svg');
+            $('#moon_light').attr('src', 'styles/img/imgLightMode/moon_ic_dark.svg');
         } else {
             flag = true
-            $('#moon_light').attr('src', '/views/img/imgLightMode/moon_ic_light.svg');
+            $('#moon_light').attr('src', 'styles/img/imgLightMode/moon_ic_light.svg');
         }
     });
 </script>

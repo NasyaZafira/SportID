@@ -3,15 +3,16 @@
     padding: 0;
     outline: 0;
     font-size: 16px;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 body {
-    height: 100vh;
+
     background-color: #eee;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: "Montserrat";
 }
 
 /* <------------------- Start Kotak Profile Page --------------------> */
@@ -19,10 +20,11 @@ body {
 .kotak-profile {
     width: 500px;
     background-color: white;
-    margin: 90px auto;
+    margin: 220px auto auto auto;
     padding: 30px 60px;
-    left: 50%;
-    right: 50%;
+    left: auto;
+    right: auto;
+    font-family: "Montserrat";
 }
 
 .par2 {
@@ -36,6 +38,7 @@ body {
     border-bottom: 1.5px solid black;
     border-width: 0 0 1.5px;
     border-style: solid;
+    font-family: "Montserrat";
 }
 
 .ganti-nama {
@@ -48,6 +51,7 @@ body {
     margin-left: 40px;
     font-size: 16px;
     margin-bottom: 30px;
+    font-family: "Montserrat";
 }
 
 .ganti-email {
@@ -60,6 +64,7 @@ body {
     margin-left: 40px;
     font-size: 16px;
     margin-bottom: 30px;
+    font-family: "Montserrat";
 }
 
 .ganti-nomorhp {
@@ -72,6 +77,7 @@ body {
     margin-left: 40px;
     font-size: 16px;
     margin-bottom: 30px;
+    font-family: "Montserrat";
 }
 
 label {
@@ -81,10 +87,12 @@ label {
     margin-top: 20px;
     margin-left: 20px;
     font-weight: bold;
+    font-family: "Montserrat";
 }
 
 form .input-icon {
     position: relative;
+    font-family: "Montserrat";
 }
 
 form input+i {
@@ -118,6 +126,7 @@ form input:focus+i {
     margin-top: 40px;
     margin-bottom: 10px;
     font-weight: bold;
+    font-family: "Montserrat";
     ;
 }
 
@@ -131,6 +140,7 @@ form input:focus+i {
     width: auto;
     font-size: 13.5px;
     padding-bottom: 20px;
+    font-family: "Montserrat";
 }
 
 /* <------------------- End Kotak Profile Page --------------------> */

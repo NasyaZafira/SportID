@@ -1,5 +1,7 @@
 const express = require('express')
-const { Sequelize } = require('sequelize')
+const {
+    Sequelize
+} = require('sequelize')
 const config = require('./app/config/config.json')
 const routes = require('./app/routes/index')
 const PORT = 3000
@@ -16,25 +18,26 @@ app.listen(PORT, () => {
     const db = new Sequelize(
         config.development.database,
         config.development.username,
-        config.development.password,
-        {
+        config.development.password, {
             host: config.development.host,
             dialect: config.development.dialect,
             logging: false
         }
     )
     db.authenticate()
-    .then(() => {
-        console.log('Succesfully connected to Local database')
-    })
-    .catch(thisError => {
-        console.error('Failed to connect into Local database', thisError)
-        process.exit()
-    })
+        .then(() => {
+            console.log('Succesfully connected to Local database')
+        })
+        .catch(thisError => {
+            console.error('Failed to connect into Local database', thisError)
+            process.exit()
+        })
 })
 
 function appInit(app) {
-    app.use(express.urlencoded({extended: false}))
+    app.use(express.urlencoded({
+        extended: false
+    }))
     app.use(express.json())
     app.use(express.static('app/public'))
 

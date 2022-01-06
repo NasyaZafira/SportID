@@ -1,5 +1,5 @@
 * {
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-weight: 600;
 }
 
@@ -8,6 +8,7 @@ body {
     flex-flow: column wrap;
     align-content: center;
     background-color: #e5e5e5;
+    width: 1440px;
 }
 
 /* <------------------- Start Navbar Profile Page --------------------> */
