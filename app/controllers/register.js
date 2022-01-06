@@ -1,11 +1,18 @@
-const {user} = require('../models')
+const {user, admin} = require('../models')
+
 
 function register(req, res) {
-    user.register(req.body)
-    .then(user => {
+  if (req.body.kodeunik == 'akumaujadiadmin') {
+    admin.register(req.body)
+    .then(admin => {
       res.redirect("/login")
     })
     .catch(err => console.log(err))
+  } else {
+  user.register(req.body)
+    .then(user => {
+      res.redirect("/login")
+    })
+    .catch(err => console.log(err))} 
   }
-
   module.exports = {register}
