@@ -12,18 +12,27 @@
     
             <%# highlight category tray request direct page sesuai kategori %>
             <div class="highlight-ctgr">
-                <button class="highlight-ctgr-items"> Sepak Bola </button>
-                <button class="highlight-ctgr-items"> Bulutangkis </button>
-                <button class="highlight-ctgr-items"> Basket </button>
-                <select id="select-sizing">
-                    <option selected hidden> Lainnya </option>
-                    <option value="1"> Voli </option>
-                    <option value="2"> Panahan </option>
-                    <option value="3"> Renang </option>
-                    <option value="4"> Bela Diri </option>
-                    <option value="5"> Angkat Besi </option>
-                    <option value="6"> Otomotif </option>
-                </select>
+                <ul>
+                    <li class="highlight-ctgr-items"> Sepak Bola </li>
+                    <li class="highlight-ctgr-items"> Bulutangkis </li>
+                    <li class="highlight-ctgr-items"> Basket </li>
+                    <li id="select-sizing">
+                        <a href="#!"> Lainnya &nbsp; <img src="/icon/arrow_down_dark_ic.svg"> </a>
+                        <div class="dropdownContain">
+                            <div class="dropOut">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <li>Voli</li>
+                                    <li>Panahan</li>
+                                    <li>Renang</li>
+                                    <li>Bela Diri</li>
+                                    <li>Angkat Besi</li>
+                                    <li>Otomotif</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
     
             <%# search bar request direct page sesuai yang dicari %>
