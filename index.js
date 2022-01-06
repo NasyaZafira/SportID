@@ -13,13 +13,11 @@ app.set('views', 'app/views');
 app.set('view engine', 'ejs');
 
 //Halaman homepage
-app.get('/homepagelight', function(req, res){
-    res.render('pages/Homepage-light')
-});
-app.get('/homepagedark', function(req, res){
-    res.render('pages/Homepage-dark')
+app.get('/homepage', function(req, res) {
+    res.render('pages/homepage');
 });
 
 app.listen(PORT, () => {
     console.log('Listening to port 3000...')
 })
+
