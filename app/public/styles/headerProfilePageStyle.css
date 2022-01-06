@@ -83,11 +83,14 @@ body {
     padding: 1%;
     border-style: none;
     border-width: 0;
-    position: relative
+    position: relative;
+    color: black;
+    font-weight: 600;
 }
 
 #select-sizing a {
-    font-size: 13px;
+    font-size: 14px;
+    color: white;
 }
 
 #select-sizing:hover {
@@ -280,13 +283,23 @@ a {
     color: black;
 }
 
-a:hover {
-    color: #5b75eb;
+/* a:hover {
+    background: #5b75eb;
+    cursor: pointer;
+} */
+
+.opsi {
+    margin: 100px;
+}
+
+.opsi:hover {
+    color: red;
     cursor: pointer;
 }
 
 #profile-option {
     width: 200px;
+    margin: 25px;
     margin-left: 5%;
     border-radius: 0;
     padding: 1%;
