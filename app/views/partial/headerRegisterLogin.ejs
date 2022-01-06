@@ -3,38 +3,57 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/views/styles/headerRegisterLoginStyle.css">
+    <link rel="stylesheet" href="/styles/headerRegisterLoginStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="navbar-tray">
         <div class="logo">
-            <img src="/views/img/imgLightMode/logo_light_mode.svg">
+            <img src="/styles/img/imgLightMode/logo_light_mode.svg">
         </div>
 
         <%# highlight category tray request direct page sesuai kategori %>
         <div class="highlight-ctgr">
-            <button class="highlight-ctgr-items"> Sepak Bola </button>
-            <button class="highlight-ctgr-items"> Bulutangkis </button>
-            <button class="highlight-ctgr-items"> Basket </button>
-            <select id="select-sizing">
-                <option selected hidden> Lainnya </option>
-                <option value="1"> Voli </option>
-                <option value="2"> Panahan </option>
-                <option value="3"> Renang </option>
-                <option value="4"> Bela Diri </option>
-                <option value="5"> Angkat Besi </option>
-                <option value="6"> Otomotif </option>
-            </select>
+            <ul>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Sepak Bola %>"
+                        style="color: black; font-weight: 550; font-size: 14px;">Sepak
+                        Bola</a> </li>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Bulutangkis %>"
+                        style="color: black; font-weight: 550; font-size: 14px;">Bulutangkis</a> </li>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Basket %>"
+                        style="color: black; font-weight: 550; font-size: 14px;">Basket</a> </li>
+                <li id="select-sizing">
+                    <a href="#!" style="color: black;"> Lainnya &nbsp; <img
+                            src="/styles/img/imgLightMode/arrow_down_right_ic.svg"> </a>
+                    <div class="dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li> <a href="<%# ke kategori voli %>">Voli</a>
+                                </li>
+                                <li> <a href="<%# ke kategori Panahan %>">Panahan</a> </li>
+                                <li> <a href="<%# ke kategori Renang %>">Renang</a> </li>
+                                <li> <a href="<%# ke kategori Bela Diri %>">Bela Diri</a> </li>
+                                <li> <a href="<%# ke kategori Angkat Besi %>">Angkat Besi</a> </li>
+                                <li> <a href="<%# ke kategori Otomotif %>">Otomotif</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
+
 
         <%# search bar request direct page sesuai yang dicari %>
         <form class="search-bar">
             <input type="text" placeholder="Search...">
-            <button type="submit"></button>
+            <button type="submit"> <i class="fa fa-search" aria-hidden="true"></i> </button>
 
             <div class="sublogo">
-                <img src="/views/img/imgLightMode/moon_ic_light.svg" id="moon_light">
+                <img src="/styles/img/imgLightMode/moon_ic_light.svg" id="moon_light">
             </div>
         </form>
 
@@ -47,6 +66,9 @@
 </body>
 
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <script>
     let flag = true
