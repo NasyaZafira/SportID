@@ -3,6 +3,7 @@ const router = express.Router()
 const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
 const { addLaporan } = require('../controllers/controllerLaporan');
+const {showEditUser, editUser} = require('../controllers/user')
 
 //Router untuk Controller Comments
 router.get('/comments', function(req, res) {
@@ -26,5 +27,8 @@ router.get('/laporan', function(req, res) {
 });
 
 router.post('/laporan', addLaporan);
+
+router.get('/profile/:id', showEditUser)
+router.post('/profile/:id/success', editUser)
 
 module.exports = router
