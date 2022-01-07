@@ -13,7 +13,7 @@ const app = express()
 appInit(app)
 
 app.listen(PORT, () => {
-    console.log('App running on http://localhost:${PORT}')
+    console.log(`App running on http://localhost:${PORT}`)
     const db = new Sequelize(
         config.development.database, 
         config.development.username,
@@ -25,7 +25,6 @@ app.listen(PORT, () => {
         }
     )
     db.authenticate(
-        
     ).then(console.log('Berhasil koneksi ke database'))
     .catch(err =>{
         console.log('Gagal koneksi ke local database', err)
