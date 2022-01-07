@@ -1,18 +1,24 @@
 /* HOMEPAGE */
-@font-face {
+  @font-face {
     font-family: Montserrat;
-    src: url(../fonts/Montserrat-Regular.ttf);
+    src: url(../font/Montserrat-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url(../font/Montserrat-ExtraBold.ttf);
   }
 
 * {
-    font-family: "Montserrat";
     transition: background-color 0.5s;
 }
 
 body {
     display: flex;
+    width: 100%;
     flex-flow: column wrap;
     align-content: center;
+    justify-content: center;
     background-color: rgb(25,39,52);
     margin: 0;
 }
@@ -20,11 +26,18 @@ body {
 a {
     text-decoration: none;
     color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+  color: #5B75EB;
+  cursor: pointer;
 }
 
 .homepage {
-    width: 1440px;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .flex-container-2 {
@@ -33,7 +46,6 @@ a {
     align-items: center;
     flex-direction: column;
     width: 796px;
-    margin-left: 98px;
     margin-top: 103px;
     height: 542px;
 }
@@ -54,7 +66,7 @@ a {
     width: 554px;
     margin-left: 16px;
     margin-top: 2px;
-    font-family: "Montserrat";
+    font-family: Montserrat-Bold;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -73,7 +85,9 @@ a {
     margin-left: 48px;
     font-family: "Montserrat";
     font-size: 14px;
+    font-weight: 600;
     margin-top: 2px;
+    color: white;
 }
 
 .tanggal {
@@ -87,6 +101,7 @@ a {
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
+    color: white;
 }
 
 /* container edusport */
@@ -101,13 +116,22 @@ a {
 }
 
 .font-1 {
-    font-family: "Montserrat";
+    font-family: Montserrat-Bold;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 37px;
     color: #5B75EB;
     margin-left: 25px;
+}
+
+#category {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    color: #FFFFFF;
 }
 
 .edusport-news {
@@ -136,9 +160,9 @@ a {
 
 .edu-judul-berita {
     width: 219px;
-    font-family: "Montserrat";
+    font-family: Montserrat-Bold;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 13px;
     line-height: 16px;
 }
@@ -161,9 +185,10 @@ a {
 }
 
 .homepage-2 {
-    width: 1440px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .bagian-berita {
@@ -175,7 +200,7 @@ a {
 }
 
 .iklan {
-    margin-top: 61px;
+    margin: 61px 0 0 -100px;
     background: #15202B;
     width: 231px;
     height: 896px;
@@ -185,7 +210,6 @@ a {
     display: flex;
     flex-direction: column;
     width: 944px;
-    margin-left: 98px;
     background: #15202B;
     border-radius: 8px;
     height: 427px;
@@ -193,16 +217,16 @@ a {
 
 .judul-trending {
     width: 873px;
-    height: 34px;
+    height: 40px;
     margin-left: 36px;
     margin-top: 40px;
-    font-family: "Montserrat";
+    font-family: Montserrat-Bold;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
     line-height: 34px;
     color: #5B75EB;
-    box-shadow: 0 1.5px 0 0 rgb(170, 170, 170);
+    box-shadow: 0 2px 0 0 rgb(170, 170, 170);
 }
 
 .berita-trending {
@@ -245,7 +269,7 @@ a {
 
 .trending-judul-berita {
     width: 286px;
-    font-family: "Montserrat";
+    font-family: Montserrat-Bold;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -255,7 +279,6 @@ a {
 
 .terbaru-section {
     width: 944px;
-    margin-left: 98px;
     margin-top: 42px;
     background: #15202B;
     border-radius: 8px;
@@ -263,9 +286,11 @@ a {
 }
 
 .iklan-2 {
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
     width: 892px;
     height: 228px;
-    margin-left: 274px;
     margin-top: 57px;
 }
 
@@ -282,14 +307,10 @@ a {
     display: flex;
     flex: column wrap;
     justify-content: center;
-    width: 1440px;
+    width: 100%;
     height: 82px;
     background-color: #15202B;
     box-shadow: 0 8px 10px -10px black;
-    width: 1440px;
-    height: 82px;
-    left: 0px;
-    top: 0px;
   }
   
   .logo {
@@ -299,18 +320,28 @@ a {
     width: 146px;
     height: 50px;
   }
+
+  #moon_light {
+    width: 16px;
+    height: 16px;
+    background-image: url(/icon/moon_ic_dark.svg);
+    background-repeat: no-repeat;
+  }
   
   /* <------------------- Start Highlight Category ------------> */
   .highlight-ctgr {
     width: 35%;
     padding-left: 1%;
     justify-content: space-around;
+    font-family: Montserrat;
     font-size: 13px;
     font-weight: 600;
   }
 
   ul li {
       color: white;
+      font-family: Montserrat;
+      font-weight: 600;
   }
   
   .highlight-ctgr ul {
@@ -322,11 +353,11 @@ a {
   }
   
   .highlight-ctgr a {
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -ms-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   
   .highlight-ctgr-items {
@@ -344,6 +375,7 @@ a {
     -ms-transition: padding .05s linear;
     -o-transition: padding .05s linear;
     transition: padding .05s linear;
+    transition: 0.3s;
   }
   
   #select-sizing {
@@ -356,10 +388,31 @@ a {
     border-width: 0;
     position: relative
   }
+
+  #select-sizing-user {
+    width: 120px;
+    margin-left: -25px;
+    border-radius: 0;
+    background: transparent;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+    position: relative
+  }
+
+  #user {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 30px 0 31px 10px;
+    background-image: url(/icon/profile_ic_dark.svg);
+    background-repeat: no-repeat;
+  }
   
   #select-sizing a {
     font-size: 13px;
     font-weight: 600;
+    transition: 0.2s;
   }
   
   #select-sizing:hover {
@@ -384,7 +437,15 @@ a {
   .arrow-down {
     width: 8px;
     height: 8px;
-    margin: -10px 0 0 60px;
+    margin: -10px 0 0 65px;
+    background-image: url(/icon/arrow_down_dark_ic.svg);
+    background-repeat: no-repeat;
+  }
+
+  .arrow-down-user {
+    width: 8px;
+    height: 8px;
+    margin: -10px 0 0 120px;
     background-image: url(/icon/arrow_down_dark_ic.svg);
     background-repeat: no-repeat;
   }
@@ -393,7 +454,7 @@ a {
     width: 160px;
     position: absolute;
     z-index: 2;
-    left: 50%;
+    left: 72px;
     margin-left: -80px;
     /* half of width */
     top: -400px;
@@ -414,11 +475,11 @@ a {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
     -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
     box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -ms-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   
   .dropOut ul {
@@ -437,15 +498,17 @@ a {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    -webkit-transition: background .1s ease-out;
-    -moz-transition: background .1s ease-out;
-    -ms-transition: background .1s ease-out;
-    -o-transition: background .1s ease-out;
-    transition: background .1s ease-out;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+    transition: all .1s ease-in-out;
   }
   
   .dropOut ul li:hover {
-    background: #777;
+    background: #15202B;
+    color: white;
   }
   
   .highlight-ctgr ul li:hover a {
@@ -483,6 +546,8 @@ a {
     border-radius: 20px;
     padding-left: 20px;
     margin-top: 20px;
+    font-family: Montserrat;
+    font-weight: 600;
   }
   
   form.search-bar button {
@@ -504,11 +569,61 @@ a {
     width: 16px;
     height: 16px;
   }
-  
+
   .access {
     display: flex;
     flex: column wrap;
     justify-content: space-between;
+  }
+
+  .access-user {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  .access-user-dropdownContain {
+    width: 160px;
+    position: absolute;
+    z-index: 2;
+    left: 45px;
+    top: 25px;
+  }
+
+  .access-user ul {
+    margin-top: 6px;
+  }
+  
+  .access-user ul>li {
+    display: inline-block;
+  }
+  
+  .access-user a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  .access-user ul li:hover a {
+    color: #5B75EB;
+  }
+  
+  .access-user ul li:hover .dropdownContain {
+    top: 25px;
+  }
+  
+  .access-user ul li:hover .underline {
+    border-bottom-color: #777;
+  }
+  
+  .access-user ul li:hover .dropOut {
+    opacity: 1;
+    margin-top: 8px;
   }
   
   form.access button {
@@ -518,7 +633,6 @@ a {
     top: 26px;
     margin: 25px 10px 0 0;
   
-
     box-sizing: border-box;
     border-radius: 4px;
   
@@ -531,12 +645,14 @@ a {
     background: transparent;
     border: solid 2px white;
     color: white;
+    transition: ease-in-out;
   }
   
   .register-button {
     background: white;
     border: none;
     color: black;
+    transition: 0s;
   }
   
   .highlight-ctgr-items:hover {
@@ -564,13 +680,9 @@ a {
     display: flex;
     flex: column wrap;
     align-items: center;
-    width: 1440px;
+    width: 100%;
     height: 210px;
     background: #15202B;
-    width: 1440px;
-    height: 210px;
-    left: 2px;
-    top: 1090px;
   }
   
   .logo-footer {
@@ -586,6 +698,8 @@ a {
   }
   
   #rights-footer {
+    font-family: Montserrat;
+    font-weight: 600;
     font-size: 10px;
     line-height: 12px;
     color: white;
@@ -609,12 +723,14 @@ a {
   }
   
   .head-foot-a {
+    font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
     color: white;
+    transition: 0.3s;
   }
   
   .head-foot-a:hover {
