@@ -1,12 +1,12 @@
-const express = require('express')
+// load the things we need
+const express = require('express');
 const { Sequelize } = require('sequelize')
 const router = require('./app/routes/index')
 const PORT = 3000
 const config = require('./app/config/config.json')
 module.exports = config
 
-
-//Menjadikan variabel app sebagai module express
+//Menjadikan app sebagai fungsi express
 const app = express()
 
 //Memanggil fungsi appInit
