@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "mchzhvkvzgpvyp",
-    "password": "ef5ae8c0f7e04a3f9e1ad0832909e61dbfbff04b6e7f236c73aae582de144597",
-    "database": "dfhjaitkjn87mc",
-    "host": "ec2-52-208-145-55.eu-west-1.compute.amazonaws.com",
+    "username": "postgres",
+    "password": "root",
+    "database": "berita",
+    "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
     "dialectOptions": {
