@@ -4,7 +4,7 @@ const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
 
 router.get('/comments', function(req, res) {
-    res.render('comment.ejs');
+    res.render('pages/comment');
 });
 
 router.post('/comments', addKomen);
@@ -17,5 +17,9 @@ router.get('/homepagedark', function(req, res){
 
 router.get('/register', (req, res) => res.render('pages/register'))
 router.post('/register', register)
+
+router.get('/', function(req, res) {
+    res.render('homepage');
+});
 
 module.exports = router
