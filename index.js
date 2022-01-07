@@ -18,8 +18,15 @@ app.listen(PORT, () => {
         config.development.username,
         config.development.password,
         {
-            host : config.development.host, 
+            host : config.development.host,
+            port: 5432, 
             dialect : config.development.dialect,
+            dialectOptions: {
+                ssl: {
+                    require: true,
+                    rejectUnauthorized: false
+                }
+            },
             logging : false
         }
     )
