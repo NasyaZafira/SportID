@@ -1,6 +1,9 @@
 * {
     font-family: Montserrat;
     font-weight: 600;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,6 +11,9 @@ body {
     flex-flow: column wrap;
     align-content: center;
     background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* <------------------- Start Navbar Register & Login Page--------------------> */
@@ -21,16 +27,23 @@ body {
     background-color: white;
     box-shadow: 0 8px 10px -10px black;
     position: absolute;
-    width: 1440px;
-    height: 82px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .logo {
     padding: 10px 0 0 0;
+    background-repeat: no-repeat;
     width: 146px;
     height: 50px;
+}
+
+#moon_light {
+    background-image: url(/icon/moon_ic_light.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
 }
 
 /* <------------------- Start Highlight Category ------------> */
@@ -165,7 +178,7 @@ body {
 }
 
 .dropOut ul li:hover {
-    background: #777;
+    background: #5B75EB;
 }
 
 .highlight-ctgr ul li:hover a {
@@ -203,6 +216,8 @@ select {
     border-radius: 20px;
     padding-left: 20px;
     margin-top: 20px;
+    font-family: "Montserrat";
+    font-weight: 600;
 }
 
 form.search-bar button {
@@ -220,7 +235,7 @@ form.search-bar button {
 }
 
 .sublogo {
-    margin: 25px 0 0 10%;
+    margin: 30px 0 0 10%;
     width: 16px;
     height: 16px;
 }
@@ -229,6 +244,56 @@ form.search-bar button {
     display: flex;
     flex: column wrap;
     justify-content: space-between;
+    margin: 0;
+}
+
+.access-user {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0;
+    font-weight: 600;
+}
+
+.access-user-dropdownContain {
+    width: 160px;
+    position: absolute;
+    z-index: 2;
+    left: 45px;
+    top: 25px;
+}
+
+.access-user ul {
+    margin-top: 6px;
+}
+
+.access-user ul>li {
+    display: inline-block;
+}
+
+.access-user a {
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+
+.access-user ul li:hover a {
+    color: #5B75EB;
+}
+
+.access-user ul li:hover .dropdownContain {
+    top: 25px;
+}
+
+.access-user ul li:hover .underline {
+    border-bottom-color: #777;
+}
+
+.access-user ul li:hover .dropOut {
+    opacity: 1;
+    margin-top: 8px;
 }
 
 form.access button {
@@ -248,10 +313,32 @@ form.access button {
 
 .login-button {
     background: transparent;
+    border: 2px solid#000000;
+    transition: ease-in-out;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.login-button a:hover {
+    color: #5b75eb;
 }
 
 .register-button {
     background: black;
+    border: none;
+    color: #ffffff;
+    transition: 0s;
+}
+
+.register-button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.register-button a:hover {
     color: #ffffff;
 }
 
@@ -298,3 +385,31 @@ form.access button {
 }
 
 /* <------------------- End Navbar Register & Login Page --------------------> */
+
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #15202B;
+    border-radius: 6px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #15202B;
+    border-radius: 6px
+}
+
+/* Scroll Bar */
