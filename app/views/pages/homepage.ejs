@@ -6,11 +6,11 @@
         <link rel="stylesheet" id="styles" type="text/css" href="/css/Light.css">
     </head>
 
-    <header>
-        <%- include('../partial/header') %>
-    </header>
-
     <body>  
+        <header>
+            <%- include('../partial/header-post') %>
+        </header>
+
         <div class="homepage">
             <div class="flex-container-2">
                 <div class="flex-item-2-1">
@@ -203,28 +203,48 @@
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
         <div class="iklan-2"><img src="/images/892x228.png"></div>    
-    </body>
 
-    <footer>
-        <%- include('../partial/footer') %>
-    </footer>
+        <footer>
+            <%- include('../partial/footer') %>
+        </footer>
+    </body>
 
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
     <script>
-        let flag = true
-        $('#moon_light').click(function () { /* Switching between light and dark mode */
-            if (flag == true) {
-                flag = false
-                $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                $('link#styles').attr('href', '/css/Dark.css');
+        var flag = localStorage.getItem('flag');
+        console.log(flag)
 
-            } else {
-                flag = true
-                $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                $('link#styles').attr('href', '/css/Light.css');
-            }
-        });
+        if (flag) {
+            $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+            $('link#styles').attr('href', '/css/Light.css');
+        } else {
+            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+            $('link#styles').attr('href', '/css/Dark.css');
+        }
+
+        $(document).ready(function(){
+
+            // $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+            // $('link#styles').attr('href', '/css/Light.css');
+
+            // $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+            // $('link#styles').attr('href', '/css/Dark.css');
+
+            $('#moon_light').click(function () { // Switching between light and dark mode 
+                if (flag) {
+                    flag = false
+                    $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+                    $('link#styles').attr('href', '/css/Dark.css');
+                    localStorage.setItem('flag', false);
+                } else {
+                    flag = true
+                    $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+                    $('link#styles').attr('href', '/css/Light.css');
+                    localStorage.setItem('flag', true);
+                }
+            });
+        }); 
 
         $('.logo').click(function (){
             window.location.href = '/homepage' /* requesting redirect page on logo click */

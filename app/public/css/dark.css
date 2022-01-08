@@ -11,11 +11,15 @@
 
 * {
     transition: background-color 0.5s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
@@ -122,7 +126,7 @@ a:hover {
     font-size: 30px;
     line-height: 37px;
     color: #5B75EB;
-    margin-left: 25px;
+    margin: 25px;
 }
 
 #category {
@@ -330,9 +334,10 @@ a:hover {
   
   /* <------------------- Start Highlight Category ------------> */
   .highlight-ctgr {
-    width: 35%;
-    padding-left: 1%;
-    justify-content: space-around;
+    display: flex;
+    flex-flow: column;
+    width: 34%;
+    margin-left: 1%;
     font-family: Montserrat;
     font-size: 13px;
     font-weight: 600;
@@ -353,11 +358,11 @@ a:hover {
   }
   
   .highlight-ctgr a {
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -ms-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -ms-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
   }
   
   .highlight-ctgr-items {
@@ -391,10 +396,9 @@ a:hover {
 
   #select-sizing-user {
     width: 120px;
-    margin-left: -25px;
+    margin: 0 0 15px 10px;
     border-radius: 0;
     background: transparent;
-    padding: 1%;
     border-style: none;
     border-width: 0;
     position: relative
@@ -438,16 +442,14 @@ a:hover {
     width: 8px;
     height: 8px;
     margin: -10px 0 0 65px;
-    background-image: url(/icon/arrow_down_dark_ic.svg);
-    background-repeat: no-repeat;
+    content: url(/icon/arrow_down_dark_ic.svg);
   }
 
   .arrow-down-user {
     width: 8px;
     height: 8px;
     margin: -10px 0 0 120px;
-    background-image: url(/icon/arrow_down_dark_ic.svg);
-    background-repeat: no-repeat;
+    content: url(/icon/arrow_down_dark_ic.svg);
   }
   
   .dropdownContain {
@@ -533,8 +535,8 @@ a:hover {
   .search-bar {
     display: flex;
     flex-wrap: nowrap;
-    width: 30%;
-    margin-right: 0;
+    width: 24%;
+    margin-right: 1%;
   }
   
   form.search-bar input[type="text"],
@@ -578,11 +580,10 @@ a:hover {
 
   .access-user {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     margin: 0;
     font-weight: 600;
-    transition: 0.3s;
   }
 
   .access-user-dropdownContain {
@@ -678,7 +679,6 @@ a:hover {
   /* Footer Start */
   .footer-tray {
     display: flex;
-    flex: column wrap;
     align-items: center;
     width: 100%;
     height: 210px;
@@ -689,7 +689,7 @@ a:hover {
     width: 206px;
     height: 96px;
     font-weight: 600;
-    margin: 100px 150px 100px 150px;
+    margin: 100px 150px 100px 10%;
     background-image: url(/icon/logo_dark_mode.svg);
     background-repeat: no-repeat;
     background-size: 200px 64px;
@@ -711,13 +711,13 @@ a:hover {
     flex-flow: row wrap;
     width: 80px;
     height: 80px;
-    margin: 0 25px 0 50px;
+    margin: 0 2% 0 2%;
   }
   
   .internal-tc {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 50px 0 150px;
+    margin: 0 5% 0 15%;
     width: 118px;
     height: 80px;
   }
