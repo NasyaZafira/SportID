@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/loginLight.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -25,9 +26,9 @@
 
     <p class="par1">Silahkan masuk untuk melanjutkan aktivitas</p>
 
-    <input type="text" name="username" class="form_login" style="font-weight:500;" placeholder="Email atau Nomor HP">
-
-    <form>
+    
+    <form action='/login' method='post'>
+      <input type="text" name="email" class="form_login" style="font-weight:500;" placeholder="Email atau Nomor HP">
       <div class="input-icon">
         <div class="input-group" id="show_hide_password">
           <input type="password" name="password" class="form_login" style="font-weight: 500;" placeholder="Kata Sandi">
@@ -113,6 +114,23 @@
       window.location.href = '/login'
     }
   </script>
+
+<script src="successLogin.ejs"></script>
+
+<script>
+  $(document).ready(function() {
+    $.ajax({
+      method: 'POST',
+      URL: '/login',
+      data: {
+        email: $('#email').val(),
+        phoneNumber: $('#phoneNumber').val(),
+        nomorHp : $('#nomorHp').val(),
+        password: $('#password').val()
+      }
+    })
+  })
+</script>
 
 </body>
 
