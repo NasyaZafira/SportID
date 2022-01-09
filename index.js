@@ -4,9 +4,13 @@ const router = require('./app/routes/index')
 const PORT = 3000
 const config = require('./app/config/config.json')
 module.exports = config
+const bodyParser = require("body-parser");
 
 //Menjadikan variabel app sebagai module express
 const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
 
 //Memanggil fungsi appInit
 appInit(app)

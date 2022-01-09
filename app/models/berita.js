@@ -16,10 +16,13 @@ module.exports = (sequelize, DataTypes) => {
   berita.init({
     judulBerita: DataTypes.STRING,
     isiBerita: DataTypes.TEXT,
-    kategori: DataTypes.STRING
+    kategori: DataTypes.STRING,
+    createdAt: DataTypes.STRING,
+    updatedAt: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'berita',
+    timestamps: false
   });
   return berita;
 };
