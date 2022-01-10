@@ -4,12 +4,17 @@
     outline: 0;
     font-size: 16px;
     font-family: "Montserrat";
+    transition: background-color 0.5s;
+}
+
+html body {
+    background-color: rgb(25, 39, 52);
+    width: 1440px;
 }
 
 body {
     width: 1440px;
-    background-color: #eee;
-    color: black;
+    background-color: rgb(25, 39, 52);
     font-size: 25px;
     background-size: cover;
     background-position: center;
@@ -17,16 +22,30 @@ body {
     font-family: "Montserrat";
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #5B75EB;
+    cursor: pointer;
+}
 
 /* Navbar Start */
 .navbar-tray {
     display: flex;
     flex: column wrap;
     justify-content: center;
-    width: 100%;
+    width: 1440px;
     height: 82px;
     background-color: #15202B;
-    box-shadow: 0 8px 10px -10px black;
+    box-shadow: 0 8px 10px -10px white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .logo {
@@ -128,7 +147,7 @@ ul li {
 #select-sizing a {
     font-size: 13px;
     font-weight: 600;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 #select-sizing:hover {
@@ -153,7 +172,7 @@ ul li {
 .arrow-down {
     width: 8px;
     height: 8px;
-    margin: -10px 0 0 65px;
+    margin: -14px 0 0 65px;
     background-image: url(/icon/arrow_down_dark_ic.svg);
     background-repeat: no-repeat;
 }
@@ -244,6 +263,12 @@ ul li {
     margin-top: 8px;
 }
 
+select option {
+    background: white;
+    color: black;
+    border-radius: 0%;
+}
+
 /* <------------------- End Highlight Category --------------------> */
 
 .search-bar {
@@ -253,7 +278,7 @@ ul li {
     margin-right: 0;
 }
 
-form.search-bar input[type="text"],
+form.search-bar input[type="search"],
 select {
     width: 347px;
     height: 35px;
@@ -265,6 +290,7 @@ select {
     font-family: Montserrat;
     font-weight: 600;
 }
+
 
 form.search-bar button {
     border: transparent;
@@ -349,6 +375,7 @@ form.access button {
     top: 26px;
     margin: 25px 10px 0 0;
 
+    border: 1px solid white;
     box-sizing: border-box;
     border-radius: 4px;
 
@@ -360,7 +387,7 @@ form.access button {
 .login-button {
     background: transparent;
     border: solid 2px white;
-    color: white;
+    color: black;
     transition: ease-in-out;
 }
 
@@ -413,14 +440,118 @@ form.access button {
 
 /* Navbar End */
 
+
+/* Kotak Login Start */
+
+.kotak_login {
+    width: 500px;
+    background-color: #15202B;
+    margin: 250px auto auto auto;
+    padding: 60px 60px;
+    font-family: "Montserrat";
+}
+
+.logoLogin {
+    margin: 10px auto 35px 120px;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    width: 146px;
+    height: 50px;
+}
+
+.par1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form_login {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1.5px solid white;
+    background-color: #15202B;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 540;
+}
+
+input[type=text] {
+    background-color: #15202B;
+    color: white;
+}
+
+form .input-icon {
+    position: relative;
+}
+
+form input+i {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    color: black;
+}
+
+form input:focus {
+    border: 1px solid #0099ff;
+    color: #000
+}
+
+form input:focus+i {
+    color: #0099ff;
+}
+
+.tombolLogin {
+    background: #5b75eb;
+    color: white;
+    display: grid;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 0;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    ;
+}
+
+.pendaftaranAkun {
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+/* Kotak Login End */
+
+
 /* Footer Start */
 .footer-tray {
     display: flex;
     flex: column wrap;
     align-items: center;
-    width: 100%;
+    width: 1440px;
     height: 210px;
     background: #15202B;
+    position: absolute;
+    left: 0px;
+    top: 1090px;
 }
 
 .logo-footer {
@@ -464,7 +595,7 @@ form.access button {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     text-decoration: none;
     color: white;
