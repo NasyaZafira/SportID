@@ -15,22 +15,22 @@
 body {
   display: flex;
   width: 100%;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-content: center;
   justify-content: center;
-  background-color: rgb(25,39,52);
+  background-color: rgb(25, 39, 52);
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
   transition: 0.3s;
 }
 
 a:hover {
-color: #5B75EB;
-cursor: pointer;
+  color: #5b75eb;
+  cursor: pointer;
 }
 
 .homepage {
@@ -41,7 +41,7 @@ cursor: pointer;
 
 .flex-container-2 {
   display: flex;
-  background-color: #15202B;
+  background-color: #15202b;
   align-items: center;
   flex-direction: column;
   width: 796px;
@@ -82,7 +82,7 @@ cursor: pointer;
 .sepak-bola {
   height: 16px;
   margin-left: 48px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 600;
   margin-top: 2px;
@@ -95,7 +95,7 @@ cursor: pointer;
   margin-bottom: 15px;
   margin-top: 48px;
   margin-right: 22px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -106,7 +106,7 @@ cursor: pointer;
 /* container edusport */
 .edusport {
   display: flex;
-  background-color: #15202B;
+  background-color: #15202b;
   flex-direction: column;
   width: 410px;
   margin-left: 29px;
@@ -120,7 +120,7 @@ cursor: pointer;
   font-weight: bold;
   font-size: 30px;
   line-height: 37px;
-  color: #5B75EB;
+  color: #5b75eb;
   margin-left: 25px;
 }
 
@@ -130,7 +130,7 @@ cursor: pointer;
   font-weight: 600;
   font-size: 12px;
   line-height: 17px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .edusport-news {
@@ -169,12 +169,12 @@ cursor: pointer;
 .edu-jenis-berita {
   width: 84px;
   height: 20px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  color: #5B75EB;
+  color: #5b75eb;
   margin-top: 3px;
 }
 
@@ -200,7 +200,7 @@ cursor: pointer;
 
 .iklan {
   margin: 61px 0 0 -100px;
-  background: #15202B;
+  background: #15202b;
   width: 231px;
   height: 896px;
 }
@@ -209,7 +209,7 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 944px;
-  background: #15202B;
+  background: #15202b;
   border-radius: 8px;
   height: 427px;
 }
@@ -224,7 +224,7 @@ cursor: pointer;
   font-weight: bold;
   font-size: 28px;
   line-height: 34px;
-  color: #5B75EB;
+  color: #5b75eb;
   box-shadow: 0 2px 0 0 rgb(170, 170, 170);
 }
 
@@ -257,12 +257,12 @@ cursor: pointer;
 .trending-jenis-berita {
   width: 140px;
   height: 16px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
-  color: #5B75EB;
+  color: #5b75eb;
   margin-top: 19px;
 }
 
@@ -279,7 +279,7 @@ cursor: pointer;
 .terbaru-section {
   width: 944px;
   margin-top: 42px;
-  background: #15202B;
+  background: #15202b;
   border-radius: 8px;
   height: 427px;
 }
@@ -296,7 +296,7 @@ cursor: pointer;
 .font-2 {
   font-size: 12px;
   line-height: 15px;
-  color: #5B75EB;
+  color: #5b75eb;
 }
 
 /* Homepage end */
@@ -308,7 +308,7 @@ cursor: pointer;
   justify-content: center;
   width: 100%;
   height: 82px;
-  background-color: #15202B;
+  background-color: #15202b;
   box-shadow: 0 8px 10px -10px black;
 }
 
@@ -330,7 +330,7 @@ cursor: pointer;
 /* <------------------- Start Highlight Category ------------> */
 .highlight-ctgr {
   width: 35%;
-  padding-left: 1%;
+  margin-left: 1%;
   justify-content: space-around;
   font-family: Montserrat;
   font-size: 13px;
@@ -338,25 +338,25 @@ cursor: pointer;
 }
 
 ul li {
-    color: white;
-    font-family: Montserrat;
-    font-weight: 600;
+  color: white;
+  font-family: Montserrat;
+  font-weight: 600;
 }
 
 .highlight-ctgr ul {
   margin-top: 6px;
 }
 
-.highlight-ctgr ul>li {
+.highlight-ctgr ul > li {
   display: inline-block;
 }
 
 .highlight-ctgr a {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .highlight-ctgr-items {
@@ -369,11 +369,11 @@ ul li {
   background-color: transparent;
   margin: 5% 0 0 7%;
   cursor: pointer;
-  -webkit-transition: padding .05s linear;
-  -moz-transition: padding .05s linear;
-  -ms-transition: padding .05s linear;
-  -o-transition: padding .05s linear;
-  transition: padding .05s linear;
+  -webkit-transition: padding 0.05s linear;
+  -moz-transition: padding 0.05s linear;
+  -ms-transition: padding 0.05s linear;
+  -o-transition: padding 0.05s linear;
+  transition: padding 0.05s linear;
   transition: 0.3s;
 }
 
@@ -385,7 +385,7 @@ ul li {
   padding: 1%;
   border-style: none;
   border-width: 0;
-  position: relative
+  position: relative;
 }
 
 #select-sizing-user {
@@ -396,7 +396,7 @@ ul li {
   padding: 1%;
   border-style: none;
   border-width: 0;
-  position: relative
+  position: relative;
 }
 
 #user {
@@ -471,20 +471,19 @@ ul li {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .dropOut ul {
   float: left;
   padding: 10px 0;
-  
 }
 
 .dropOut ul li {
@@ -497,21 +496,21 @@ ul li {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-transition: background .2s ease-in-out;
-  -moz-transition: background .2s ease-in-out;
-  -ms-transition: background .2s ease-in-out;
-  -o-transition: background .2s ease-in-out;
-  transition: background .2s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -ms-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .dropOut ul li:hover {
-  background: #15202B;
+  background: #15202b;
   color: white;
 }
 
 .highlight-ctgr ul li:hover a {
-  color: #5B75EB;
+  color: #5b75eb;
 }
 
 .highlight-ctgr ul li:hover .dropdownContain {
@@ -536,7 +535,7 @@ ul li {
   margin-right: 0;
 }
 
-form.search-bar input[type="text"],
+form.search-bar input[type='text'],
 select {
   width: 347px;
   height: 35px;
@@ -596,20 +595,20 @@ form.search-bar button {
   margin-top: 6px;
 }
 
-.access-user ul>li {
+.access-user ul > li {
   display: inline-block;
 }
 
 .access-user a {
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .access-user ul li:hover a {
-  color: #5B75EB;
+  color: #5b75eb;
 }
 
 .access-user ul li:hover .dropdownContain {
@@ -702,7 +701,7 @@ form.access button {
   align-items: center;
   width: 100%;
   height: 210px;
-  background: #15202B;
+  background: #15202b;
 }
 
 .logo-footer {
@@ -779,18 +778,18 @@ form.access button {
 /* Track */
 ::-webkit-scrollbar-track {
   background: black;
-  border-radius: 6px
+  border-radius: 6px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #5b75eb;
-  border-radius: 6px
+  border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #5b75eb;
-  border-radius: 6px
+  border-radius: 6px;
 }
 /* Scroll Bar */

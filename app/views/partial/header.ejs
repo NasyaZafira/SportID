@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/light.css" />
-    
-</head>
+    <link class="stylingheader" rel="stylesheet" href="/css/light.css" />
+  </head>
 
-<body>
+  <body>
     <div class="navbar-tray">
-        <div class="logo">
+      <div class="logo"></div>
 
-        </div>
-
-        <%# highlight category tray request direct page sesuai kategori %>
-        <div class="highlight-ctgr">
-            <ul>
-                <li class="highlight-ctgr-items"> Sepak Bola </li>
-                <li class="highlight-ctgr-items"> Bulutangkis </li>
-                <li class="highlight-ctgr-items"> Basket </li>
-                <li id="select-sizing">
-                    <a href="#!" class="head-foot-a"> Lainnya &nbsp;
-                        <div class="arrow-down"></div>
-                    </a>
-                    <div class="dropdownContain">
-                        <div class="dropOut">
-                            <div class="triangle"></div>
-                            <ul>
-                                <li>Voli</li>
-                                <li>Panahan</li>
-                                <li>Renang</li>
-                                <li>Bela Diri</li>
-                                <li>Angkat Besi</li>
-                                <li>Otomotif</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <%# search bar request direct page sesuai yang dicari %>
-        <form class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit"></button>
-
-            <div class="sublogo">
-                <div id="moon_light"> </div>
+      <%# highlight category tray request direct page sesuai kategori %>
+      <div class="highlight-ctgr">
+        <ul>
+          <li class="highlight-ctgr-items">Sepak Bola</li>
+          <li class="highlight-ctgr-items">Bulutangkis</li>
+          <li class="highlight-ctgr-items">Basket</li>
+          <li id="select-sizing">
+            <a href="#!" class="head-foot-a">
+              Lainnya &nbsp;
+              <div class="arrow-down"></div>
+            </a>
+            <div class="dropdownContain">
+              <div class="dropOut">
+                <div class="triangle"></div>
+                <ul>
+                  <li>Voli</li>
+                  <li>Panahan</li>
+                  <li>Renang</li>
+                  <li>Bela Diri</li>
+                  <li>Angkat Besi</li>
+                  <li>Otomotif</li>
+                </ul>
+              </div>
             </div>
-        </form>
+          </li>
+        </ul>
+      </div>
 
-        <%# access class request direct page sesuai pilihan user login/register %>
-        <form class="access">
-            <button class="login-button" onclick="navLogin()"><a href="/login"> Log In </a></button>
-            <button type="submit" class="register-button"><a href="/register"> Register </a></button>
-        </form>
+      <%# search bar request direct page sesuai yang dicari %>
+      <form class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button type="submit"></button>
+
+        <div class="sublogo">
+          <div id="moon_light"></div>
+        </div>
+      </form>
+
+      <%# access class request direct page sesuai pilihan user login/register %>
+      <form class="access">
+        <button class="login-button" onclick="navLogin()"><a href="/login"> Log In </a></button>
+        <button type="submit" class="register-button"><a href="/register"> Register </a></button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
