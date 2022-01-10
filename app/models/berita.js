@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const admin = require('./admin')
 module.exports = (sequelize, DataTypes) => {
   class berita extends Model {
     /**
@@ -14,12 +15,24 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   berita.init({
+    imageBerita: DataTypes.STRING,
     judulBerita: DataTypes.STRING,
     isiBerita: DataTypes.TEXT,
-    kategori: DataTypes.STRING
+    kategori: DataTypes.STRING,
+    admin_name: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      references: {
+        model: admin,
+        key: 'nama'
+      }
+    },
+    createdAt: DataTypes.STRING,
+    updatedAt: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'berita',
+    timestamps: false
   });
   return berita;
 };

@@ -65,6 +65,10 @@ body {
     margin-left: 63px;
     margin-top: 32px;
 }
+.thumbnail img {
+  width: 925px;
+  height: 621px;
+}
 .penulis{
     display: flex;
     width: 925px;
@@ -173,6 +177,7 @@ body {
     width: 480px;
     font-weight: lighter;
     overflow: auto;
+    line-height: 30px;
     font-size: 14px;
     text-align: justify;
     font-family: Montserrat-regular;
@@ -200,6 +205,7 @@ body {
 }
 .baris-berita{
     display: flex;
+    margin-top: 15px;
 }
 .thumbnail-berita{
     width: 126px;

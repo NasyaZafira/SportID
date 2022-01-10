@@ -3,7 +3,15 @@
 <html>
 
 <head>
+    <script type="text/javascript">
+        function thisLogin() {
+            window.location.href = '/login';
+        }
 
+        function thisRegister() {
+            window.location.href = '/register';
+        }
+    </script>
 </head>
 
 <body>
@@ -50,8 +58,8 @@
 
         <%# access class request direct page sesuai pilihan user login/register %>
         <form class="access">
-            <button type="submit" class="login-button"> Log In </button>
-            <button type="submit" class="register-button"> Register </button>
+            <button type="submit" class="login-button" onclick="thisLogin(); return false;"> Log In </button>
+            <button type="submit" class="register-button" onclick="thisRegister(); return false;"> Register </button>
         </form>
     </div>
 </body>
