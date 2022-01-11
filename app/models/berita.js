@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   berita.init({
     judulBerita: DataTypes.STRING,
-    isiBerita: DataTypes.STRING,
+    isiBerita: DataTypes.TEXT,
     kategori: DataTypes.STRING
   }, {
     sequelize,

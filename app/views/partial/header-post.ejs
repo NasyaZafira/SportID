@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Welcome, <%# request nama user sebagai title %> </title>
+</head>
+
+<body>
+    <div class="navbar-tray">
+        <div class="logo">
+
+        </div>
+
+        <%# highlight category tray request direct page sesuai kategori %>
+        <div class="highlight-ctgr">
+            <ul>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Sepak Bola %>" class="head-foot-a">Sepak
+                        Bola</a> </li>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Bulutangkis %>"
+                        class="head-foot-a">Bulutangkis</a>
+                </li>
+                <li class="highlight-ctgr-items"> <a href="<%# ke kategori Basket %>" class="head-foot-a">Basket</a>
+                </li>
+                <li id="select-sizing">
+                    <a href="#!" class="head-foot-a"> Lainnya &nbsp;
+                        <div class="arrow-down"></div>
+                    </a>
+                    <div class="dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li>Voli</li>
+                                <li>Panahan</li>
+                                <li>Renang</li>
+                                <li>Bela Diri</li>
+                                <li>Angkat Besi</li>
+                                <li>Otomotif</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <%# search bar request direct page sesuai yang dicari %>
+        <form class="search-bar">
+            <input type="search" placeholder="Search ...">
+            <button type="submit"> </button>
+
+            <div class="sublogo">
+                <div id="moon_light"></div>
+            </div>
+        </form>
+
+        <div class="access-user">
+            <div class="sublogo" id="user">
+                <%# request profile pict from database on the css %>
+            </div>
+            <ul>
+                <li id="select-sizing-user">
+                    <a href="#!" class="head-foot-a"> Nama User <%# request user first and second name from database %>
+                        <div class="arrow-down-user"></div>
+                    </a>
+                    <div class="access-user-dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <%# request direct page to lists below %>
+                                <li>Ubah Profile</li>
+                                <li>Keluar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+</body>
+
+</html>

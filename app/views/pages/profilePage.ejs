@@ -6,29 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" id="styles" href="/styles/profilePageStyle.css" />
+    <link rel="stylesheet" id="styles" href="/css/profileLight.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
-<body style="background-color: #eee; width: 1440px;">
+<Header>
+    <%- include ('../partial/header-post') %>
+</Header>
 
-    <Header>
-        <%- include ('./partial/headerProfilePage') %>
-    </Header>
-
+<body>
 
     <div class="kotak-profile">
 
         <p class="par2">Pengaturan Profile</p>
 
-        <form action="/profile/edit/<%= User.id %>/success" method="post">
+        <form action="/profile/<%= User.id %>/success" method="post">
             <div>
                 <label for="nama">Nama</label>
                 <div class="input-icon-nama">
                     <i class="fa fa-user" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
-                    <input type="text" name="name" class="ganti-nama" style="font-weight:500;" value="<%= User.name %>">
+                    <input type="text" name="name" class="ganti-nama" style="font-weight:500;"
+                        value=" <%= User.name %>">
                 </div>
             </div>
 
@@ -37,7 +38,7 @@
                 <div class="input-icon-email">
                     <i class="fas fa-envelope" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
                     <input type="text" name="email" class="ganti-email" style="font-weight:500;"
-                        value="<%= User.email %>">
+                        value=" <%= User.email %>">
                 </div>
             </div>
 
@@ -46,10 +47,10 @@
                 <div class="input-icon-hp">
                     <i class="fas fa-phone-alt" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
                     <input type="text" name="Nomor HP" class="ganti-nomorhp" style="font-weight:500;"
-                        value="<%= User.phoneNumber %>">
+                        value=" <%= User.phoneNumber %>">
                 </div>
             </div>
-            <button type="submit" class="tombol-simpan-perubahan" onclick="validation();">Simpan
+            <button type=" submit" class="tombol-simpan-perubahan">Simpan
                 Perubahan
             </button>
         </form>
@@ -57,11 +58,12 @@
 
 
         <a href="#" class="balik-beranda">
-            < Kembali ke Beranda </a> </div> <footer>
-                <%- include ('./partial/footer') %>
+            < Kembali ke Beranda </a> </div> </body> <footer>
+                <%- include ('../partial/footer') %>
                 </footer>
 
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+                </script>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
                 </script>
@@ -76,6 +78,7 @@
                     crossorigin="anonymous">
                 </script>
 
+
                 <script>
                     let flag = true
                     $('#moon_light').click(function () {
@@ -83,12 +86,12 @@
                         if (flag == true) {
                             flag = false
                             $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                            $('link#styles').attr('href', '/css/Dark.css');
+                            $('link#styles').attr('href', '/css/profileDark.css');
 
                         } else {
                             flag = true
                             $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                            $('link#styles').attr('href', '/css/Light.css');
+                            $('link#styles').attr('href', '/css/profileLight.css');
                         }
                     });
 
@@ -100,13 +103,5 @@
                         window.location.href = '/login'
                     }
                 </script>
-
-                <script>
-                    function validation() {
-                        alert("Perubahan berhasil disimpan");
-                    }
-                </script>
-
-</body>
 
 </html>

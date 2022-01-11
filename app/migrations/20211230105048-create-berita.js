@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       isiBerita: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       kategori: {
         type: Sequelize.STRING
