@@ -19,10 +19,10 @@ module.exports = (sequelize, DataTypes) => {
 
     static #encrypt = (password) => bcrypt.hashSync(password, 10)
 
-    static register = ({ name, email, phoneNumber, password }) => {
+    static register = ({ firstName, lastName, email, phoneNumber, password }) => {
       const encryptedPassword = this.#encrypt(password)
 
-      return this.create({ nama:name , email:email , nomorHp:phoneNumber , password: encryptedPassword })
+      return this.create({ nama:`${firstName} ${lastName}` , email:email , nomorHp:phoneNumber , password: encryptedPassword })
     }
   };
   admin.init({
