@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "postgres",
-    "password": "root",
-    "database": "berita",
+    "password": "1914",
+    "database": "MiniProjectProfile",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
-    "dialectOptions": {
-      "ssl": {
-          "require": true,
-          "rejectUnauthorized": false
+    "_dialectOptions": {
+      "_ssl": {
+        "_require": true,
+        "_rejectUnauthorized": false
       }
     }
   },

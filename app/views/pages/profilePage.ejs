@@ -14,7 +14,7 @@
 </head>
 
 <Header>
-    <%- include ('../partial/header-post') %>
+    <%- include ('../partial/headerProfile') %>
 </Header>
 
 <body>
@@ -23,7 +23,7 @@
 
         <p class="par2">Pengaturan Profile</p>
 
-        <form action="/profile/<%= User.id %>/success" method="post">
+        <form action="/profile/ <%= User.id %>/success" method="post">
             <div>
                 <label for="nama">Nama</label>
                 <div class="input-icon-nama">
@@ -102,5 +102,3 @@
                         window.location.href = '/login'
                     }
                 </script>
-
-                54b6e0

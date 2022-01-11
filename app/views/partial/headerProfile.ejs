@@ -23,20 +23,19 @@
                 <li class="highlight-ctgr-items"> <a href="<%# ke kategori Basket %>" class="head-foot-a">Basket</a>
                 </li>
                 <li id="select-sizing">
-                    <a href="#!" class="lainnya"> Lainnya &nbsp;
+                    <a href="#!" class="head-foot-a"> Lainnya &nbsp;
                         <div class="arrow-down"></div>
                     </a>
                     <div class="dropdownContain">
                         <div class="dropOut">
                             <div class="triangle"></div>
                             <ul>
-                                <li> <a href="<%# ke kategori voli %>" class="head-foot-a">Voli</a>
-                                </li>
-                                <li> <a href="<%# ke kategori Panahan %>" class="head-foot-a">Panahan</a> </li>
-                                <li> <a href="<%# ke kategori Renang %>" class="head-foot-a">Renang</a> </li>
-                                <li> <a href="<%# ke kategori Bela Diri %>" class="head-foot-a">Bela Diri</a> </li>
-                                <li> <a href="<%# ke kategori Angkat Besi %>" class="head-foot-a">Angkat Besi</a> </li>
-                                <li> <a href="<%# ke kategori Otomotif %>" class="head-foot-a">Otomotif</a> </li>
+                                <li>Voli</li>
+                                <li>Panahan</li>
+                                <li>Renang</li>
+                                <li>Bela Diri</li>
+                                <li>Angkat Besi</li>
+                                <li>Otomotif</li>
                             </ul>
                         </div>
                     </div>
@@ -44,10 +43,9 @@
             </ul>
         </div>
 
-
         <%# search bar request direct page sesuai yang dicari %>
         <form class="search-bar">
-            <input type="search" placeholder="Search...">
+            <input type="search" placeholder="Search ...">
             <button type="submit"> </button>
 
             <div class="sublogo">
@@ -55,26 +53,28 @@
             </div>
         </form>
 
-
-        <div class="access">
-            <%# request profile pict from database %>
-            <div class="profile_logo" id="user">
-
+        <div class="access-user">
+            <div class="sublogo" id="user">
+                <%# request profile pict from database on the css %>
             </div>
-            <select id="profile-option">
-                <option selected hidden value="0"> <%= User.name %>
-                </option>
-                <%# request direct page to chosen options %>
-                <option value="1" style="background-color: black; color: white;"> <i class="fas fa-edit"></i>
-                    Ubah Profile
-                </option>
-                <br>
-                <option value="2" style="background-color: black; color: white;">
-                    Keluar
-                </option>
-            </select>
+            <ul>
+                <li id="select-sizing-user">
+                    <a href="#!" class="head-foot-a"> Nama User <%# request user first and second name from database %>
+                        <div class="arrow-down-user"></div>
+                    </a>
+                    <div class="access-user-dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <%# request direct page to lists below %>
+                                <li>Ubah Profile</li>
+                                <li>Keluar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </div>
 </body>
 
 </html>
