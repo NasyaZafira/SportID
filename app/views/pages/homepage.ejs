@@ -213,15 +213,7 @@
 
     <script>
         var flag = localStorage.getItem('flag');
-        console.log(flag)
-
-        if (flag) {
-            $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-            $('link#styles').attr('href', '/css/Light.css');
-        } else {
-            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-            $('link#styles').attr('href', '/css/Dark.css');
-        }
+        console.log(flag);
 
         $(document).ready(function(){
 

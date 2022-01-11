@@ -17,6 +17,14 @@ app.get('/homepage', function(req, res) {
     res.render('pages/homepage');
 });
 
+app.get('/register', function(req, res) {
+    res.render('pages/register');
+});
+
+app.get('/report', function(req, res) {
+    res.render('pages/report');
+});
+
 app.listen(PORT, () => {
     console.log('Listening to port 3000...')
 })
