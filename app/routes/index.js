@@ -1,12 +1,21 @@
 const express = require('express')
 const router = express.Router()
-const { addKomen } = require('../controllers/controllerComments')
-const {register}= require('../controllers/register')
-const { addLaporan } = require('../controllers/controllerLaporan');
-const {showEditUser, editUser} = require('../controllers/user')
+const {
+    addKomen
+} = require('../controllers/controllerComments')
+const {
+    register
+} = require('../controllers/register')
+const {
+    addLaporan
+} = require('../controllers/controllerLaporan');
+const {
+    showEditUser,
+    editUser
+} = require('../controllers/user')
 
 //Router untuk Controller Comments
-router.get('/comments', function(req, res) {
+router.get('/comments', function (req, res) {
     res.render('pages/comment');
 });
 
@@ -17,12 +26,12 @@ router.get('/register', (req, res) => res.render('pages/register'))
 router.post('/register', register)
 
 //Router untuk Memanggil homepage.ejs
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
     res.render('homepage');
 });
 
 //Router untuk Controller Laporan
-router.get('/laporan', function(req, res) {
+router.get('/laporan', function (req, res) {
     res.render('laporan');
 });
 
