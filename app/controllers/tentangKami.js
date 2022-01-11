@@ -1,5 +1,5 @@
 function tentangKami (req, res) {
-    res.render("tentangKami")
+    res.render("pages/tentangKami")
   }
 
 module.exports = { tentangKami }
