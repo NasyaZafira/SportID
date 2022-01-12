@@ -16,39 +16,39 @@
       <!--Sub Judul-->
       <p class="kal_satu">Daftarkan akun Sport ID mu disini!</p>
       <form>
-      <!--Kolom Nama-->
-      <input class="form-content" placeholder="Nama Depan" type="nama" name="firstName" autocomplete="on" required />
-      <input class="form-content" placeholder="Nama Belakang" type="nama" name="lastName" autocomplete="on" required />
-      <!--Kolom Email-->
-      <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
-      <!--Kolom No Hp-->
-      <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="nohp" autocomplete="on" required />
-      <!--Kolom Password-->
-      
-        <div class="password-show-card">
-          <input class="input-control" placeholder="Password" type="Password" name="Password" required />
-          <i class="fa fa-eye-slash password-show"></i>
-          <p class="admin">*Khusus Admin</p>
-          <!--<i class="fa fa-eye-slash" ></i> -->
+        <!--Kolom Nama-->
+        <input class="form-content" placeholder="Nama Depan" type="nama" name="firstName" autocomplete="on" required />
+        <input class="form-content" placeholder="Nama Belakang" type="nama" name="lastName" autocomplete="on" required />
+        <!--Kolom Email-->
+        <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
+        <!--Kolom No Hp-->
+        <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="nohp" autocomplete="on" required />
+        <!--Kolom Password-->
+        <div class="container">
+          <span onclick="togglePass()">
+            <i class="fa fa-eye-slash" id="eye"></i>
+          </span>
+          <input type="password" autocomplete="off" placeholder="Password" class="password" />
           <p class="karakter">Kata sandi minimal 8 karakter berisi angka dan huruf</p>
+          <p class="admin">*Khusus Admin</p>
+          
         </div>
-      
 
-      <!--Kolom Kode Unik-->
-      <div class="cek">
-        <label for="user-kodeunik"> Kode Unik </label>
+        <!--Kolom Kode Unik-->
+        <div class="cek">
+          <label for="user-kodeunik"> Kode Unik </label>
           <input id="user-kodeunik" class="form-content baru" type="kodeunik" name="kodeunik" required />
 
-        <!--Kolom Check Box-->
-        <input class="pic-checkbox" type="checkbox"/>
-        <span class="setuju"
-          >Saya setuju dengan <strong><a href="///" class="" style="font-weight: 600; font-size: 10px; line-height: 12px; font-style: normal; color: #5b75eb">Syarat dan Ketentuan </a></strong> yang berlaku
-        </span>
-      </div>
+          <!--Kolom Check Box-->
+          <input class="pic-checkbox" type="checkbox" />
+          <span class="setuju"
+            >Saya setuju dengan <strong><a href="///" class="" style="font-weight: 600; font-size: 10px; line-height: 12px; font-style: normal; color: #5b75eb">Syarat dan Ketentuan </a></strong> yang berlaku
+          </span>
+        </div>
 
-      <!--Button Register-->
-      <input id="tombolregister" type="submit" name="submit" value="Register" />
-    </form>
+        <!--Button Register-->
+        <input id="tombolregister" type="submit" name="submit" value="Register" />
+      </form>
       <!--kemarin
       <input id="submit-btn-register" type="submit" name="submit" value="Register" />
       -->
@@ -60,25 +60,8 @@
         </p>
       </div>
     </div>
-    <!--Logo Hide Show Eye pada Password -->
-    <script src="jquery-latest.min.js"></script>
-    <script>
-      $(function () {
-        $('.password-show').click(function (event) {
-          $(this).toggleClass('fa-eye-slash fa-eye');
-          var x = $('.input-control').attr('type');
-          if (x == 'text') {
-            $('.input-control').attr('type', 'password');
-          } else {
-            $('.input-control').attr('type', 'text');
-          }
-        });
-      });
-    </script>
 
-    <!--Script jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!--Merubah Warna Button Register on click-->
+    <!--Toggle Password on click-->
     <script src="js/register.js"></script>
   </body>
 </html>

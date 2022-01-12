@@ -46,7 +46,7 @@
   margin: 10px 0 30px 0;
 }
 
-.input-control {
+.password {
   font-weight: bold;
   box-sizing: border-box;
   border: none;
@@ -109,19 +109,7 @@
   font-size: 10px;
   line-height: 12px;
   color: #5b75eb;
-}
-
-.password-show-card {
-  position: relative;
-}
-
-.password-show-card .password-show {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 7px;
-  right: 7px;
-  cursor: pointer;
+  margin-top: 532px;
 }
 
 .admin {
@@ -136,7 +124,7 @@
   /* identical to box height */
   color: #5b75eb;
   margin-left: 77px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 ::placeholder {
@@ -186,4 +174,9 @@ label {
   width: 332px;
   height: 42px;
   margin-bottom: 0px;
+}
+#eye{
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 5px;
 }
