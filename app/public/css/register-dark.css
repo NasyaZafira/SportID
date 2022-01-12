@@ -4,7 +4,7 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  background-color: #15202B;
+  background-color: #15202b;
   width: 500px;
   margin: 40px auto 40px auto;
   padding: 30px 60px;
@@ -39,17 +39,15 @@
   border-bottom: 1px solid white;
   font-size: 16px;
   font-weight: 500;
-  background-color: #15202B;
+  background-color: #15202b;
   display: flex;
-  font-weight: bold;
   color: white;
-
   width: 332px;
   height: 32px;
   margin: 10px 0 30px 0;
 }
 
-.input-control {
+.password {
   color: white;
   font-weight: bold;
   box-sizing: border-box;
@@ -57,7 +55,7 @@
   border-bottom: 1px solid white;
   font-size: 16px;
   font-weight: 500;
-  background-color: #15202B;
+  background-color: #15202b;
   display: flex;
   width: 332px;
   height: 32px;
@@ -66,7 +64,7 @@
 
 #tombolregister {
   background: #4169e1;
-  color: #15202B;
+  color: #15202b;
   display: grid;
   font-size: 16px;
   width: 200px;
@@ -113,19 +111,7 @@
   font-size: 10px;
   line-height: 12px;
   color: #5b75eb;
-}
-
-.password-show-card {
-  position: relative;
-}
-
-.password-show-card .password-show {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 7px;
-  right: 7px;
-  cursor: pointer;
+  margin-top: 532px;
 }
 
 .admin {
@@ -140,7 +126,7 @@
   /* identical to box height */
   color: #5b75eb;
   margin-left: 77px;
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 ::placeholder {
@@ -191,4 +177,10 @@ label {
   width: 332px;
   height: 42px;
   margin-bottom: 0px;
+}
+#eye {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 5px;
+  color: white;
 }

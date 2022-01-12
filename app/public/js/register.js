@@ -1,4 +1,17 @@
-///Merubah Warna Button Register on click
-let graybtn = document.querySelector('#tombolregister')
-graybtn.addEventListener('click', () => graybtn.style.backgroundColor="#5B75EB")
+const passwordEl = document.querySelector('.password');
+const eyeButton = document.querySelector('.fa');
+let isPass = true;
 
+function togglePass() {
+  if (isPass) {
+    passwordEl.setAttribute('type', 'text');
+    eyeButton.classList.remove('fa-eye-slash');
+    eyeButton.classList.add('fa-eye');
+    isPass = false;
+  } else {
+    passwordEl.setAttribute('type', 'password');
+    eyeButton.classList.remove('fa-eye');
+    eyeButton.classList.add('fa-eye-slash');
+    isPass = true;
+  }
+}
