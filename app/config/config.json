@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "postgres",
-    "password": "root",
+    "password": "kevinpro123",
     "database": "berita",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "port": 5432,
     "dialectOptions": {
-      "ssl": {
-          "require": true,
-          "rejectUnauthorized": false
+      "_ssl": {
+          "_require": true,
+          "_rejectUnauthorized": false
       }
     }
   },
