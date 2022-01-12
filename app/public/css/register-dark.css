@@ -4,7 +4,7 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  background-color: #15202B;
+  background-color: #15202b;
   width: 500px;
   margin: 40px auto 40px auto;
   padding: 30px 60px;
@@ -39,11 +39,9 @@
   border-bottom: 1px solid white;
   font-size: 16px;
   font-weight: 500;
-  background-color: #15202B;
+  background-color: #15202b;
   display: flex;
-  font-weight: bold;
   color: white;
-
   width: 332px;
   height: 32px;
   margin: 10px 0 30px 0;
@@ -57,7 +55,7 @@
   border-bottom: 1px solid white;
   font-size: 16px;
   font-weight: 500;
-  background-color: #15202B;
+  background-color: #15202b;
   display: flex;
   width: 332px;
   height: 32px;
@@ -66,7 +64,7 @@
 
 #tombolregister {
   background: #4169e1;
-  color: #15202B;
+  color: #15202b;
   display: grid;
   font-size: 16px;
   width: 200px;
@@ -115,8 +113,6 @@
   color: #5b75eb;
   margin-top: 532px;
 }
-
-
 
 .admin {
   position: absolute;
@@ -182,7 +178,7 @@ label {
   height: 42px;
   margin-bottom: 0px;
 }
-#eye{
+#eye {
   position: absolute;
   margin-left: 300px;
   margin-top: 5px;
