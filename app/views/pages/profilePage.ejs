@@ -49,9 +49,18 @@
                         value="<%= User.phoneNumber %>">
                 </div>
             </div>
-            <button type=" submit" class="tombol-simpan-perubahan">Simpan
+
+            <button type="submit" class="tombol-simpan-perubahan" id="tombol-submit" onclick="myFunction()">Simpan
                 Perubahan
             </button>
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="demo">Perubahan berhasil disimpan</p>
+                </div>
+            </div>
         </form>
 
 
@@ -100,5 +109,39 @@
 
                     function navLogin() {
                         window.location.href = '/login'
+                    }
+                </script>
+
+                <script>
+                    function myFunction() {
+                        var txt;
+                        if (confirm("Perubahan berhasil disimpan")) {
+                            txt = "Perubahan berhasil disimpan";
+                        } else {
+                            txt = "Perubahan gagal disimpan";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                </script>
+
+                <script>
+                    var modal = document.getElementById("myModal");
+
+                    var btn = document.getElementById("tombol-submit");
+
+                    var span = document.getElementsByClassName("close")[0];
+
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
+
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
                     }
                 </script>

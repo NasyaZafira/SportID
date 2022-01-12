@@ -468,6 +468,27 @@ form.access button {
     color: white;
 }
 
+.input-icon-nama {
+    background-image: url(../icon/user_dark.svg);
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.input-icon-email {
+    background-image: url(../icon/email_dark2.svg);
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.input-icon-hp {
+    background-image: url(../icon/phone_dark.svg);
+    background-repeat: no-repeat;
+    margin: 0px 00px 10px 10px;
+    background-size: 18px 18px;
+}
+
 .ganti-nama {
     box-sizing: border-box;
     display: grid;
@@ -656,12 +677,12 @@ form input:focus+i {
 
 #profile-option {
     width: 200px;
-    margin-left: 5%;
+    padding: 5px 0 15px 6px;
     border-radius: 0;
-    padding: 1%;
     border-style: none;
     border-width: 0;
     background: transparent;
+    color: white;
 }
 
 /* Footer End */

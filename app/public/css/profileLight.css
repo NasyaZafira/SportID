@@ -463,6 +463,24 @@ form.access button {
     font-family: "Montserrat";
 }
 
+.input-icon-nama {
+
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+
+.input-icon-email {
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.input-icon-hp {
+    background-repeat: no-repeat;
+    margin: 0px 00px 10px 10px;
+    background-size: 18px 18px;
+}
+
 .ganti-nama {
     box-sizing: border-box;
     display: grid;
@@ -472,7 +490,7 @@ form.access button {
     padding: 5px;
     margin-left: 40px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-family: "Montserrat";
 }
 
@@ -485,7 +503,7 @@ form.access button {
     padding: 5px;
     margin-left: 40px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-family: "Montserrat";
 }
 
@@ -653,11 +671,12 @@ a:hover {
 
 #profile-option {
     width: 200px;
-    padding: 0px 0px 15px 0px;
+    padding: 5px 0 15px 6px;
     border-radius: 0;
     border-style: none;
     border-width: 0;
     background: transparent;
+    color: black;
 }
 
 /* Footer End */
@@ -688,3 +707,51 @@ a:hover {
 }
 
 /* Scroll Bar */
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 200px;
+    /* Full width */
+    height: 300px;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: red;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
