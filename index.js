@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 module.exports = config
+const bodyParser = require("body-parser");
 
 //Menjadikan variabel app sebagai module express
 const app = express()
@@ -57,6 +58,8 @@ app.listen(PORT, () => {
 function appInit(app) {
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
+    app.use(bodyParser.urlencoded({ extended: false}));
+    app.use(bodyParser.json());
     
     //Static Files
     app.use(express.static('app/public'))

@@ -10,6 +10,7 @@ const { tentangKami } = require('../controllers/tentangKami')
 const {getThumbnailBerita} = require('../controllers/newspage')
 const {createBerita, showFormUpload, showAllBerita, 
     showUpdateBerita, updateBerita, deleteBerita} = require('../controllers/crudBerita')
+const  {lihatsemua , createBerita}  =require('../controllers/controllerBeritaHomepage')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -49,9 +50,11 @@ router.get('/register', (req, res) => res.render('pages/register'))
 router.post('/register', register)
 
 //Router untuk Memanggil homepage.ejs
-router.get('/', function(req, res) {
-    res.render('homepage');
-});
+router.get('/', lihatsemua );
+
+//Router tambah berita
+router.get('/tambahberita', createBerita)
+router.post('/tambahberita', createBerita)
 
 //Router untuk Controller Laporan
 router.get('/laporan', function(req, res) {
