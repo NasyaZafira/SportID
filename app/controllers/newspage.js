@@ -1,4 +1,4 @@
-const { berita, admin }  = require('../models/index')
+const { berita, admin, comments }  = require('../models/index')
 const { Sequelize, Op, or } = require('sequelize')
 const moment = require('moment')
 const marked = require('marked')
@@ -66,9 +66,19 @@ const getThumbnailBerita = async (req, res) => {
             ['createdAt', 'DESC']
         ]
     })
+    
+        //Menampilkan bagian Berita Terkait agar sesuai dengan judul dan kategori
+        const dbKomentar = await comments.findAll({
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        })
+    
 
-    res.render('pages/newspage', { Berita, dbBerita })
+    res.render('pages/newspage', { Berita, dbBerita, dbKomentar })
 }
+
+
 
 
 module.exports = {

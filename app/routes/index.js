@@ -35,12 +35,12 @@ const upload = multer({
 })
 
 //Router untuk Controller Comments
-router.get('/comments', function(req, res) {
-    res.render('pages/comment');
-});
+// router.get('/details/:id', function(req, res) {
+//     res.render('pages/newspage');
+// });
 
 router.post('/comments', addKomen);
-
+    
 //Router untuk Controller Register
 router.get('/register', (req, res) => res.render('pages/register'))
 router.post('/register', register)
