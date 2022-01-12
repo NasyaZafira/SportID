@@ -24,8 +24,8 @@ app.get('/register', function(req, res) {
 app.get('/report', function(req, res) {
     res.render('pages/report');
 });
-app.get('/about-us', function(req, res) {
-    res.render('pages/about-us');
+app.get('/tentang-kami', function(req, res) {
+    res.render('pages/tentang-kami');
 });
 app.get('/kebijakan-privasi', function(req, res) {
     res.render('pages/kebijakan-privasi');

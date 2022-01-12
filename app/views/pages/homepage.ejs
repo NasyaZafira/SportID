@@ -8,7 +8,7 @@
 
     <body>  
         <header>
-            <%- include('../partial/header-post') %>
+            <%- include('../partial/header') %>
         </header>
 
         <div class="homepage">
@@ -232,6 +232,20 @@
 
         $('.logo').click(function (){
             window.location.href = '/homepage' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
+        })
+
+        // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+        $('.login-button').click(function () {
+            window.location.href = '/login'
+        })
+
+        $('.register-button').click(function () {
+            window.location.href = '/register'
         })
     </script>
 </html>

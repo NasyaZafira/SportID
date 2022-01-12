@@ -62,17 +62,6 @@ a {
     font-weight: 600;
 }
 
-#option {
-    font-family: Montserrat;
-    font-weight: 600;
-    color: white;
-}
-
-#option:hover {
-    color: black;
-    cursor: pointer;
-}
-
 ul {
     text-align-last: justify;
 }
@@ -112,6 +101,17 @@ ul {
     transition: 0.3s;
 }
 
+#option a {
+    font-family: Montserrat;
+    font-weight: 600;
+    color: white;
+}
+
+#option:hover a{
+    color: black;
+    cursor: pointer;
+}
+
 #select-sizing {
     width: 120px;
     margin-left: 5%;
@@ -144,13 +144,6 @@ ul {
     background-repeat: no-repeat;
 }
 
-#select-sizing a {
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s;
-    color: white;
-}
-
 .dropOut .triangle {
     width: 0;
     height: 0;
@@ -161,13 +154,6 @@ ul {
     top: -10px;
     left: 50%;
     margin-left: -8px;
-}
-
-.arrow-down {
-    width: 8px;
-    height: 8px;
-    margin: -10px 0 0 65px;
-    content: url(/icon/arrow_down_right_ic.svg);
 }
 
 .arrow-down-user {
@@ -219,7 +205,7 @@ ul {
 }
 
 #userid:hover {
-    color: #5B75EB;
+    color: black;
     cursor: pointer;
 }
 
@@ -227,6 +213,14 @@ ul {
     text-align: left;
     float: left;
     padding: 10px 0;
+}
+
+.dropOut li a {
+    color: white;
+}
+
+.dropOut li:hover {
+    text-decoration: underline 2px;
 }
 
 .dropOut ul li {
@@ -244,15 +238,6 @@ ul {
     -o-transition: background .1s ease-out;
     transition: background .1s ease-out;
     transition: all .1s ease-in-out;
-}
-
-.dropOut ul li:hover {
-    background: white;
-    color: black;
-}
-
-.highlight-ctgr ul li:hover a {
-    color: black;
 }
 
 .highlight-ctgr ul li:hover .dropdownContain {
@@ -312,22 +297,22 @@ ul {
     transition: all .1s ease-out;
 }
 
-.access-user ul li:hover a {
+.access-user ul li:hover {
     color: black;
-}
-
-.access-user ul li:hover .dropdownContain {
+  }
+  
+  .access-user ul li:hover .dropdownContain {
     top: 25px;
-}
-
-.access-user ul li:hover .underline {
+  }
+  
+  .access-user ul li:hover .underline {
     border-bottom-color: #777;
-}
-
-.access-user ul li:hover .dropOut {
+  }
+  
+  .access-user ul li:hover .dropOut {
     opacity: 1;
     margin-top: 8px;
-}
+  }
 
 form.access button {
     width: 68px;
@@ -603,7 +588,18 @@ h3 {
     height: 80px;
 }
 
-.head-foot-a {
+.head {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .foot {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -612,11 +608,15 @@ h3 {
     text-decoration: none;
     color: black;
     transition: 0.3s;
-}
-
-.head-foot-a:hover {
-    color: #5b75eb;
+  }
+  
+  .head:hover {
+    color: black;
     cursor: pointer;
-}
+  }
 
+  .foot:hover {
+      color: #5B75EB;
+      cursor: pointer;
+  }
 /* Footer End */

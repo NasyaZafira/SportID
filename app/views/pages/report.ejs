@@ -142,8 +142,12 @@
             }
         }
 
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
+        $('.logo').click(function (){
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
         })
     </script>
 </html>

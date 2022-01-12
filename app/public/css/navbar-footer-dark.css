@@ -77,10 +77,9 @@
   
   #select-sizing {
     width: 120px;
-    margin-left: 5%;
+    margin-left: 10px;
     border-radius: 0;
     background: transparent;
-    padding: 1%;
     border-style: none;
     border-width: 0;
     position: relative
@@ -105,19 +104,6 @@
     background-repeat: no-repeat;
   }
   
-  #select-sizing a {
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.2s;
-  }
-  
-  #select-sizing:hover {
-    color: #5b75eb;
-    border-style: none;
-    border-width: 0;
-    cursor: pointer;
-  }
-  
   .dropOut .triangle {
     width: 0;
     height: 0;
@@ -133,7 +119,7 @@
   .arrow-down {
     width: 8px;
     height: 8px;
-    margin: -10px 0 0 65px;
+    margin: -10px 0 0 95px;
     content: url(/icon/arrow_down_dark_ic.svg);
   }
 
@@ -149,7 +135,7 @@
     position: absolute;
     z-index: 2;
     left: 72px;
-    margin-left: -80px;
+    margin-left: -55px;
     /* half of width */
     top: -400px;
     color: white;
@@ -179,7 +165,14 @@
   .dropOut ul {
     float: left;
     padding: 10px 0;
-    
+  }
+
+  .dropOut li a {
+    color: black;
+  }
+
+  .dropOut li:hover {
+    text-decoration: underline 2px black;
   }
   
   .dropOut ul li {
@@ -198,15 +191,6 @@
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
     transition: all .1s ease-in-out;
-  }
-  
-  .dropOut ul li:hover {
-    background: #15202B;
-    color: white;
-  }
-  
-  .highlight-ctgr ul li:hover a {
-    color: #5B75EB;
   }
   
   .highlight-ctgr ul li:hover .dropdownContain {
@@ -306,7 +290,7 @@
     transition: all .2s ease-in-out;
   }
 
-  .access-user ul li:hover a {
+  .access-user ul li:hover {
     color: #5B75EB;
   }
   
@@ -418,7 +402,18 @@
     height: 80px;
   }
   
-  .head-foot-a {
+  .head {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .foot {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -429,18 +424,8 @@
     transition: 0.3s;
   }
   
-  .head-foot-a:hover {
+  .head .foot:hover {
     color: #5b75eb;
     cursor: pointer;
-  }
-  
-  #profile-option {
-    width: 200px;
-    margin-left: 5%;
-    border-radius: 0;
-    padding: 1%;
-    border-style: none;
-    border-width: 0;
-    background: transparent;
   }
   /* Footer End */
