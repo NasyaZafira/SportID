@@ -346,14 +346,15 @@ form.access button {
 
 .login-button {
     background: transparent;
-    border: 2px solid #000000;
+    color: white;
+    border: 2px solid white;
     transition: ease-in-out;
 }
 
 .register-button {
-    background: black;
+    background: white;
     border: none;
-    color: #ffffff;
+    color: #5B75EB;
     transition: 0s;
 }
 
@@ -364,14 +365,14 @@ form.access button {
 
 .login-button:hover {
     background: transparent;
-    border: solid #5b75eb;
-    color: #5b75eb;
+    border: solid black;
+    color: black;
     cursor: pointer;
 }
 
 .register-button:hover {
-    background: #5b75eb;
-    border: solid #5b75eb;
+    background: black;
+    border: solid black;
     color: white;
     cursor: pointer;
 }

@@ -135,5 +135,9 @@
         $('#enter').click(function() {
             confirm("Apakah Anda yakin melaporkan berita ini?");
         })
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 </html>
