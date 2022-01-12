@@ -1,11 +1,12 @@
+/* HOMEPAGE */
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat-Regular.ttf);
+  src: url(../font/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url(../fonts/Montserrat-ExtraBold.ttf);
+  src: url(../font/Montserrat-ExtraBold.ttf);
 }
 
 * {
@@ -122,12 +123,12 @@ color: #5B75EB;
 }
 
 #category {
-font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 17px;
-color: black;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
 }
 
 .edusport-news {
@@ -781,4 +782,5 @@ form.access button {
   background: #15202B;
   border-radius: 6px
 }
+
 /* Scroll Bar */

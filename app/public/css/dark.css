@@ -34,19 +34,19 @@ a:hover {
 }
 
 .homepage {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .flex-container-2 {
-  display: flex;
-  background-color: #15202b;
-  align-items: center;
-  flex-direction: column;
-  width: 796px;
-  margin-top: 103px;
-  height: 542px;
+    display: flex;
+    background-color: #15202B;
+    align-items: center;
+    flex-direction: column;
+    width: 796px;
+    margin-top: 103px;
+    height: 542px;
 }
 
 /* thumbnail */

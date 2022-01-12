@@ -12,6 +12,7 @@ const {createBerita, showFormUpload, showAllBerita,
     showUpdateBerita, updateBerita, deleteBerita} = require('../controllers/crudBerita')
 const  {lihatsemua} = require('../controllers/controllerBeritaHomepage')
 const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
+const controllerLogin = require("../controllers/controllerLogin");
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -74,5 +75,9 @@ router.get('/admin/upload', showFormUpload)
 router.get('/admin/update/:id', showUpdateBerita)
 router.post('/admin/success/:id', upload.single('imageBeritaUpdate'), updateBerita)
 router.get('/admin/delete/:id', deleteBerita)
+
+//Router untuk Controller Login
+router.get("/login", controllerLogin.getLogin);
+router.post("/login", controllerLogin.postLogin);
 
 module.exports = router
