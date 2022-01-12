@@ -243,6 +243,10 @@
     font-family: Montserrat;
     font-weight: 600;
   }
+
+  input[type=text]::placeholder {
+    color: #15202B;
+  }
   
   form.search-bar button {
     border: transparent;

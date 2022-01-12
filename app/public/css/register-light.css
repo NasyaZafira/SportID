@@ -1,32 +1,16 @@
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-
-* {
-  font-family: Montserrat;
-  font-weight: 600;
-
-}
-
-body {
-  background-color: #eee;
-  width: 1440px;
-}
-
 .box_register {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   background-color: white;
   margin: 40px auto 40px auto;
   padding: 30px 60px;
   font-family: 'Montserrat';
   box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-}
 
+}
 .logo_register {
   display: block;
   margin-bottom: 20px;

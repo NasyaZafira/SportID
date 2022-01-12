@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/Light.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
     <body>  
@@ -212,16 +212,9 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
     <script>
+        
         var flag = localStorage.getItem('flag');
         console.log(flag);
-
-        $(document).ready(function(){
-
-            // $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-            // $('link#styles').attr('href', '/css/Light.css');
-
-            // $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-            // $('link#styles').attr('href', '/css/Dark.css');
 
             $('#moon_light').click(function () { // Switching between light and dark mode 
                 if (flag) {
@@ -236,7 +229,6 @@
                     localStorage.setItem('flag', true);
                 }
             });
-        }); 
 
         $('.logo').click(function (){
             window.location.href = '/homepage' /* requesting redirect page on logo click */

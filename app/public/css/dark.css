@@ -1,7 +1,7 @@
-  @import 'homepage-dark.css';
-  @import 'navbar-footer-dark.css';
-  @import 'report-dark.css';
-  @import 'register-dark.css';
+@import "navbar-footer-dark.css";
+@import "homepage-dark.css";
+@import "report-dark.css";
+@import "register-dark.css";
 
   @font-face {
     font-family: Montserrat;
@@ -19,7 +19,7 @@
   }
 
 * {
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

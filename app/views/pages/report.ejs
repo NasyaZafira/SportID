@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/Light.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
     <header>
@@ -12,8 +12,6 @@
     </header>
 
     <body>
-
-
         <div class="main-container">
             <div class="selected-item">
                 <div class="info">
@@ -77,15 +75,15 @@
                         </label>
 
                         <div class="text-container">
-                            <textarea id="rep4" placeholder="Tulis alasan anda..."></textarea>
+                            <textarea id="rep5" placeholder="Tulis alasan anda..."></textarea>
                         </div>
                 </div>
             </div>
 
             <div class="button-container">
                 <form>
-                    <input type="submit" class="abort" value="Batal"> </button>
-                    <input type="submit" class="go" value="Laporkan" id="enter"> </button>
+                    <input type="submit" class="abort" value="Batal">
+                    <input type="submit" class="go" value="Laporkan" id="enter" disabled="true"> 
                 </form>
             </div>
         </form>
@@ -104,12 +102,38 @@
             if (flag) {
                 flag = false
                 $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                $('link#styles').attr('href', '/css/Dark.css');
+                $('link#styles').attr('href', '/css/dark.css');
             } else {
                 flag = true
                 $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                $('link#styles').attr('href', '/css/Light.css');
+                $('link#styles').attr('href', '/css/light.css');
             }
         });
+
+        for (let i = 0; i < 5; i++) {
+            $('#rep' + i).click(function () {
+                if (i != 4) {
+                    $('#enter').prop('disabled', false);
+                } else {
+                    $('#rep5').focus();
+                }
+            })
+        }
+
+        $('#rep5').bind('input propertychange', function() {
+            if(this.value.length){
+                $('#enter').prop('disabled', false);
+            } else {
+                $('#enter').prop('disabled', true);
+            }
+        });
+
+        $('#rep5').click(function () {
+            $('#rep4').click();
+        })
+
+        $('#enter').click(function() {
+            confirm("Apakah Anda yakin melaporkan berita ini?");
+        })
     </script>
 </html>

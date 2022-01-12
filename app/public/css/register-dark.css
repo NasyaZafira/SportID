@@ -1,27 +1,11 @@
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-
-* {
-  font-family: Montserrat;
-  font-weight: 600;
-
-}
-
-body {
-  background-color: #152B29;
-  width: 1440px;
-}
-
 .box_register {
   display: flex;
   flex-flow: column wrap;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
-  width: 500px;
   background-color: #15202B;
+  width: 500px;
   margin: 40px auto 40px auto;
   padding: 30px 60px;
   font-family: 'Montserrat';
@@ -123,7 +107,7 @@ body {
   position: absolute;
   width: 380px;
   height: 17px;
-  top: 50px;
+  top: 45px;
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
@@ -166,6 +150,7 @@ body {
   font-size: 13px;
   line-height: 16px;
   color: white;
+  padding: 0;
 }
 
 input:focus::placeholder {
