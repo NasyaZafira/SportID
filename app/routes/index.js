@@ -6,6 +6,7 @@ const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
 const { addLaporan } = require('../controllers/controllerLaporan');
 const {showEditUser, editUser} = require('../controllers/user')
+const { tentangKami } = require('../controllers/tentangKami')
 const {getThumbnailBerita} = require('../controllers/newspage')
 const {createBerita, showFormUpload, showAllBerita, 
     showUpdateBerita, updateBerita, deleteBerita} = require('../controllers/crudBerita')
@@ -58,6 +59,9 @@ router.get('/laporan', function(req, res) {
 });
 
 router.post('/laporan', addLaporan);
+
+//Router untuk tentang kami
+router.get('/tentangKami', tentangKami)
 
 router.get('/profile/:id', showEditUser)
 router.post('/profile/:id/success', editUser)
