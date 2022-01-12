@@ -1,30 +1,54 @@
-<div class="footer-tray">
-    <div class="logo-footer">
-        <p id="rights-footer">© 2021 SportID.COM, All Right Reserved</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="footer-tray">
+        <div class="logo-footer">
+            <p id="rights-footer">© 2021 SportID.COM, All Right Reserved</p>
+        </div>
+    
+        <%# category tray request direct page sesuai kategori %>
+        <div class="category-tray">
+            <a href="" class="head-foot-a"> Sepak Bola </a>
+            <a href="" class="head-foot-a"> Bulu Tangkis </a>
+            <a href="" class="head-foot-a"> Basket </a>
+        </div>
+    
+        <div class="category-tray">
+            <a href="" class="head-foot-a"> Bola Voli </a>
+            <a href="" class="head-foot-a"> Renang </a>
+            <a href="" class="head-foot-a"> Panahan </a>
+        </div>
+    
+        <div class="category-tray">
+            <a href="" class="head-foot-a"> Bela Diri </a>
+            <a href="" class="head-foot-a"> Angkat Besi </a>
+            <a href="" class="head-foot-a"> Otomotif </a>
+        </div>
+    
+        <div class="internal-tc">
+            <a href="" class="head-foot-a"> Tentang Kami </a>
+            <a href="" class="head-foot-a"> Pusat Bantuan </a>
+            <a href="" class="head-foot-a"> Kebijakan & Privasi </a>
+        </div>
     </div>
-
-    <%# category tray request direct page sesuai kategori %>
-    <div class="category-tray">
-        <a href="" class="head-foot-a"> Sepak Bola </a>
-        <a href="" class="head-foot-a"> Bulu Tangkis </a>
-        <a href="" class="head-foot-a"> Basket </a>
-    </div>
-
-    <div class="category-tray">
-        <a href="" class="head-foot-a"> Bola Voli </a>
-        <a href="" class="head-foot-a"> Renang </a>
-        <a href="" class="head-foot-a"> Panahan </a>
-    </div>
-
-    <div class="category-tray">
-        <a href="" class="head-foot-a"> Bela Diri </a>
-        <a href="" class="head-foot-a"> Angkat Besi </a>
-        <a href="" class="head-foot-a"> Otomotif </a>
-    </div>
-
-    <div class="internal-tc">
-        <a href="" class="head-foot-a"> Tentang Kami </a>
-        <a href="" class="head-foot-a"> Pusat Bantuan </a>
-        <a href="" class="head-foot-a"> Kebijakan & Privasi </a>
-    </div>
-</div>
+    
+    <script>
+        $(function () {
+      $('.password-show').click(function (event) {
+        $(this).toggleClass('fa-eye-slash fa-eye');
+        var x = $('.input-control').attr('type');
+        if (x == 'text') {
+          $('.input-control').attr('type', 'password');
+        } else {
+          $('.input-control').attr('type', 'text');
+        }
+      });
+    });
+    </script>
+</body>
+</html>
