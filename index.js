@@ -27,6 +27,9 @@ app.get('/report', function(req, res) {
 app.get('/about-us', function(req, res) {
     res.render('pages/about-us');
 });
+app.get('/kebijakan-privasi', function(req, res) {
+    res.render('pages/kebijakan-privasi');
+});
 
 app.listen(PORT, () => {
     console.log('Listening to port 3000...')
