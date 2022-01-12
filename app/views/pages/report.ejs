@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="report-option">
-                    <form name="reportForm" class="option" action="/action_page.php" method="post">
+                    <form name="reportForm" class="option">
                         <label for="rep0">
                             <input type="radio" id="rep0" name="radiobutton" required>
                             <span id="form-control">
@@ -83,7 +83,7 @@
             <div class="button-container">
                 <form>
                     <input type="submit" class="abort" value="Batal">
-                    <input type="submit" class="go" value="Laporkan" id="enter" disabled="true"> 
+                    <input type="submit" class="go" value="Laporkan" id="enter" disabled="true" onclick="reconfirm(); return false;" > 
                 </form>
             </div>
         </form>
@@ -132,9 +132,15 @@
             $('#rep4').click();
         })
 
-        $('#enter').click(function() {
-            confirm("Apakah Anda yakin melaporkan berita ini?");
-        })
+        function reconfirm() {
+            if (confirm("Apakah Anda yakin melaporkan berita ini?") == true) {
+                alert ("Laporan Anda Sudah Dikirim");
+                /* Request redirect ke halaman berita yang ingin dilaporkan dengan menampilkan pesan laporan berhasil terkirim berbentuk alert */
+                window.location.href = '!#';
+            } else {
+                alert ("Laporan Anda dibatalkan");
+            }
+        }
 
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
