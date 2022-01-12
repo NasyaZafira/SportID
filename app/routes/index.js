@@ -11,6 +11,7 @@ const {getThumbnailBerita} = require('../controllers/newspage')
 const {createBerita, showFormUpload, showAllBerita, 
     showUpdateBerita, updateBerita, deleteBerita} = require('../controllers/crudBerita')
 const  {lihatsemua} = require('../controllers/controllerBeritaHomepage')
+const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -52,8 +53,10 @@ router.get('/', lihatsemua );
 router.get('/laporan', function(req, res) {
     res.render('pages/laporan');
 });
-
 router.post('/laporan', addLaporan);
+
+//Router untuk Pusat Bantuan
+router.get('/pusatbantuan', pusatBantuan)
 
 //Router untuk tentang kami
 router.get('/tentangKami', tentangKami)
