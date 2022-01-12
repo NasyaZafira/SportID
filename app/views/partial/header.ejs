@@ -3,13 +3,20 @@
 <html>
 
 <head>
+    <script type="text/javascript">
+        function thisLogin() {
+            window.location.href = '/login';
+        }
 
+        function thisRegister() {
+            window.location.href = '/register';
+        }
+    </script>
 </head>
 
 <body>
     <div class="navbar-tray">
         <div class="logo">
-
         </div>
 
         <%# highlight category tray request direct page sesuai kategori %>
@@ -45,15 +52,16 @@
             <button type="submit"></button>
 
             <div class="sublogo">
-                <div id="moon_light"> </div>
+                <img src="/icon/moon_ic_light.svg" id="moon_light">
             </div>
         </form>
 
         <%# access class request direct page sesuai pilihan user login/register %>
         <form class="access">
-            <button class="login-button" onclick="navLogin()"><a href="/login"> Log In </a></button>
-            <button type="submit" class="register-button"><a href="/register"> Register </a></button>
+            <button type="submit" class="login-button" onclick="thisLogin(); return false;"> Log In </button>
+            <button type="submit" class="register-button" onclick="thisRegister(); return false;"> Register </button>
         </form>
     </div>
 </body>
+
 </html>
