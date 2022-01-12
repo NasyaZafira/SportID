@@ -130,79 +130,30 @@
                 <div class="komentar-section">
                     <div class="tulis-komentar">
                         <div class="profil-komentar"></div>
-                        <form class="kolom-komentar" action="/form/submit"> 
-                            <input type="text" placeholder="Tulis komentar" name="kolom-komentar"/> 
-                            <a href="">
+                        <form class="kolom-komentar" action="/comments" method="post" id="hasilKomentar"> 
+                            <input type="text" placeholder="Tulis komentar" name="Komentar"/>
+                            <input type="text" id="token" hidden name="token">
+                            <a onclick="sendKomentar()"> 
                                 <div class="send"></div>
                             </a>
                         </form> 
                     </div>
                     <div class="seluruh-komentar">
+                        <% dbKomentar.forEach(comments => { %>
                         <div class="tampilan-komentar">
                             <div class="profil-tampilan-komentar"></div>
                             <div class="nama-dan-komentar">
                                 <div class="nama">
                                     <!-- ini butuh request nama penulis komentar -->
-                                    nama
+                                    <%= comments.user_name %>
                                 </div>
                                 <div class="komentarnya">
                                     <!-- ini butuh request komentar -->
-                                    komentar yang dikirim
+                                    <%= comments.isi_komen %>
                                 </div>
                             </div>
                         </div>
-                        <div class="tampilan-komentar">
-                            <div class="profil-tampilan-komentar"></div>
-                            <div class="nama-dan-komentar">
-                                <div class="nama">
-                                    <!-- ini butuh request nama penulis komentar -->
-                                    nama
-                                </div>
-                                <div class="komentarnya">
-                                    <!-- ini butuh request komentar -->
-                                    komentar yang dikirim
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tampilan-komentar">
-                            <div class="profil-tampilan-komentar"></div>
-                            <div class="nama-dan-komentar">
-                                <div class="nama">
-                                    <!-- ini butuh request nama penulis komentar -->
-                                    nama
-                                </div>
-                                <div class="komentarnya">
-                                    <!-- ini butuh request komentar -->
-                                    komentar yang dikirim
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tampilan-komentar">
-                            <div class="profil-tampilan-komentar"></div>
-                            <div class="nama-dan-komentar">
-                                <div class="nama">
-                                    <!-- ini butuh request nama penulis komentar -->
-                                    nama
-                                </div>
-                                <div class="komentarnya">
-                                    <!-- ini butuh request komentar -->
-                                    komentar yang dikirim
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tampilan-komentar">
-                            <div class="profil-tampilan-komentar"></div>
-                            <div class="nama-dan-komentar">
-                                <div class="nama">
-                                    <!-- ini butuh request nama penulis komentar -->
-                                    nama
-                                </div>
-                                <div class="komentarnya">
-                                    <!-- ini butuh request komentar -->
-                                    komentar yang dikirim
-                                </div>
-                            </div>
-                        </div>
+                        <% }) %>
                     </div>
                 </div>
                 <div class="iklan-2">
@@ -221,6 +172,10 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
+        $(document).ready(() => {
+            #token.val = localStorage.getItem('token')
+        })
+    
         let flag = true
             $('#moon_light').click(function () {
                 if (flag == true) {
@@ -263,6 +218,17 @@
         marked.setOptions({ gfm: true, breaks: true })
         document.getElementById('isi-berita').innerHTML = 
         marked.parse('<%= Berita.isiBerita %>')
-    </script>
 
+        // Fungsi Onclick Pada Button Komentar
+        function sendKomentar() {
+            console.log('tes')
+            document.getElementById("hasilKomentar").submit()
+        }
+
+        // function sendkomentar() {
+        //     document.getElementById("hasilkomentar").submit = function () {
+        //         location.href = "/details/:id"
+        //     }
+        // }
+    </script>
 </html>

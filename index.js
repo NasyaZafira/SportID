@@ -2,14 +2,27 @@ const express = require('express');
 const { Sequelize } = require('sequelize')
 const router = require('./app/routes/index')
 const PORT = 3000
-const config = require('./app/config/config.json')
+const config = require('./app/config/config.json');
+const { password } = require('pg/lib/defaults');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
 module.exports = config
 
 //Menjadikan variabel app sebagai module express
 const app = express()
 
 //Memanggil fungsi appInit
+const user = {
+    user_name: 'tes username kevin',
+    email: 'kevin@mail.com',
+    password: '123456',
+} 
+
+const token = bcrypt.compare(user.password, user.password)
 appInit(app)
+
+
 
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`)
