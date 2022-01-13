@@ -106,12 +106,18 @@
   });
 
   $('.logo').click(function () {
-    window.location.href = '/homepage' /* requesting redirect page on logo click */
+    window.location.href = '/' /* requesting redirect page on logo click */
   })
 
-  function navLogin() {
-    window.location.href = '/login'
-  }
+  $('.login-button').click(function () {
+            window.location.href = '/login'
+            return false
+  })
+
+  $('.register-button').click(function () {
+            window.location.href = '/register'
+            return false
+  })
 </script>
 
 </html>

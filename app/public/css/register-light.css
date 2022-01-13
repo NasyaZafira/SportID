@@ -1,18 +1,8 @@
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-
-* {
-  font-family: Montserrat;
-  font-weight: 600;
-  
-}
-body {
-  background-color: #eee;
-  width: 1440px;
-}
 .box_register {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   width: 500px;
   background-color: white;
   margin: 40px auto 40px auto;
@@ -42,30 +32,29 @@ body {
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid black;
-  width: 80%;
-  padding: 10px;
-  margin: auto;
   font-size: 16px;
-  margin-bottom: 10px;
   font-weight: 500;
   background-color: white;
   display: flex;
-  font-weight: bold;
+  width: 332px;
+  height: 32px;
+  margin: 10px 0 30px 0;
 }
-.input-control {
+
+.password {
   font-weight: bold;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid black;
-  width: 80%;
-  padding: 10px;
-  margin: auto;
   font-size: 16px;
-  margin-bottom: 30px;
   font-weight: 500;
   background-color: white;
   display: flex;
+  width: 332px;
+  height: 32px;
+  margin: 10px 0 30px 0;
 }
+
 #tombolregister {
   background: #4169e1;
   color: white;
@@ -91,40 +80,32 @@ body {
   color: #000000;
   font-weight: bold;
 }
+
 .pic-checkbox {
-  margin-left: 40px;
   width: 12px;
   height: 12px;
+  margin: 10px 0 0 0;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 3px;
   font-size: 10px;
 }
+
 .karakter {
-  padding: 0px 0px 10px 40px;
   font-size: 16px;
   color: #5b75eb;
   position: absolute;
   width: 380px;
   height: 17px;
-  top: 50px;
+  top: 45px;
   font-style: normal;
   font-weight: 600;
   font-size: 10px;
   line-height: 12px;
   color: #5b75eb;
+  margin-top: 532px;
 }
-.password-show-card {
-  position: relative;
-}
-.password-show-card .password-show {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 12px;
-  right: 55px;
-  cursor: pointer;
-}
+
 .admin {
   position: absolute;
   width: 87px;
@@ -136,9 +117,10 @@ body {
   line-height: 12px;
   /* identical to box height */
   color: #5b75eb;
-  margin-left: 150px;
-  margin-top: 5px;
+  margin-left: 77px;
+  margin-top: 14px;
 }
+
 ::placeholder {
   font-family: Montserrat;
   font-style: normal;
@@ -146,10 +128,31 @@ body {
   font-size: 13px;
   line-height: 16px;
   color: #000000;
+  padding: 0;
 }
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+
+  margin: 0 0 0 2px;
+}
+
+.cek {
+  margin: 40px 0 0 0;
+}
+
 .cek .pic-checkbox {
   font-size: 10px;
 }
+
 .setuju {
   font-family: Montserrat;
   font-style: normal;
@@ -159,6 +162,15 @@ body {
 
   color: #000000;
 }
+
 .baru {
+  border: solid 1px black;
+  width: 332px;
+  height: 42px;
   margin-bottom: 0px;
+}
+#eye {
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 5px;
 }
