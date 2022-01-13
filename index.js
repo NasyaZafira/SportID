@@ -1,5 +1,7 @@
 const express = require('express');
-const { Sequelize } = require('sequelize')
+const {
+    Sequelize
+} = require('sequelize')
 const router = require('./app/routes/index')
 const PORT = 3000
 const config = require('./app/config/config.json');
@@ -67,7 +69,6 @@ function appInit(app) {
     // set the view engine to ejs
     app.set('views', 'app/views');
     app.set('view engine', 'ejs');
-    
     // Set '/' from router
     app.use('/', router);
 }

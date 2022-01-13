@@ -6,23 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="/styles/profilePageStyle.css" />
-    <link rel="stylesheet" id="styles" type="text/css" href="/css/Light.css">
+    <link rel="stylesheet" id="styles" href="/css/profileLight.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #eee; width: 1440px;">
+<Header>
+    <%- include ('../partial/headerProfile') %>
+</Header>
 
-    <Header>
-        <%- include ('../partial/headerProfilePage') %>
-    </Header>
-
+<body>
 
     <div class="kotak-profile">
 
@@ -50,23 +45,33 @@
                 <label for="nomorhp">Nomor HP</label>
                 <div class="input-icon-hp">
                     <i class="fas fa-phone-alt" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
-                    <input type="text" name="Nomor HP" class="ganti-nomorhp" style="font-weight:500;"
+                    <input type="text" name="phoneNumber" class="ganti-nomorhp" style="font-weight:500;"
                         value="<%= User.phoneNumber %>">
                 </div>
             </div>
-            <button type=" submit" class="tombol-simpan-perubahan">Simpan
+
+            <button type="submit" class="tombol-simpan-perubahan" id="tombol-submit" onclick="myFunction()">Simpan
                 Perubahan
             </button>
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="demo">Perubahan berhasil disimpan</p>
+                </div>
+            </div>
         </form>
 
 
 
         <a href="#" class="balik-beranda">
-            < Kembali ke Beranda </a> </div> <footer>
+            < Kembali ke Beranda </a> </div> </body> <footer>
                 <%- include ('../partial/footer') %>
                 </footer>
 
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+                </script>
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
                 </script>
@@ -82,6 +87,61 @@
                 </script>
 
 
-</body>
+                <script>
+                    let flag = true
+                    $('#moon_light').click(function () {
+                        /* Switching between light and dark mode */
+                        if (flag == true) {
+                            flag = false
+                            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+                            $('link#styles').attr('href', '/css/profileDark.css');
 
-</html>
+                        } else {
+                            flag = true
+                            $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+                            $('link#styles').attr('href', '/css/profileLight.css');
+                        }
+                    });
+
+                    $('.logo').click(function () {
+                        window.location.href = '/homepage' /* requesting redirect page on logo click */
+                    })
+
+                    function navLogin() {
+                        window.location.href = '/login'
+                    }
+                </script>
+
+                <script>
+                    function myFunction() {
+                        var txt;
+                        if (confirm("Perubahan berhasil disimpan")) {
+                            txt = "Perubahan berhasil disimpan";
+                        } else {
+                            txt = "Perubahan gagal disimpan";
+                        }
+                        document.getElementById("demo").innerHTML = txt;
+                    }
+                </script>
+
+                <script>
+                    var modal = document.getElementById("myModal");
+
+                    var btn = document.getElementById("tombol-submit");
+
+                    var span = document.getElementsByClassName("close")[0];
+
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                    }
+
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                </script>

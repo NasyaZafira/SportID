@@ -8,8 +8,8 @@
     "port": 5432,
     "_dialectOptions": {
       "_ssl": {
-          "_require": true,
-          "_rejectUnauthorized": false
+        "_require": true,
+        "_rejectUnauthorized": false
       }
     }
   },
