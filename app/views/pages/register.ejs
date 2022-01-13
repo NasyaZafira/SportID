@@ -28,7 +28,7 @@
     <img class="logo_register" src="/icon/logo_light_mode.svg" alt="Logo Sport ID" />
     <!--Sub Judul-->
     <p class="kal_satu">Daftarkan akun Sport ID mu disini!</p>
-    <form>
+    <form method="post" class="form" action="/register">
       <!--Kolom Nama-->
       <input class="form-content" placeholder="Nama Depan" type="nama" name="firstName" autocomplete="on" required />
       <input class="form-content" placeholder="Nama Belakang" type="nama" name="lastName" autocomplete="on" required />
@@ -36,12 +36,12 @@
       <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on"
         required />
       <!--Kolom No Hp-->
-      <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="nohp" autocomplete="on"
+      <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="phoneNumber" autocomplete="on"
         required />
       <!--Kolom Password-->
 
       <div class="password-show-card">
-        <input class="input-control" placeholder="Password" type="Password" name="Password" required />
+        <input class="input-control" placeholder="Password" type="Password" name="password" required />
         <i class="fa fa-eye-slash password-show"></i>
         <p class="admin">*Khusus Admin</p>
         <!--<i class="fa fa-eye-slash" ></i> -->

@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'nama'
       }
     },
+    isTrending: DataTypes.STRING,
     createdAt: DataTypes.STRING,
     updatedAt: DataTypes.STRING
   }, {

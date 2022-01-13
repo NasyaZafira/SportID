@@ -91,6 +91,7 @@ const updateBerita = async (req, res) => {
             isiBerita: isi,
             kategori: kategori,
             admin_name: author,
+            isTrending: req.body.trending,
             updatedAt: updatedAt
         }, selector)
 
@@ -105,6 +106,7 @@ const updateBerita = async (req, res) => {
             isiBerita: isi,
             kategori: kategori,
             admin_name: author,
+            isTrending: req.body.trending,
             updatedAt: updatedAt
         }, selector)
 
