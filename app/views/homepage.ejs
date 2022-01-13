@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
+    </head>
+
+    <body>  
+        <header>
+            <%- include('./partial/header') %>
+        </header>
+
+        <div class="homepage">
+            <div class="flex-container-2">
+                <% berita.slice(-1).forEach(news => { %>
+                <div class="flex-item-2-1">
+                    <!-- <%# ini butuh request thumbnail %> -->
+                    <a href=""><img src="/images/796x437.png"></a> 
+                </div>
+                <div class="flex-item-2-2">
+                    <div class="flex-item-2-2-1">
+                        <!-- <%# ini butuh request judul %> -->
+                        <a href=""><%= news.judulBerita %></a>
+                    </div>
+                    <div class="flex-item-2-2-2">
+                        <div class="sepak-bola">
+                            <!-- <%# ini butuh request kategori berita di "sepak bola"nya %> -->
+                            <a href=""><span style="color:#5B75EB"><%= news.kategori %></span></a> | Sport
+                        </div>
+                        <div class="tanggal">
+                            <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
+                            <%= news.createdAt %>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+    
+            <div class="edusport">
+                <p class="font-1">Edu-Sport News</p>
+                <!-- <div class="edunews">
+                    <div class="thumbnail-edu">
+                        
+                        <img src="/images/126x77.png">
+                    </div>
+                    <div class="berita-edu">
+                        <div class="edu-judul-berita">
+                            
+                            <a href="">EduSport : Sejarah Piala AFF Berdiri Hingga Sekarang</a>
+                        </div>
+                        <div class="edu-jenis-berita">
+                            
+                            <a href="" class="font-2">Sepak Bola</a>
+                        </div>
+                    </div>
+                </div> -->
+                <% berita.slice(-4).forEach(newsEdu => { %>
+                <div class="edunews-2">
+                    <div class="thumbnail-edu">
+                        <!-- <%# ini butuh request thumbnail %> -->
+                        <img src="/images/126x77.png">
+                    </div>
+                    <div class="berita-edu">
+                        <div class="edu-judul-berita">
+                            <!-- <%# ini butuh request judul %> -->
+                            <a href=""><%= newsEdu.judulBerita %>></a>
+                        </div>
+                        <div class="edu-jenis-berita">
+                            <!-- <%# ini butuh request kategori %> -->
+                            <a href="" class="font-2"><%= newsEdu.kategori %></a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        
+        </div>
+
+        <div class="homepage-2">
+            <div class="bagian-berita">
+                <div class="trending-section">
+                    <div class="judul-trending">Trending</div>
+                    <div class="berita-trending">
+                        <!-- <div class="kolom-berita">
+                            <div class="thumbnail-trending">
+                                
+                                <img src="/images/286x171.png">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                
+                                <a href="" class="font-2"><span style="color:#5B75EB">Sepak Bola</span></a> | Sport</div>
+                            <div class="trending-judul-berita">
+                                
+                                <a href="">Holywings Janjikan Bonus Rp 1 M Jika Timnas Indonesia Juara Piala AFF</a>
+                            </div>
+                        </div> -->
+                        <% berita.slice(-3).forEach(newsTrend => { %>
+                        <div class="kolom-berita-2">
+                            <div class="thumbnail-trending">
+                                <!-- <%# ini butuh request thumbnail %> -->
+                                <img src="/images/286x171.png">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                <!-- <%# ini butuh request kategori %> -->
+                                <a href="" class="font-2"><span style="color:#5B75EB"><%= newsTrend.kategori %></span></a> | Sport</div>
+                            <div class="trending-judul-berita">
+                                <!-- <%# ini butuh request judul %> -->
+                                <a href=""><%= newsTrend.judulBerita %></a>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="terbaru-section">
+                    <div class="judul-trending">Terbaru</div>
+                    <div class="berita-trending">
+                        <!-- <div class="kolom-berita">
+                            <div class="thumbnail-trending">
+                                
+                                <img src="/images/286x171.png">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                
+                                <a href="" class="font-2"><span style="color:#5B75EB">Sepak Bola</span></a> | Sport</div>
+                            <div class="trending-judul-berita">
+                                
+                                <a href="">5 Srikandi Kalbar di PON Papua Cabang Angkat Besi dan Angkat Berat</a>
+                            </div>
+                        </div> -->
+                        <% berita.slice(-3).forEach(newsNew => { %>
+                        <div class="kolom-berita-2">
+                            <div class="thumbnail-trending">
+                                <!-- <%# ini butuh request thumbnail %> -->
+                                <img src="/images/286x171.png">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                <!-- <%# ini butuh request kategori %> -->
+                                <a href="" class="font-2"><span style="color:#5B75EB"><%= newsNew.kategori %></span></a> | Sport</div>
+                            <div class="trending-judul-berita">
+                                <!-- <%# ini butuh request judul %> -->
+                                <a href=""><%= newsNew.judulBerita %></a>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+            <div class="iklan">
+                <!-- <%# ini butuh request iklan (?) %> -->
+                <img src="/images/231x896.png">
+            </div>
+        </div>
+        <!-- <%# ini butuh request iklan (?) %> -->
+        <div class="iklan-2"><img src="/images/892x228.png"></div>    
+
+        <footer>
+            <%- include('./partial/footer') %>
+        </footer>
+    </body>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+    <script>
+        
+        var flag = localStorage.getItem('flag');
+        console.log(flag);
+
+            $('#moon_light').click(function () { // Switching between light and dark mode 
+                if (flag) {
+                    flag = false
+                    $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+                    $('link#styles').attr('href', '/css/dark.css');
+                    localStorage.setItem('flag', false);
+                } else {
+                    flag = true
+                    $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+                    $('link#styles').attr('href', '/css/light.css');
+                    localStorage.setItem('flag', true);
+                }
+            });
+
+        $('.logo').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+        $('.login-button').click(function () {
+            window.location.href = '/login'
+            return false
+        })
+
+        $('.register-button').click(function () {
+            window.location.href = '/register'
+            return false
+        })
+    </script>
+</html>

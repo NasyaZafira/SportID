@@ -1,0 +1,238 @@
+html body {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: rgb(25, 39, 52);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #5B75EB;
+    cursor: pointer;
+}
+
+
+/* <------------------- Start Kotak Profile Page --------------------> */
+
+.kotak-profile {
+    width: 500px;
+    background-color: #15202B;
+    margin: 120px auto 150px auto;
+    padding: 30px 60px;
+    left: auto;
+    right: auto;
+    font-family: "Montserrat";
+}
+
+.par2 {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 35px;
+    margin-top: 30px;
+    font-size: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1.5px solid white;
+    border-width: 0 0 1.5px;
+    border-style: solid;
+    font-family: "Montserrat";
+    color: white;
+}
+
+.input-icon-nama {
+    background-image: url(../icon/user_dark.svg);
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.input-icon-email {
+    background-image: url(../icon/email_dark2.svg);
+    background-repeat: no-repeat;
+    margin: 0px 0px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.input-icon-hp {
+    background-image: url(../icon/phone_dark.svg);
+    background-repeat: no-repeat;
+    margin: 0px 00px 10px 10px;
+    background-size: 18px 18px;
+}
+
+.ganti-nama {
+    box-sizing: border-box;
+    display: grid;
+    border: none;
+    border-bottom: 1.5px solid white;
+    width: 300px;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+.ganti-email {
+    box-sizing: border-box;
+    display: grid;
+    border: none;
+    border-bottom: 1.5px solid white;
+    width: 300px;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+.ganti-nomorhp {
+    box-sizing: border-box;
+    display: grid;
+    border: none;
+    border-bottom: 1.5px solid white;
+    width: 300px;
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+::value {
+    color: white;
+    font-weight: 540;
+}
+
+input[type=text] {
+    background-color: #15202B;
+    color: white;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #777;
+}
+
+label {
+    color: #4169E1;
+    padding: 1px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+form .input-icon {
+    position: relative;
+    font-family: "Montserrat";
+}
+
+form input+i {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    color: black;
+}
+
+form input:focus {
+    border: 1px solid #0099ff;
+    color: #000
+}
+
+form input:focus+i {
+    color: #0099ff;
+}
+
+.tombol-simpan-perubahan {
+    background: #4169E1;
+    color: white;
+    display: grid;
+    font-size: 18px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 0;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: "Montserrat";
+    ;
+}
+
+.balik-beranda {
+    text-align: center;
+    margin: auto;
+    display: grid;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+    width: auto;
+    font-size: 13.5px;
+    padding-bottom: 20px;
+    font-family: "Montserrat";
+}
+
+/* <------------------- End Kotak Profile Page --------------------> */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 200px;
+    /* Full width */
+    height: 300px;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: red;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
