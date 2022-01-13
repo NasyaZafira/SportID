@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/newspageLight.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
     <header>
@@ -181,11 +181,11 @@
                 if (flag == true) {
                     flag = false
                     $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                    $('link#styles').attr('href', '/css/newspageDark.css');
+                    $('link#styles').attr('href', '/css/dark.css');
                 } else {
                     flag = true
                     $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                    $('link#styles').attr('href', '/css/newspageLight.css');
+                    $('link#styles').attr('href', '/css/light.css');
                 }
             });
 
