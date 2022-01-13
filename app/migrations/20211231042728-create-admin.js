@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       nomorHp: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       alamat: {
         type: Sequelize.STRING

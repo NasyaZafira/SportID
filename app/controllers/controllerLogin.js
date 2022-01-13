@@ -12,7 +12,7 @@ module.exports = {
   postLogin(req, res) {
       user.findOne({
         where: {
-          [Op.or]: [{email: req.body.email}, {phoneNumber: req.body.email}]
+          [Op.or]: [{email: req.body.username}, {phoneNumber: req.body.username}]
         },
       })
       .then(function(data) {
@@ -24,14 +24,14 @@ module.exports = {
               if(result) {
                 const token = jwt.sign({data}, 'pass');
                 console.log("Berhasil Login")
-                res.status(200).render("successLogin.ejs", {token}); 
+                res.redirect("/"); 
               }
             }
           )
         } else {
           admin.findOne({
             where: {
-              [Op.or]: [{email: req.body.email}, {nomorHp: req.body.email}]
+              [Op.or]: [{email: req.body.username}, {nomorHp: req.body.username}]
             },
           })
           .then(function(dataadm) {
@@ -42,8 +42,8 @@ module.exports = {
                 function(err, result) {
                   if(result) {
                     const token = jwt.sign({dataadm}, 'pass');
-                    console.log("Berhasil Login")
-                    res.status(200).render("successLogin.ejs", {token}); 
+                    console.log("Berhasil Login") 
+                    res.redirect('/admin');
                   }
                 }
               )
