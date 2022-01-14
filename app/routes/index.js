@@ -83,15 +83,15 @@ router.get("/login", controllerLogin.getLogin);
 router.post("/login", controllerLogin.postLogin);
 
 //Router untuk Kategori Berita
-router.get('/angkatBesi', angkatBesi)
+router.get('/angkatbesi', angkatBesi)
 router.get('/basket', basket)
-router.get('/belaDiri', belaDiri)
-router.get('/buluTangkis', buluTangkis)
+router.get('/beladiri', belaDiri)
+router.get('/bulutangkis', buluTangkis)
 router.get('/otomotif', otomotif)
 router.get('/panahan', panahan)
 router.get('/renang', renang)
-router.get('/sepakBola', sepakBola)
-router.get('/voli', voli)
+router.get('/sepakbola', sepakBola)
+router.get('/bolavoli', voli)
 
 //Router untuk Kebijakan Privasi
 router.get('/kebijakanprivasi', kebijakanPrivasi)

@@ -11,7 +11,14 @@ const lihatsemua = async (req, res) => {
         const betren = await berita.findAll({
           where : { isTrending : 'True' }
         })
-        res.render("homepage" , {berita:Berita,betren});
+
+        const dbBerita = await berita.findAll({
+          order: [
+            ['createdAt', 'DESC']
+          ]
+        })
+
+        res.render("homepage" , {berita:dbBerita, betren});
       })
       .catch(err => {
         console.log(err)

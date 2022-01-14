@@ -1,12 +1,3 @@
-@font-face {
-    font-family: Montserrat;
-    src: url('../font/Montserrat-Bold.ttf');
-  }
-
-@font-face {
-    font-family: Montserrat-regular;
-    src: url('../font/Montserrat-Regular.ttf');
-  }
 
 * {
     transition: background-color 0.5s;
@@ -29,7 +20,7 @@ body {
     flex-flow: column wrap;
     margin-top: 16px;
 }
-.iklan{
+.iklan1{
     width: 740px;
     height: 189px;
     margin-top: 16px;
@@ -40,7 +31,7 @@ body {
     width: 150px;
     margin-top: 58px;
     margin-left: 114px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
 }
 .content{
     width: 1051px;
@@ -50,7 +41,7 @@ body {
 }
 .judul{
     width: 897px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -104,7 +95,7 @@ body {
 .laporkan-berita{
     font-size: 12px;
     line-height: 16px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     margin-left: 10px;
@@ -112,7 +103,7 @@ body {
 .nama-penulis{
     font-size: 12px;
     line-height: 16px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
 }
@@ -121,7 +112,7 @@ body {
     margin-top: 5px;
     line-height: 10px;
     font-weight: lighter;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
 }
 .tanggal-komentar{
@@ -130,12 +121,12 @@ body {
     height: 59px;
     justify-content: space-between;
 }
-.tanggal{
+.tanggal-1{
     margin-left: 79px;
     margin-top: 7px;
     height: 15px;
     width: 183px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -180,7 +171,7 @@ body {
     line-height: 30px;
     font-size: 14px;
     text-align: justify;
-    font-family: Montserrat-regular;
+    font-family: Montserrat;
 }
 .berita-terkait{
     display: flex;
@@ -191,7 +182,7 @@ body {
     margin-left: 37px;
 }
 .font{
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -219,7 +210,7 @@ body {
 }
 .judul-berita-terkait{
     width: 219px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 13px;
@@ -228,7 +219,7 @@ body {
 .kategori-berita-terkait{
     width: 84px;
     height: 20px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -243,7 +234,7 @@ body {
 #komentar{
     width: 126px;
     height: 29px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -284,14 +275,14 @@ body {
 .kolom-komentar{ 
     margin-left: 8px; 
     margin-top: 23px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
     line-height: 15px;
 } 
 form.kolom-komentar input[type=text] { 
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -369,20 +360,20 @@ form.kolom-komentar::after {
 .nama{
     font-size: 14px;
     font-weight: bold;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-style: normal;
 }
 .komentarnya{
     background-color: #15202B;
     margin-top: 6px;
-    font-family: Montserrat-regular;
+    font-family: Montserrat;
     font-size: 12px;
     font-weight: lighter;
     padding: 10px;
     width: 360px;
     border-radius: 5px;
 }
-.iklan-2{
+.iklan2{
     width: 423px;
     height: 288px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -405,14 +396,14 @@ a:hover {
     color: #5B75EB;
 }
 .popUp{
-    width: 127px;
+    width: 157px;
     height: 24px;
     border-radius: 5px;
-    font-family: Montserrat;
+    font-family: Montserrat-B;
     font-size: 12px;
     color: white;
     align-items: center;
-    padding: 10px 15px 0 15px;
+    padding: 10px 15px 20px 15px;
     margin-left: 636px;
     display: inline-block;
     cursor: pointer;
@@ -433,384 +424,3 @@ a:hover {
 #popUp{
     display: none;
 }
-
-
-/* Navbar Start */
-.navbar-tray {
-    display: flex;
-    flex: column wrap;
-    justify-content: center;
-    width: 100vw;
-    height: 82px;
-    background-color: black;
-    box-shadow: 0 8px 10px -10px black;
-    left: 0px;
-    top: 0px;
-    font-family: Montserrat-regular;
-  }
-  
-  .logo {
-    margin: 10px 0 0 0;
-    background-image: url(/icon/logo_dark_mode.svg);
-    background-repeat: no-repeat;
-    width: 146px;
-    height: 50px;
-  }
-  
-  /* <------------------- Start Highlight Category ------------> */
-  .highlight-ctgr {
-    width: 35%;
-    padding-left: 1%;
-    justify-content: space-around;
-    font-size: 13px;
-    font-weight: 600;
-  }
-
-  ul li {
-      color: white;
-  }
-  
-  .highlight-ctgr ul {
-    margin-top: 6px;
-  }
-  
-  .highlight-ctgr ul>li {
-    display: inline-block;
-  }
-  
-  .highlight-ctgr a {
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -ms-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-  }
-  
-  .highlight-ctgr-items {
-    font-size: 13px;
-    line-height: 16px;
-    border: none;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    background-color: transparent;
-    margin: 5% 0 0 4%;
-    cursor: pointer;
-    -webkit-transition: padding .05s linear;
-    -moz-transition: padding .05s linear;
-    -ms-transition: padding .05s linear;
-    -o-transition: padding .05s linear;
-    transition: padding .05s linear;
-  }
-  
-  #select-sizing {
-    width: 120px;
-    margin-left: 5%;
-    border-radius: 0;
-    background: transparent;
-    padding: 1%;
-    border-style: none;
-    border-width: 0;
-    position: relative
-  }
-  
-  #select-sizing a {
-    font-size: 13px;
-    font-weight: 600;
-  }
-  
-  #select-sizing:hover {
-    color: #5b75eb;
-    border-style: none;
-    border-width: 0;
-    cursor: pointer;
-  }
-  
-  .dropOut .triangle {
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid white;
-    top: -10px;
-    left: 50%;
-    margin-left: -8px;
-  }
-
-  .arrow-down {
-    width: 8px;
-    height: 8px;
-    margin: -10px 0 0 60px;
-    background-image: url(/icon/arrow_down_dark_ic.svg);
-    background-repeat: no-repeat;
-  }
-  
-  .dropdownContain {
-    width: 160px;
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    margin-left: -80px;
-    /* half of width */
-    top: -400px;
-    color: white;
-  }
-  
-  .dropOut {
-    font-size: 13px;
-    width: 160px;
-    background: white;
-    float: left;
-    position: relative;
-    margin-top: 0px;
-    opacity: 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
-    -webkit-transition: all .1s ease-out;
-    -moz-transition: all .1s ease-out;
-    -ms-transition: all .1s ease-out;
-    -o-transition: all .1s ease-out;
-    transition: all .1s ease-out;
-  }
-  
-  .dropOut ul {
-    float: left;
-    padding: 10px 0;
-    
-  }
-  
-  .dropOut ul li {
-    text-align: left;
-    float: left;
-    width: 125px;
-    padding: 12px 0 10px 15px;
-    margin: 0px 10px;
-    color: black;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-transition: background .1s ease-out;
-    -moz-transition: background .1s ease-out;
-    -ms-transition: background .1s ease-out;
-    -o-transition: background .1s ease-out;
-    transition: background .1s ease-out;
-  }
-  
-  .dropOut ul li:hover {
-    background: #777;
-  }
-  
-  .highlight-ctgr ul li:hover a {
-    color: #5B75EB;
-  }
-  
-  .highlight-ctgr ul li:hover .dropdownContain {
-    top: 25px;
-  }
-  
-  .highlight-ctgr ul li:hover .underline {
-    border-bottom-color: #777;
-  }
-  
-  .highlight-ctgr ul li:hover .dropOut {
-    opacity: 1;
-    margin-top: 8px;
-  }
-  
-  /* <------------------- End Highlight Category --------------------> */
-  
-  .search-bar {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 30%;
-    margin-right: 0;
-  }
-  
-  form.search-bar input[type="text"],
-  select {
-    width: 347px;
-    height: 35px;
-    background: #f1f1f1;
-    border: transparent;
-    border-radius: 20px;
-    padding-left: 20px;
-    margin-top: 20px;
-  }
-  
-  form.search-bar button {
-    border: transparent;
-    width: 40px;
-    height: 32px;
-    margin-left: -50px;
-    margin-top: 21px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-image: url(/icon/search_ic.svg);
-    background-size: 12px 12px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .sublogo {
-    margin: 30px 3% 0 10%;
-    width: 16px;
-    height: 16px;
-  }
-  
-  .access {
-    display: flex;
-    flex: column wrap;
-    justify-content: space-between;
-  }
-  
-  form.access button {
-    width: 68px;
-    height: 29px;
-    left: 1126px;
-    top: 26px;
-    margin: 25px 10px 0 0;
-  
-
-    box-sizing: border-box;
-    border-radius: 4px;
-  
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: 600;
-  }
-  
-  .login-button {
-    background: transparent;
-    border: solid 2px white;
-    color: white;
-  }
-  
-  .register-button {
-    background: white;
-    border: none;
-    color: black;
-  }
-  
-  .highlight-ctgr-items:hover {
-    color: #5b75eb;
-    cursor: pointer;
-  }
-  
-  .login-button:hover {
-    background: transparent;
-    border: solid #5b75eb;
-    color: #5b75eb;
-    cursor: pointer;
-  }
-  
-  .register-button:hover {
-    background: #5b75eb;
-    border: solid #5b75eb;
-    color: white;
-    cursor: pointer;
-  }
-  /* Navbar End */
-  
-  /* Footer Start */
-  .footer-tray {
-    display: flex;
-    flex: column wrap;
-    align-items: center;
-    width: 100vw;
-    height: 210px;
-    background: black;
-    left: 2px;
-    top: 1090px;
-    font-family: Montserrat-regular;
-  }
-  
-  .logo-footer {
-    width: 206px;
-    height: 96px;
-    font-weight: 600;
-    margin: 100px 150px 100px 150px;
-    background-image: url(/icon/logo_dark_mode.svg);
-    background-repeat: no-repeat;
-    background-size: 200px 64px;
-    align-items: center;
-    align-self: center;
-  }
-  
-  #rights-footer {
-    font-size: 10px;
-    line-height: 12px;
-    color: white;
-    margin: 70px 0 0 0;
-  }
-  
-  .category-tray {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100px;
-    height: 80px;
-    margin: 0 5px 0 50px;
-  }
-  
-  .internal-tc {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0 50px 0 150px;
-    width: 118px;
-    height: 80px;
-  }
-  
-  .head-foot-a {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .head-foot-a:hover {
-    color: #5b75eb;
-    cursor: pointer;
-  }
-  
-  #profile-option {
-    width: 200px;
-    margin-left: 5%;
-    border-radius: 0;
-    padding: 1%;
-    border-style: none;
-    border-width: 0;
-    background: transparent;
-  }
-  /* Footer End */
-
-  /* Scroll Bar */
-  /* width */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: black;
-    border-radius: 6px
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #5b75eb;
-    border-radius: 6px
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #5b75eb;
-    border-radius: 6px
-  }
-  /* Scroll Bar */

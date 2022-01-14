@@ -8,7 +8,6 @@
 .flex-container-2 {
     display: flex;
     background-color: white;
-    align-items: center;
     flex-direction: column;
     width: 796px;
     margin-top: 103px;
@@ -31,7 +30,7 @@
     width: 554px;
     margin-left: 16px;
     margin-top: 2px;
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -48,23 +47,23 @@
 .sepak-bola {
     height: 16px;
     margin-left: 48px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-size: 14px;
     font-weight: 600;
     margin-top: 2px;
 }
 
 .tanggal {
-    width: 183px;
     height: 15px;
     margin-bottom: 15px;
     margin-top: 48px;
     margin-right: 22px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
+    text-align: end;
 }
 
 /* container edusport */
@@ -79,13 +78,14 @@
 }
 
 .font-1 {
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-B;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 30px;
     line-height: 37px;
     color: #5B75EB;
-    margin: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
 }
 
 #category {
@@ -105,6 +105,7 @@
 
 .edunews {
     display: flex;
+    margin-top: 20px;
 }
 
 .thumbnail-edu {
@@ -123,7 +124,7 @@
 
 .edu-judul-berita {
     width: 219px;
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
@@ -133,7 +134,7 @@
 .edu-jenis-berita {
     width: 84px;
     height: 20px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -165,7 +166,7 @@
 
 .iklan {
     margin: 61px 0 0 -100px;
-    background: white;
+    background: #15202B;
     width: 231px;
     height: 896px;
 }
@@ -184,7 +185,7 @@
     height: 40px;
     margin-left: 36px;
     margin-top: 40px;
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -222,7 +223,7 @@
 .trending-jenis-berita {
     width: 140px;
     height: 16px;
-    font-family: "Montserrat";
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
@@ -233,7 +234,7 @@
 
 .trending-judul-berita {
     width: 286px;
-    font-family: Montserrat-Bold;
+    font-family: Montserrat-B;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -252,7 +253,6 @@
 .iklan-2 {
     display: flex;
     flex-flow: column wrap;
-    align-self: center;
     width: 892px;
     height: 228px;
     margin-top: 57px;

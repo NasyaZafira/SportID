@@ -3,12 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/kategori-light.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
-    <header>
-        <%- include('../partial/header') %>
-    </header>
     <body>  
         <header>
             <%- include('./partial/header') %>
@@ -17,27 +14,19 @@
         <div class="homepage">
             <div class="flex-container-2">
                 <% berita.slice(-1).forEach(news => { %>
-
-    <body>  
-        <div class="homepage">
-            <div class="flex-container-2">
-                <div class="home-kategori">
-                    <!-- a href untuk kembali ke homepage -->
-                    <a href="">Home</a> > <span style="color: #5B75EB;">Sepak Bola</span>
-                </div>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= newsEdu.imageBerita %>"></a> 
+                    <a href=""><img src="<%= news.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href=""><%= news.judulBerita %></a>
+                        <a href="/details/<%= news.id %>"><%= news.judulBerita %></a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "sepak bola"nya %> -->
-                            <a href=""><span style="color:#5B75EB"><%= news.kategori %></span></a> | Sport
+                            <a href="<%= news.kategori %>"><span style="color:#5B75EB"><%= news.kategori %></span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -75,11 +64,11 @@
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href=""><%= newsEdu.judulBerita %>></a>
+                            <a href="/details/<%= newsEdu.id %>"><%= newsEdu.judulBerita %>></a>
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
-                            <a href="" class="font-2"><%= newsEdu.kategori %></a>
+                            <a href="/<%= newsEdu.kategori %>" class="font-2"><%= newsEdu.kategori %></a>
                         </div>
                     </div>
                 </div>
@@ -110,14 +99,14 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
+                                <img src="<%= newsTrend.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB"><%= newsTrend.kategori %></span></a> | Sport</div>
+                                <a href="/<%= newsTrend.kategori %>" class="font-2"><span style="color:#5B75EB"><%= newsTrend.kategori %></span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href=""><%= newsTrend.judulBerita %></a>
+                                <a href="/details/<%= newsTrend.id %>"><%= newsTrend.judulBerita %></a>
                             </div>
                         </div>
                         <% }) %>
@@ -143,14 +132,14 @@
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
+                                <img src="<%= newsNew.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB"><%= newsNew.kategori %></span></a> | Sport</div>
+                                <a href="/<%= newsNew.kategori %>" class="font-2"><span style="color:#5B75EB"><%= newsNew.kategori %></span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href=""><%= newsNew.judulBerita %></a>
+                                <a href="/details/<%= newsNew.id %>"><%= newsNew.judulBerita %></a>
                             </div>
                         </div>
                         <% }) %>
@@ -163,7 +152,7 @@
             </div>
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
-        <div class="iklan-2"><img src="/images/892x228.png"></div>
+        <div class="iklan-2"><img src="/images/892x228.png"></div>    
 
         <footer>
             <%- include('./partial/footer') %>
@@ -211,5 +200,4 @@
             return false
         })
     </script>
-    </body>
 </html>

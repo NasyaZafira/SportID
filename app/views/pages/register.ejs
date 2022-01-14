@@ -16,27 +16,27 @@
       <img class="logo_register" src="/icon/logo_light_mode.svg" alt="Logo Sport ID" />
       <!--Sub Judul-->
       <p class="kal_satu">Daftarkan akun Sport ID mu disini!</p>
-      <form action="/register" method="post">
+      <form>
         <!--Kolom Nama-->
         <input class="form-content" placeholder="Nama Depan" type="nama" name="firstName" autocomplete="on" required />
         <input class="form-content" placeholder="Nama Belakang" type="nama" name="lastName" autocomplete="on" required />
         <!--Kolom Email-->
         <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on" required />
         <!--Kolom No Hp-->
-        <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="phoneNumber" autocomplete="on" required />
+        <input id="user-nohp" class="form-content" placeholder="No Hp" type="nohp" name="nohp" autocomplete="on" required />
         <!--Kolom Password-->
         <div class="container">
           <span onclick="togglePass()">
             <i class="fa fa-eye-slash" id="eye"></i>
           </span>
-          <input type="password" autocomplete="off" placeholder="Password" class="password" name="password" />
+          <input type="password" autocomplete="off" placeholder="Password" class="password" />
           <p class="karakter">Kata sandi minimal 8 karakter berisi angka dan huruf</p>
           <p class="admin">*Khusus Admin</p>
         </div>
         <!--Kolom Kode Unik-->
         <div class="cek">
           <label for="user-kodeunik"> Kode Unik </label>
-          <input id="user-kodeunik" class="form-content baru" type="kodeunik" name="kodeunik" />
+          <input id="user-kodeunik" class="form-content baru" type="kodeunik" name="kodeunik" required />
 
           <!--Kolom Check Box-->
           <input class="pic-checkbox" type="checkbox" />
@@ -87,21 +87,11 @@
     });
 
         $('.logo').click(function (){
-            window.location.href = '/' /* requesting redirect page on logo click */
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
         })
 
         $('.logo-footer').click(function (){
-            window.location.href = '/' /* requesting redirect page on logo click */
-        })
-        
-        $('.login-button').click(function () {
-            window.location.href = '/login'
-            return false
-        })
-
-        $('.register-button').click(function () {
-            window.location.href = '/register'
-            return false
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
         })
   </script>
 </html>

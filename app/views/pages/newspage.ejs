@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/newspageLight.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
     <header>
@@ -13,7 +13,7 @@
     <body>
         <div class="all">
             <div class="container-iklan">
-                <div class="iklan">
+                <div class="iklan1">
                     <!-- butuh request iklan -->
                     <img src="/images/633x162.png">
                 </div>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="thumbnail">
                     <!-- butuh request thumbnail -->
-                    <img src="/images/<%= Berita.imageBerita %>">
+                    <img src="<%= Berita.imageBerita %>">
                     <!-- /images/925x621.png -->
                 </div>
                 <div class="penulis">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="tanggal-komentar">
-                    <div class="tanggal">
+                    <div class="tanggal-1">
                         <%= Berita.createdAt %>
                         <!-- ini butuh request tanggal dan waktu upload -->
                         <!-- 28 Desember 2021 20:49 WIB -->
@@ -65,7 +65,7 @@
                 <div class="berita-section">
                     <div class="berita">
                         <div class="isi-berita" id="isi-berita">
-                            <%# isi berita ini berada di javascript %>
+                            <%= Berita.isiBerita %>
                         </div>
                     </div>
                     <div class="berita-terkait">
@@ -75,7 +75,7 @@
                             <div class="baris-berita">
                                 <div class="thumbnail-berita">
                                     <!-- ini butuh request thumbnail -->
-                                    <img src="/images/<%= news.imageBerita %>">
+                                    <img src="<%= news.imageBerita %>">
                                 </div>
                                 <div class="judul-kategori-berita-terkait">
                                     <div class="judul-berita-terkait">
@@ -156,7 +156,7 @@
                         <% }) %>
                     </div>
                 </div>
-                <div class="iklan-2">
+                <div class="iklan2">
                     <!-- ini butuh request iklan -->
                     <img src="/images/423x288.png"/>
                 </div>
@@ -172,20 +172,20 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        $(document).ready(() => {
-            #token.val = localStorage.getItem('token')
-        })
     
-        let flag = true
-            $('#moon_light').click(function () {
-                if (flag == true) {
+        var flag = localStorage.getItem('flag');
+
+            $('#moon_light').click(function () { // Switching between light and dark mode 
+                if (flag) {
                     flag = false
                     $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                    $('link#styles').attr('href', '/css/newspageDark.css');
+                    $('link#styles').attr('href', '/css/dark.css');
+                    localStorage.setItem('flag', false);
                 } else {
                     flag = true
                     $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                    $('link#styles').attr('href', '/css/newspageLight.css');
+                    $('link#styles').attr('href', '/css/light.css');
+                    localStorage.setItem('flag', true);
                 }
             });
 
@@ -230,5 +230,25 @@
         //         location.href = "/details/:id"
         //     }
         // }
+
+        $('.logo').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+        $('.login-button').click(function () {
+            window.location.href = '/login'
+            return false
+        })
+
+        $('.register-button').click(function () {
+            window.location.href = '/register'
+            return false
+        })
     </script>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/kategori-light.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
     <header>
@@ -223,12 +223,32 @@
             if (flag == true) {
                 flag = false
                 $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                $('link#styles').attr('href', '/css/kategori-dark.css');
+                $('link#styles').attr('href', '/css/dark.css');
             } else {
                 flag = true
                 $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                $('link#styles').attr('href', '/css/kategori-light.css');
+                $('link#styles').attr('href', '/css/light.css');
             }
         });
+
+        $('.logo').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+        $('.login-button').click(function () {
+            window.location.href = '/login'
+            return false
+        })
+
+        $('.register-button').click(function () {
+            window.location.href = '/register'
+            return false
+        })
     </script>
 </html>
