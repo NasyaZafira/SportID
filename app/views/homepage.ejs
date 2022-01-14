@@ -3,9 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/kategori-light.css">
     </head>
 
+    <header>
+        <%- include('../partial/header') %>
+    </header>
     <body>  
         <header>
             <%- include('./partial/header') %>
@@ -14,6 +17,14 @@
         <div class="homepage">
             <div class="flex-container-2">
                 <% berita.slice(-1).forEach(news => { %>
+
+    <body>  
+        <div class="homepage">
+            <div class="flex-container-2">
+                <div class="home-kategori">
+                    <!-- a href untuk kembali ke homepage -->
+                    <a href="">Home</a> > <span style="color: #5B75EB;">Sepak Bola</span>
+                </div>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
                     <a href=""><img src="/images/796x437.png"></a> 
@@ -152,7 +163,7 @@
             </div>
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
-        <div class="iklan-2"><img src="/images/892x228.png"></div>    
+        <div class="iklan-2"><img src="/images/892x228.png"></div>
 
         <footer>
             <%- include('./partial/footer') %>
@@ -200,4 +211,5 @@
             return false
         })
     </script>
+    </body>
 </html>

@@ -23,16 +23,15 @@
 
                 </div>
             </div>
-
             <div class="report-section">
                 <div class="title">
                     Laporkan Berita
                 </div>
 
                 <div class="report-option">
-                    <form name="reportForm" class="option">
+                    <form class="option" action="/laporan" method="post" id="report-form" onsubmit="confirm('Apakah Anda yakin melaporkan berita ini?')">
                         <label for="rep0">
-                            <input type="radio" id="rep0" name="radiobutton" required>
+                            <input type="radio" id="rep0" name="radiobutton" value="Iklan atau spam" required>
                             <span id="form-control">
                                 Iklan atau spam
                             </span>
@@ -41,7 +40,7 @@
                         <br>
 
                         <label for="rep1"> 
-                            <input type="radio" id="rep1" name="radiobutton" required>
+                            <input type="radio" id="rep1" name="radiobutton" value="Mengandung Pornografi atau asusila" required>
                             <span id="form-control">
                                 Mengandung Pornografi atau asusila
                             </span>
@@ -50,7 +49,7 @@
                         <br>
 
                         <label for="rep2"> 
-                            <input type="radio" id="rep2" name="radiobutton" required>
+                            <input type="radio" id="rep2" name="radiobutton" value="Membahayakan atau menjurus tindakan berbahaya" required>
                             <span id="form-control">
                                 Membahayakan atau menjurus tindakan berbahaya
                             </span>
@@ -59,7 +58,7 @@
                         <br>
 
                         <label for="rep3"> 
-                            <input type="radio" id="rep3" name="radiobutton" required>
+                            <input type="radio" id="rep3" name="radiobutton" value="Menyinggung SARA" required>
                             <span id="form-control">
                                 Menyinggung SARA
                             </span>                            
@@ -68,25 +67,28 @@
                         <br>
 
                         <label for="rep4"> 
-                            <input type="radio" id="rep4" name="radiobutton" required>
+                            <input name="radiobutton" value="Lainnya" type="radio" id="rep4" required>
                             <span id="form-control">
                                 Lainnya
                             </span>                       
                         </label>
 
                         <div class="text-container">
-                            <textarea id="rep5" placeholder="Tulis alasan anda..."></textarea>
+                            <textarea id="rep5" name="isipesan" placeholder="Tulis alasan anda..." ></textarea>
                         </div>
+                    </form>
+                    
                 </div>
             </div>
 
             <div class="button-container">
-                <form>
-                    <input type="submit" class="abort" value="Batal">
-                    <input type="submit" class="go" value="Laporkan" id="enter" disabled="true" onclick="reconfirm(); return false;" > 
-                </form>
+                <!-- <form> -->
+                    <input type="reset" class="abort" value="Batal">
+                    <!-- <input type="button" class="go" value="Laporkan" id="enter" onclick="reconfirm()" >  -->
+                    <input type="submit" form="report-form" class="go" value="Laporkan" id="enter" > 
+                <!-- </form> -->
             </div>
-        </form>
+       
         </div>
     </body>
 
@@ -97,6 +99,7 @@
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
     <script>
+
         let flag = true;
         $('#moon_light').click(function () { // Switching between light and dark mode 
             if (flag) {
@@ -133,21 +136,24 @@
         })
 
         function reconfirm() {
+            console.log($("#report-form"))
             if (confirm("Apakah Anda yakin melaporkan berita ini?") == true) {
+                $("#report-form").submit()
                 alert ("Laporan Anda Sudah Dikirim");
                 /* Request redirect ke halaman berita yang ingin dilaporkan dengan menampilkan pesan laporan berhasil terkirim berbentuk alert */
-                window.location.href = '!#';
+                window.location.href = '/';
             } else {
                 alert ("Laporan Anda dibatalkan");
             }
+
         }
 
         $('.logo').click(function (){
-            window.location.href = '/homepage' /* requesting redirect page on logo click */
+            window.location.href = '/' /* requesting redirect page on logo click */
         })
 
         $('.logo-footer').click(function (){
-            window.location.href = '/homepage' /* requesting redirect page on logo click */
+            window.location.href = '/' /* requesting redirect page on logo click */
         })
     </script>
 </html>

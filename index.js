@@ -27,19 +27,6 @@ appInit(app)
 
 
 
-app.get('/register', function(req, res) {
-    res.render('pages/register');
-});
-
-app.get('/report', function(req, res) {
-    res.render('pages/report');
-});
-app.get('/tentang-kami', function(req, res) {
-    res.render('pages/tentang-kami');
-});
-app.get('/kebijakan-privasi', function(req, res) {
-    res.render('pages/kebijakan-privasi');
-});
 
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`)

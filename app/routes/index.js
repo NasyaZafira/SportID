@@ -52,7 +52,7 @@ router.get('/', lihatsemua );
 
 //Router untuk Controller Laporan
 router.get('/laporan', function(req, res) {
-    res.render('pages/laporan');
+    res.render('pages/report');
 });
 router.post('/laporan', addLaporan);
 
