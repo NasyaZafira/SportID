@@ -22,13 +22,13 @@ appInit(app)
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`)
     const db = new Sequelize(
-        config.development.database, 
-        config.development.username,
-        config.development.password,
+        config.production.database, 
+        config.production.username,
+        config.production.password,
         {
-            host : config.development.host,
-            port: config.development.port, 
-            dialect : config.development.dialect,
+            host : config.production.host,
+            port: config.production.port, 
+            dialect : config.production.dialect,
             /*
             dialectOptions: {
                 ssl: {
