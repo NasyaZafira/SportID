@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link class="stylingheader" rel="stylesheet" href="/css/light.css" />
+    <script type="text/javascript">
+        function thisLogin() {
+          window.location.href = '/login';
+        }
+    
+        function thisRegister() {
+          window.location.href = '/register';
+        }
+      </script>
+</head>
+<body>
+    <div class="navbar-tray">
+        <div class="logo">
+        </div>
+
+        <%# highlight category tray request direct page sesuai kategori %>
+        <div class="highlight-ctgr">
+            <ul>
+                <a href="/sepakBola"><li class="highlight-ctgr-items"> Sepak Bola </li></a>
+                <a href="/buluTangkis"><li class="highlight-ctgr-items"> Bulutangkis </li></a>
+                <a href="/basket"><li class="highlight-ctgr-items"> Basket </li></a>
+                <li id="select-sizing">
+                    <a href="#!" class="head-foot-a"> Lainnya &nbsp;
+                        <div class="arrow-down"></div>
+                    </a>
+                    <div class="dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <a href="/voli"><li>Voli</li></a>
+                                <a href="/panahan"><li>Panahan</li></a>
+                                <a href="/renang"><li>Renang</li></a>
+                                <a href="/belaDiri"><li>Bela Diri</li></a>
+                                <a href="/angkatBesi"><li>Angkat Besi</li></a>
+                                <a href="/otomotif"><li>Otomotif</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <%# search bar request direct page sesuai yang dicari %>
+        <form class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"></button>
+
+            <div class="sublogo">
+                <img src="/icon/moon_ic_light.svg" id="moon_light">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+        <%# access class request direct page sesuai pilihan user login/register %>
+        <form class="access">
+            <button type="submit" class="login-button" onclick="thisLogin(); return false;"> Log In </button>
+            <button type="submit" class="register-button" onclick="thisRegister(); return false;"> Register </button>
+        </form>
+    </div>
+</body>
+</html> 

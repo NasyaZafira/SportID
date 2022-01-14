@@ -1,0 +1,647 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 16px;
+    font-family: "Montserrat";
+    transition: background-color 0.5s;
+}
+
+html body {
+    background-color: rgb(25, 39, 52);
+    width: 1440px;
+}
+
+body {
+    width: 1440px;
+    background-color: rgb(25, 39, 52);
+    font-size: 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Montserrat";
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #5B75EB;
+    cursor: pointer;
+}
+
+/* Navbar Start */
+.navbar-tray {
+    display: flex;
+    flex: column wrap;
+    justify-content: center;
+    width: 1440px;
+    height: 82px;
+    background-color: #15202B;
+    box-shadow: 0 8px 10px -10px white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.logo {
+    margin: 10px 0 0 0;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    width: 146px;
+    height: 50px;
+}
+
+#moon_light {
+    width: 16px;
+    height: 16px;
+    background-image: url(/icon/moon_ic_dark.svg);
+    background-repeat: no-repeat;
+}
+
+/* <------------------- Start Highlight Category ------------> */
+.highlight-ctgr {
+    width: 35%;
+    padding-left: 1%;
+    justify-content: space-around;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+ul li {
+    color: white;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.highlight-ctgr ul {
+    margin-top: 6px;
+}
+
+.highlight-ctgr ul>li {
+    display: inline-block;
+}
+
+.highlight-ctgr a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.highlight-ctgr-items {
+    font-size: 13px;
+    line-height: 16px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 5% 0 0 7%;
+    cursor: pointer;
+    -webkit-transition: padding .05s linear;
+    -moz-transition: padding .05s linear;
+    -ms-transition: padding .05s linear;
+    -o-transition: padding .05s linear;
+    transition: padding .05s linear;
+    transition: 0.3s;
+}
+
+#select-sizing {
+    width: 120px;
+    margin-left: 5%;
+    border-radius: 0;
+    background: transparent;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+    position: relative
+}
+
+#select-sizing-user {
+    width: 120px;
+    margin-left: -25px;
+    border-radius: 0;
+    background: transparent;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+    position: relative
+}
+
+#user {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 30px 0 31px 10px;
+    background-image: url(/icon/profile_ic_dark.svg);
+    background-repeat: no-repeat;
+}
+
+#select-sizing a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#select-sizing:hover {
+    color: #5b75eb;
+    border-style: none;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.dropOut .triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    top: -10px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.arrow-down {
+    width: 8px;
+    height: 8px;
+    margin: -14px 0 0 65px;
+    background-image: url(/icon/arrow_down_dark_ic.svg);
+    background-repeat: no-repeat;
+}
+
+.arrow-down-user {
+    width: 8px;
+    height: 8px;
+    margin: -10px 0 0 120px;
+    background-image: url(/icon/arrow_down_dark_ic.svg);
+    background-repeat: no-repeat;
+}
+
+.dropdownContain {
+    width: 160px;
+    position: absolute;
+    z-index: 2;
+    left: 72px;
+    margin-left: -80px;
+    /* half of width */
+    top: -400px;
+    color: white;
+}
+
+.dropOut {
+    font-size: 13px;
+    width: 160px;
+    background: white;
+    float: left;
+    position: relative;
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.dropOut ul {
+    float: left;
+    padding: 10px 0;
+
+}
+
+.dropOut ul li {
+    text-align: left;
+    float: left;
+    width: 125px;
+    padding: 12px 0 10px 15px;
+    margin: 0px 10px;
+    color: black;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -ms-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+.dropOut ul li:hover {
+    background: #15202B;
+    color: white;
+}
+
+.highlight-ctgr ul li:hover a {
+    color: #5B75EB;
+}
+
+.highlight-ctgr ul li:hover .dropdownContain {
+    top: 25px;
+}
+
+.highlight-ctgr ul li:hover .underline {
+    border-bottom-color: #777;
+}
+
+.highlight-ctgr ul li:hover .dropOut {
+    opacity: 1;
+    margin-top: 8px;
+}
+
+select option {
+    background: white;
+    color: black;
+    border-radius: 0%;
+}
+
+/* <------------------- End Highlight Category --------------------> */
+
+.search-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 30%;
+    margin-right: 0;
+}
+
+form.search-bar input[type="search"],
+select {
+    width: 347px;
+    height: 35px;
+    background: #f1f1f1;
+    border: transparent;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+
+form.search-bar button {
+    border: transparent;
+    width: 40px;
+    height: 32px;
+    margin-left: -50px;
+    margin-top: 21px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-image: url(/icon/search_ic.svg);
+    background-size: 12px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sublogo {
+    margin: 30px 0 0 10%;
+    width: 16px;
+    height: 16px;
+}
+
+.access {
+    display: flex;
+    flex: column wrap;
+    justify-content: space-between;
+}
+
+.access-user {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.access-user-dropdownContain {
+    width: 160px;
+    position: absolute;
+    z-index: 2;
+    left: 45px;
+    top: 25px;
+}
+
+.access-user ul {
+    margin-top: 6px;
+}
+
+.access-user ul>li {
+    display: inline-block;
+}
+
+.access-user a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.access-user ul li:hover a {
+    color: #5B75EB;
+}
+
+.access-user ul li:hover .dropdownContain {
+    top: 25px;
+}
+
+.access-user ul li:hover .underline {
+    border-bottom-color: #777;
+}
+
+.access-user ul li:hover .dropOut {
+    opacity: 1;
+    margin-top: 8px;
+}
+
+form.access button {
+    width: 68px;
+    height: 29px;
+    left: 1126px;
+    top: 26px;
+    margin: 25px 10px 0 0;
+
+    border: 1px solid white;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 600;
+}
+
+.login-button {
+    background: transparent;
+    border: solid 2px white;
+    color: black;
+    transition: ease-in-out;
+}
+
+.login-button a {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out;
+}
+
+.login-button a:hover {
+    color: #5b75eb;
+}
+
+.register-button {
+    background: white;
+    border: none;
+    color: black;
+    transition: 0s;
+}
+
+.register-button a {
+    text-decoration: none;
+    color: black;
+    transition: 0s;
+}
+
+.register-button a:hover {
+    color: white;
+    transition: none;
+}
+
+.highlight-ctgr-items:hover {
+    color: #5b75eb;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: transparent;
+    border: solid #5b75eb;
+    color: #5b75eb;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background: #5b75eb;
+    border: solid #5b75eb;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navbar End */
+
+
+/* Kotak Login Start */
+
+.kotak_login {
+    width: 500px;
+    background-color: #15202B;
+    margin: 250px auto auto auto;
+    padding: 60px 60px;
+    font-family: "Montserrat";
+}
+
+.logoLogin {
+    margin: 10px auto 35px 120px;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    width: 146px;
+    height: 50px;
+}
+
+.par1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: "Montserrat";
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form_login {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1.5px solid white;
+    background-color: #15202B;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 540;
+}
+
+input[type=text] {
+    background-color: #15202B;
+    color: white;
+}
+
+form .input-icon {
+    position: relative;
+}
+
+form input+i {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    color: black;
+}
+
+form input:focus {
+    border: 1px solid #0099ff;
+    color: #000
+}
+
+form input:focus+i {
+    color: #0099ff;
+}
+
+.tombolLogin {
+    background: #5b75eb;
+    color: white;
+    display: grid;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 0;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    ;
+}
+
+.pendaftaranAkun {
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+/* Kotak Login End */
+
+
+/* Footer Start */
+.footer-tray {
+    display: flex;
+    flex: column wrap;
+    align-items: center;
+    width: 1440px;
+    height: 210px;
+    background: #15202B;
+    position: absolute;
+    left: 0px;
+    top: 1090px;
+}
+
+.logo-footer {
+    width: 206px;
+    height: 96px;
+    font-weight: 600;
+    margin: 100px 150px 100px 150px;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 64px;
+    align-items: center;
+    align-self: center;
+}
+
+#rights-footer {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: white;
+    margin: 70px 0 0 0;
+}
+
+.category-tray {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80px;
+    height: 80px;
+    margin: 0 25px 0 50px;
+}
+
+.internal-tc {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 50px 0 150px;
+    width: 118px;
+    height: 80px;
+}
+
+.head-foot-a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.head-foot-a:hover {
+    color: #5b75eb;
+    cursor: pointer;
+}
+
+#profile-option {
+    width: 200px;
+    margin-left: 5%;
+    border-radius: 0;
+    padding: 1%;
+    border-style: none;
+    border-width: 0;
+    background: transparent;
+}
+
+/* Footer End */
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 6px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5b75eb;
+    border-radius: 6px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5b75eb;
+    border-radius: 6px
+}
+
+/* Scroll Bar */
