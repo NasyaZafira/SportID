@@ -11,6 +11,14 @@ module.exports = {
       isi_komen: {
         type: Sequelize.TEXT
       },
+      user_name : {
+        allowNull: false,
+        type: Sequelize.STRING,
+        reference: {
+          model: user,
+          key: 'name'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

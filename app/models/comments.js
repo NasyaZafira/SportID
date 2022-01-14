@@ -14,7 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   comments.init({
-      isi_komen: DataTypes.TEXT
+      isi_komen: DataTypes.TEXT,
+      user_name: {
+        allowNull: false,
+        type: DataTypes.STRING,
+        references: {
+          model: user,
+          key: 'name'
+        }
+      }
   }, {
     sequelize,
     modelName: 'comments',

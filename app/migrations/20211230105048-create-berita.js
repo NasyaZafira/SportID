@@ -17,6 +17,14 @@ module.exports = {
       kategori: {
         type: Sequelize.STRING
       },
+      admin_name : {
+        allowNull: false,
+        type: Sequelize.STRING,
+        reference: {
+          model: admin,
+          key: 'nama'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

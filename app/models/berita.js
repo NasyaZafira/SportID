@@ -16,7 +16,15 @@ module.exports = (sequelize, DataTypes) => {
   berita.init({
     judulBerita: DataTypes.STRING,
     isiBerita: DataTypes.TEXT,
-    kategori: DataTypes.STRING
+    kategori: DataTypes.STRING,
+    admin_name: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      references: {
+        model: admin,
+        key: 'nama'
+      }
+    },
   }, {
     sequelize,
     modelName: 'berita',

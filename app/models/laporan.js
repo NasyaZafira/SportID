@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   laporan.init({
     isilaporan: DataTypes.TEXT,
+    tipelaporan: DataTypes.STRING,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {
