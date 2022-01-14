@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/terms-n-cond.css">
+    </head>
+
+    <body>
+        <header>
+            <%- include ('../partial/header-tnc') %>
+        </header>
+
+        <div class="content">
+            <h1> Tentang Kami </h1>
+            <p id="intro"> Diluncurkan pada Januari 2022, Sport ID adalah Platform Media Berita Digital yang khusus mengangkat berita - berita olahraga di Indonesia. Sport ID merupakan
+                hasil <span id="bold"> Project SYNRGY ACADEMY BCA X GRAB </span> dari Tim D dengan hasil riset dan proses pembuatan selama kurang lebih satu bulan
+            </p>       
+            
+            <div class="vismis">
+                <div class="box-cont">
+                    <h2> Visi </h2>
+                    <p id="goals"> Sport ID berambisi menumbuhkan jiwa nasionalisme kepada seluruh masyarakat Indonesia melalui pemberitaan olahraga yang positif.
+                        Selain itu, Sport ID memiliki keinginan turut serta membantu memajukan olahraga Tanah Air.
+                    </p>
+                </div>
+
+                <div class="line"></div>
+    
+                <div class="box-cont">
+                    <h2> Misi </h2>
+                        <ol id="goals">
+                            <li>
+                            Menyuguhkan informasi positif yang berkualitas dari olahraga nasional maupun internasional
+                            secara aktual, faktual, mendidik, atraktif, dan menghibur dari seluruh arena olahraga secara mendalam dan menyeluruh.
+                            </li>
+
+                            <li>
+                            Menampung dan menyalurkan seluruh kegiatan olahraga dari komunitas atau organisasi di seluruh Indonesia,
+                            yang bertujuan untuk membangun kedekatan emosional dalam berbagi informasi seputar olahraga.
+                            </li>
+                        </ol>
+                </div>
+            </div>
+
+            <div class="team-d">
+                <h2 id="our-team"> Tim Sport ID </h2>
+                <p id="sub-team"> Tim D - Mini Project SYNRGY ACADEMY BCA X GRAB </p>
+            </div>
+
+            <div class="division">
+                <div class="members">
+                    <h3> Back End Developer </h3>
+                    <ul id="names">
+                        <li>Zahrotul Aulia (Lead)</li>
+                        <li>Muhammad Ma'ruf Rahman</li>
+                        <li>Gilang Wahyudi</li>
+                        <li>Nasya Zafira</li>
+                        <li>Kevin Rimbun</li>
+                    </ul>
+                </div>
+
+                <div class="members">
+                    <h3> Front End Developer </h3>
+                    <ul id="names">
+                        <li>Muhammad Tohir Rafly (Lead)</li>
+                        <li>Imelda Averina</li>
+                        <li>Sheilla Sara Yasmine</li>
+                        <li>Krissy Vieri</li>
+                        <li>Dolly Miftah Rizky Lubis</li>                        
+                    </ul>
+                </div>
+
+                <div class="members">
+                    <h3>UI/UX Developer </h3>
+                    <ul id="names">
+                        <li>Muhamad Rafli Adiansyah (Lead)</li>
+                        <li>Shinta Dewi Pramesti</li>
+                        <li>Tiara Azzelia Putri</li>                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <%- include ('../partial/footer') %>
+        </footer>
+    </body>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+        $('.logo').click(function (){
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/homepage' /* requesting redirect page on logo click */
+        })
+    </script>
+</html>
