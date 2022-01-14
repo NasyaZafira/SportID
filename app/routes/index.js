@@ -2,6 +2,11 @@ const express = require('express')
 const router = express.Router()
 const multer = require('multer')
 const path = require('path')
+
+//Import Middleware
+const { checkLoginUser, checkLoginAdmin } = require('../middleware/checkLogin')
+
+//Import Controller
 const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
 const { addLaporan } = require('../controllers/controllerLaporan');
@@ -43,10 +48,13 @@ const upload = multer({
 })
 
 //Router untuk Controller Comments
-router.post('/comments', addKomen);
+router.post('/details/:id', checkLoginUser, addKomen);
     
 //Router untuk Controller Register
-router.get('/register', (req, res) => res.render('pages/register'))
+router.get('/register', (req, res) => res.render('pages/register', {
+    loggedName: req.session.userName, 
+    loggedNameAdmin: req.session.adminName
+}))
 router.post('/register', register)
 
 //Router untuk Memanggil homepage.ejs
@@ -54,7 +62,10 @@ router.get('/', lihatsemua );
 
 //Router untuk Controller Laporan
 router.get('/laporan', function(req, res) {
-    res.render('pages/report');
+    res.render('pages/report', {
+        loggedName: req.session.userName, 
+        loggedNameAdmin: req.session.adminName
+    });
 });
 router.post('/laporan', addLaporan);
 
@@ -64,19 +75,20 @@ router.get('/pusatbantuan', pusatBantuan)
 //Router untuk tentang kami
 router.get('/tentangKami', tentangKami)
 
-router.get('/profile/:id', showEditUser)
+//Router untuk Controller User
+router.get('/profile/:id', checkLoginUser, showEditUser)
 router.post('/profile/:id/success', editUser)
 
 //Router untuk Controller Newspage
 router.get('/details/:id', getThumbnailBerita)
 
 //Router untuk Controller Admin
-router.get('/admin', showAllBerita)
+router.get('/admin', checkLoginAdmin, showAllBerita)
 router.post('/admin/upload', upload.single('imageBerita'), createBerita)
-router.get('/admin/upload', showFormUpload)
-router.get('/admin/update/:id', showUpdateBerita)
+router.get('/admin/upload', checkLoginAdmin, showFormUpload)
+router.get('/admin/update/:id', checkLoginAdmin, showUpdateBerita)
 router.post('/admin/success/:id', upload.single('imageBeritaUpdate'), updateBerita)
-router.get('/admin/delete/:id', deleteBerita)
+router.get('/admin/delete/:id', checkLoginAdmin, deleteBerita)
 
 //Router untuk Controller Login
 router.get("/login", controllerLogin.getLogin);

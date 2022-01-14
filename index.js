@@ -8,6 +8,7 @@ const config = require('./app/config/config.json');
 const { password } = require('pg/lib/defaults');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const session = require('express-session');
 
 module.exports = config
 const bodyParser = require("body-parser");
@@ -53,6 +54,15 @@ function appInit(app) {
     app.use(express.urlencoded({extended: true}));
     app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());
+    const oneDay = 1000 * 60 * 60;
+    app.use(
+        session({
+            secret: 'thisSecretKey',
+            saveUninitialized: true,
+            cookie: { maxAge: oneDay },
+            resave: false
+        })
+    )
     
     //Static Files
     app.use(express.static('app/public'))

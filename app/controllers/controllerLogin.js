@@ -7,7 +7,7 @@ const { Op } = require("sequelize");
 
 module.exports = {
   getLogin(req, res) {
-    res.render("login.ejs");
+    res.render("pages/login", {loggedName: req.session.userName, loggedNameAdmin: req.session.adminName});
   },
   postLogin(req, res) {
       user.findOne({
@@ -23,6 +23,8 @@ module.exports = {
             function(err, result) {
               if(result) {
                 const token = jwt.sign({data}, 'pass');
+                req.session.userName = data.name
+                req.session.loggedUser = data
                 console.log("Berhasil Login")
                 res.redirect("/"); 
               }
@@ -42,6 +44,8 @@ module.exports = {
                 function(err, result) {
                   if(result) {
                     const token = jwt.sign({dataadm}, 'pass');
+                    req.session.adminName = dataadm.name
+                    req.session.loggedAdmin = dataadm
                     console.log("Berhasil Login") 
                     res.redirect('/admin');
                   }

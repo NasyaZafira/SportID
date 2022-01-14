@@ -10,6 +10,7 @@
   font-family: 'Montserrat';
   box-sizing: border-box;
 }
+
 .logo_register {
   display: block;
   margin-bottom: 20px;
@@ -172,6 +173,7 @@ label {
   height: 42px;
   margin-bottom: 0px;
 }
+
 #eye {
   position: absolute;
   margin-left: 300px;

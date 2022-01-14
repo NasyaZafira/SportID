@@ -18,7 +18,7 @@ const lihatsemua = async (req, res) => {
           ]
         })
 
-        res.render("homepage" , {berita:dbBerita, betren});
+        res.render("homepage" , {berita:dbBerita, betren, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName});
       })
       .catch(err => {
         console.log(err)

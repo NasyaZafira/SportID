@@ -130,7 +130,7 @@
                 <div class="komentar-section">
                     <div class="tulis-komentar">
                         <div class="profil-komentar"></div>
-                        <form class="kolom-komentar" action="/comments" method="post" id="hasilKomentar"> 
+                        <form class="kolom-komentar" action="/details/<%= Berita.id %>" method="post" id="hasilKomentar"> 
                             <input type="text" placeholder="Tulis komentar" name="Komentar"/>
                             <input type="text" id="token" hidden name="token">
                             <a onclick="sendKomentar()"> 

@@ -4,6 +4,8 @@
   @import "register-light.css";
   @import "kategori-light.css";
   @import "newspageLight.css";
+  @import "login-light.css";
+  @import "profile-light.css";
   
   @font-face {
     font-family: Montserrat;
@@ -26,26 +28,26 @@
   }
 
   * {
-      transition: background-color 0.2s;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    transition: background-color 0.2s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   body {
-      display: flex;
-      width: 100vw;
-      max-width: 100%;
-      flex-flow: column wrap;
-      justify-content: center;
-      background-color: #e5e5e5;
-      margin: 0;
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #e5e5e5;
+    margin: 0;
   }
 
   a {
-      text-decoration: none;
-      color: black;
-      transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
   }
 
   a:hover {
@@ -76,4 +78,5 @@
     background: #15202B;
     border-radius: 6px
   }
+
   /* Scroll Bar */

@@ -7,7 +7,9 @@ function register(req, res) {
     .then(admin => {
       res.redirect("/login")
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+      res.redirect('/register')
+    })
   } else {
   user.register(req.body)
     .then(user => {
