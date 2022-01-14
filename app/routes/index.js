@@ -13,6 +13,8 @@ const {createBerita, showFormUpload, showAllBerita,
 const  {lihatsemua} = require('../controllers/controllerBeritaHomepage')
 const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
 const controllerLogin = require("../controllers/controllerLogin");
+const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
+const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -79,5 +81,19 @@ router.get('/admin/delete/:id', deleteBerita)
 //Router untuk Controller Login
 router.get("/login", controllerLogin.getLogin);
 router.post("/login", controllerLogin.postLogin);
+
+//Router untuk Kategori Berita
+router.get('/angkatBesi', angkatBesi)
+router.get('/basket', basket)
+router.get('/belaDiri', belaDiri)
+router.get('/buluTangkis', buluTangkis)
+router.get('/otomotif', otomotif)
+router.get('/panahan', panahan)
+router.get('/renang', renang)
+router.get('/sepakBola', sepakBola)
+router.get('/voli', voli)
+
+//Router untuk Kebijakan Privasi
+router.get('/kebijakanprivasi', kebijakanPrivasi)
 
 module.exports = router
