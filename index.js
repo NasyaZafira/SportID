@@ -3,7 +3,7 @@ const {
     Sequelize
 } = require('sequelize')
 const router = require('./app/routes/index')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const config = require('./app/config/config.json');
 const { password } = require('pg/lib/defaults');
 const jwt = require('jsonwebtoken');
