@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   berita.init({
+    imageBerita: DataTypes.STRING,
     judulBerita: DataTypes.STRING,
     isiBerita: DataTypes.TEXT,
     kategori: DataTypes.STRING,
@@ -24,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         model: admin,
         key: 'nama'
       }
-    },
+    }
   }, {
     sequelize,
     modelName: 'berita',
