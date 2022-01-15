@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="navbar-tray">
+        <div class="logo">
+        </div>
+
+        <%# highlight category tray request direct page sesuai kategori %>
+        <div class="highlight-ctgr">
+            <ul>
+                <li class="highlight-ctgr-items" id="option"><a href="/tentang-kami"> Tentang Kami </a></li>
+                <li class="highlight-ctgr-items" id="option"><a href="/pusat-bantuan"> Pusat Bantuan </a>  </li>
+                <li class="highlight-ctgr-items" id="option"><a href="/kebijakan-privasi"> Kebijakan dan Privasi </a> </li>
+            </ul>
+        </div>
+
+        <div class="access-user">
+            <div class="sublogo" id="user">
+                <%# request profile pict from database on the css %>
+            </div>
+            <ul id="userid">
+            <li id="select-sizing-user">
+                <a href="#!" class="head"> Nama User <%# request user first and second name from database %>
+                    <div class="arrow-down-user"></div>
+                </a>
+                <div class="access-user-dropdownContain">
+                    <div class="dropOut">
+                        <div class="triangle"></div>
+                        <ul>
+                            <%# request direct page to lists below %>
+                            <li><a href="#!">Ubah Profile</a></li>
+                            <li><a href="#!">Keluar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

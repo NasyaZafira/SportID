@@ -1,0 +1,84 @@
+@import "navbar-footer-dark.css";
+@import "homepage-dark.css";
+@import "report-dark.css";
+@import "register-dark.css";
+@import "kategori-dark.css";
+@import "newspageDark.css";
+@import "login-dark.css";
+@import "profile-dark.css";
+
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/font/Montserrat-Regular.ttf);
+}
+
+  @font-face {
+    font-family: Montserrat-B;
+    src: url(/font/Montserrat-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Med;
+    src: url(/font/Montserrat-Medium.ttf);
+  }
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+}
+
+* {
+  transition: background-color 0.1s;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  flex-flow: column wrap;
+  justify-content: center;
+  background-color: rgb(25, 39, 52);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #5B75EB;
+  cursor: pointer;
+}
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 6px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5b75eb;
+  border-radius: 6px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5b75eb;
+  border-radius: 6px
+}
+
+/* Scroll Bar */

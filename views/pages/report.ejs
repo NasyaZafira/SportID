@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
+    </head>
+
+    <header>
+        <%- include('../partial/header-post') %>
+    </header>
+
+    <body>
+        <div class="main-container">
+            <div class="selected-item">
+                <div class="info">
+                    <a href="" id="selected-item-title"> Komentar Pedas Shin Tae-yong Bikin Kaget Pelatih Thailand Jelang Hadapi Timnas Indonesia di Final Piala AFF 2020 </a>
+                    <a href="" id="item-category"><span style="color:#5B75EB">Sepak Bola</span> | Sport </a>
+                </div>
+
+                <div class="item-thumbnail">
+
+                </div>
+            </div>
+            <div class="report-section">
+                <div class="title">
+                    Laporkan Berita
+                </div>
+
+                <div class="report-option">
+                    <form class="option" action="/laporan" method="post" id="report-form" onsubmit="confirm('Apakah Anda yakin melaporkan berita ini?')">
+                        <label for="rep0">
+                            <input type="radio" id="rep0" name="radiobutton" value="Iklan atau spam" required>
+                            <span id="form-control">
+                                Iklan atau spam
+                            </span>
+                        </label>
+
+                        <br>
+
+                        <label for="rep1"> 
+                            <input type="radio" id="rep1" name="radiobutton" value="Mengandung Pornografi atau asusila" required>
+                            <span id="form-control">
+                                Mengandung Pornografi atau asusila
+                            </span>
+                        </label>
+
+                        <br>
+
+                        <label for="rep2"> 
+                            <input type="radio" id="rep2" name="radiobutton" value="Membahayakan atau menjurus tindakan berbahaya" required>
+                            <span id="form-control">
+                                Membahayakan atau menjurus tindakan berbahaya
+                            </span>
+                        </label>
+
+                        <br>
+
+                        <label for="rep3"> 
+                            <input type="radio" id="rep3" name="radiobutton" value="Menyinggung SARA" required>
+                            <span id="form-control">
+                                Menyinggung SARA
+                            </span>                            
+                        </label>
+
+                        <br>
+
+                        <label for="rep4"> 
+                            <input name="radiobutton" value="Lainnya" type="radio" id="rep4" required>
+                            <span id="form-control">
+                                Lainnya
+                            </span>                       
+                        </label>
+
+                        <div class="text-container">
+                            <textarea id="rep5" name="isipesan" placeholder="Tulis alasan anda..." ></textarea>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+
+            <div class="button-container">
+                <!-- <form> -->
+                    <input type="reset" class="abort" value="Batal">
+                    <!-- <input type="button" class="go" value="Laporkan" id="enter" onclick="reconfirm()" >  -->
+                    <input type="submit" form="report-form" class="go" value="Laporkan" id="enter" > 
+                <!-- </form> -->
+            </div>
+       
+        </div>
+    </body>
+
+    <footer>
+        <%- include('../partial/footer') %>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+    <script>
+
+        let flag = true;
+        $('#moon_light').click(function () { // Switching between light and dark mode 
+            if (flag) {
+                flag = false
+                $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+                $('link#styles').attr('href', '/css/dark.css');
+            } else {
+                flag = true
+                $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+                $('link#styles').attr('href', '/css/light.css');
+            }
+        });
+
+        for (let i = 0; i < 5; i++) {
+            $('#rep' + i).click(function () {
+                if (i != 4) {
+                    $('#enter').prop('disabled', false);
+                } else {
+                    $('#rep5').focus();
+                }
+            })
+        }
+
+        $('#rep5').bind('input propertychange', function() {
+            if(this.value.length){
+                $('#enter').prop('disabled', false);
+            } else {
+                $('#enter').prop('disabled', true);
+            }
+        });
+
+        $('#rep5').click(function () {
+            $('#rep4').click();
+        })
+
+        function reconfirm() {
+            console.log($("#report-form"))
+            if (confirm("Apakah Anda yakin melaporkan berita ini?") == true) {
+                $("#report-form").submit()
+                alert ("Laporan Anda Sudah Dikirim");
+                /* Request redirect ke halaman berita yang ingin dilaporkan dengan menampilkan pesan laporan berhasil terkirim berbentuk alert */
+                window.location.href = '/';
+            } else {
+                alert ("Laporan Anda dibatalkan");
+            }
+
+        }
+
+        $('.logo').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+
+        $('.logo-footer').click(function (){
+            window.location.href = '/' /* requesting redirect page on logo click */
+        })
+    </script>
+</html>

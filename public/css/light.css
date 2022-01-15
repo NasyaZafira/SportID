@@ -1,0 +1,82 @@
+  @import "navbar-footer-light.css";
+  @import "homepage-light.css";
+  @import "report-light.css";
+  @import "register-light.css";
+  @import "kategori-light.css";
+  @import "newspageLight.css";
+  @import "login-light.css";
+  @import "profile-light.css";
+  
+  @font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-B;
+    src: url(/font/Montserrat-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Med;
+    src: url(/font/Montserrat-Medium.ttf);
+  }
+
+  * {
+    transition: background-color 0.2s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #e5e5e5;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: #5B75EB;
+  }
+
+  /* Scroll Bar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #15202B;
+    border-radius: 6px
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15202B;
+    border-radius: 6px
+  }
+
+  /* Scroll Bar */

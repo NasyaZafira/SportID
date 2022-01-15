@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="navbar-tray">
+        <div class="logo">
+        </div>
+
+        <%# highlight category tray request direct page sesuai kategori %>
+        <div class="highlight-ctgr">
+            <ul>
+                <li class="highlight-ctgr-items"><a href="/sepakbola">Sepak Bola</a></li>
+                <li class="highlight-ctgr-items"><a href="/bulutangkis">Bulutangkis</a></li>
+                <li class="highlight-ctgr-items"><a href="/basket">Basket</a></li>
+                <li class="highlight-ctgr-items" id="select-sizing">
+                    <a href="#!" class="head"> Lainnya &nbsp;
+                        <div class="arrow-down"></div>
+                    </a>
+                    <div class="dropdownContain">
+                        <div class="dropOut">
+                            <div class="triangle"></div>
+                            <ul>
+                                <li><a href="/bolavoli">Voli</a></li>
+                                <li><a href="/panahan">Panahan</a></li>
+                                <li><a href="/renang">Renang</a></li>
+                                <li><a href="/beladiri">Bela Diri</a></li>
+                                <li><a href="/angkatbesi">Angkat Besi</a></li>
+                                <li><a href="/otomotif">Otomotif</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <%# search bar request direct page sesuai yang dicari %>
+        <form class="search-bar">
+            <input type="text" id="search" placeholder="Search...">
+            <button type="submit"></button>
+
+            <div class="sublogo">
+                <div id="moon_light"> </div>
+            </div>
+        </form>
+
+        <%# access class request direct page sesuai pilihan user login/register %>
+        <% if (loggedName) { %>
+            <div class="access-user">
+                <div class="sublogo" id="user">
+                    <%# request profile pict from database on the css %>
+    
+                </div>
+                <ul>
+                    <li id="select-sizing-user">
+                        <a href="#!" class="nama-user"><%= loggedName %>
+                            <div class="arrow-down-user"></div>
+                        </a>
+                        <div class="access-user-dropdownContain">
+                            <div class="dropOut">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <%# request direct page to lists below %>
+                                    <li> <a href="#!">Ubah Profile</a></li>
+                                    <li><a href="#!">Keluar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        <% } else if (loggedNameAdmin) { %>
+            <div class="access-user">
+                <div class="sublogo" id="user">
+                    <%# request profile pict from database on the css %>
+    
+                </div>
+                <ul>
+                    <li id="select-sizing-user">
+                        <a href="#!" class="nama-user"><%= loggedNameAdmin %>
+                            <div class="arrow-down-user"></div>
+                        </a>
+                        <div class="access-user-dropdownContain">
+                            <div class="dropOut">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <%# request direct page to lists below %>
+                                    <li> <a href="#!">Ubah Profile</a></li>
+                                    <li><a href="#!">Keluar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        <% } else { %>
+        <form class="access">
+            <button type="submit" class="login-button"> Log In </button>
+            <button type="submit" class="register-button"> Register </button>
+        </form>
+        <% } %>
+    </div>
+</body>
+
+</html>
