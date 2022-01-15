@@ -13,9 +13,9 @@ const showAllBerita = async (req, res) => {
             ]
         })
         if (dbBerita.length < 1) {
-            res.status(404).render('pages/admin/admin', {dbBerita: dbBerita})
+            res.status(404).render('pages/admin', {dbBerita: dbBerita})
         }
-        res.status(200).render('pages/admin/admin', {dbBerita: dbBerita})
+        res.status(200).render('pages/admin', {dbBerita: dbBerita})
     } catch (err) {
         res.status(503).send('Internal server error')
     }
@@ -52,10 +52,7 @@ const createBerita = async (req, res) => {
         })
     }
 
-    res.status(200).json({
-        message: 'Data berhasil ditambahkan',
-        data: dbBerita
-    })
+    res.status(200).redirect('/admin/list-berita')
 }
 
 //Deklarasi untuk menampilkan halaman updateBerita
@@ -85,6 +82,9 @@ const updateBerita = async (req, res) => {
         }
     }
 
+    const wib = ' WIB'
+    const isDateTime = moment().locale('id').format('DD MMMM YYYY HH:mm')
+
     if (!req.file) {
         const data = await berita.update({
             judulBerita: judul,
@@ -92,7 +92,7 @@ const updateBerita = async (req, res) => {
             kategori: kategori,
             admin_name: author,
             isTrending: req.body.trending,
-            updatedAt: updatedAt
+            updatedAt: isDateTime + wib
         }, selector)
 
         if(!data) {
@@ -107,7 +107,7 @@ const updateBerita = async (req, res) => {
             kategori: kategori,
             admin_name: author,
             isTrending: req.body.trending,
-            updatedAt: updatedAt
+            updatedAt: isDateTime + wib
         }, selector)
 
         if(!data) {
@@ -116,7 +116,7 @@ const updateBerita = async (req, res) => {
         }
     }
 
-    res.redirect('/admin')
+    res.redirect('/admin/list-berita')
 }
 
 //Deklarasi untuk delete Berita
@@ -134,7 +134,7 @@ const deleteBerita = async (req, res) => {
         return
     }
 
-    res.redirect('/admin')
+    res.redirect('/admin/list-berita')
 }
 
 module.exports = {
