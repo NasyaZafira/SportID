@@ -2,7 +2,6 @@ const { user } = require("../models/index");
 const { admin } = require("../models/index");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { password } = require("pg/lib/defaults");
 const { Op } = require("sequelize");
 
 module.exports = {
@@ -44,7 +43,7 @@ module.exports = {
                 function(err, result) {
                   if(result) {
                     const token = jwt.sign({dataadm}, 'pass');
-                    req.session.adminName = dataadm.name
+                    req.session.adminName = dataadm.nama
                     req.session.loggedAdmin = dataadm
                     console.log("Berhasil Login") 
                     res.redirect('/admin');

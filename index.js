@@ -50,8 +50,8 @@ app.listen(PORT, () => {
 function appInit(app) {
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
-    app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false}));
     const oneDay = 1000 * 60 * 60;
     app.use(
         session({

@@ -20,6 +20,7 @@ const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
 const controllerLogin = require("../controllers/controllerLogin");
 const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
 const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
+const {showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser} = require('../controllers/admin')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -76,19 +77,24 @@ router.get('/pusatbantuan', pusatBantuan)
 router.get('/tentangKami', tentangKami)
 
 //Router untuk Controller User
-router.get('/profile/:id', checkLoginUser, showEditUser)
-router.post('/profile/:id/success', editUser)
+router.get('/profile', checkLoginUser, showEditUser)
+router.post('/profile/success', editUser)
 
 //Router untuk Controller Newspage
 router.get('/details/:id', getThumbnailBerita)
 
 //Router untuk Controller Admin
-router.get('/admin', checkLoginAdmin, showAllBerita)
-router.post('/admin/upload', upload.single('imageBerita'), createBerita)
-router.get('/admin/upload', checkLoginAdmin, showFormUpload)
-router.get('/admin/update/:id', checkLoginAdmin, showUpdateBerita)
-router.post('/admin/success/:id', upload.single('imageBeritaUpdate'), updateBerita)
-router.get('/admin/delete/:id', checkLoginAdmin, deleteBerita)
+router.get('/admin', checkLoginAdmin, showUpdateAdmin)
+router.post('/admin/update', updateAdmin)
+router.get('/admin/list-berita', checkLoginAdmin, showAllBerita)
+router.post('/admin/list-berita/upload', upload.single('imageBerita'), createBerita)
+router.get('/admin/list-berita/upload', checkLoginAdmin, showFormUpload)
+router.get('/admin/list-berita/update/:id', checkLoginAdmin, showUpdateBerita)
+router.post('/admin/list-berita/update/:id/success', upload.single('imageBeritaUpdate'), updateBerita)
+router.get('/admin/list-berita/delete/:id', checkLoginAdmin, deleteBerita)
+router.get('/admin/list-user', checkLoginAdmin, showAllUser)
+router.get('/admin/list-user/update/:id', checkLoginAdmin, showUpdatePasswordUser)
+router.post('/admin/list-user/update/:id/success', updatePasswordUser)
 
 //Router untuk Controller Login
 router.get("/login", controllerLogin.getLogin);
@@ -107,5 +113,11 @@ router.get('/bolavoli', voli)
 
 //Router untuk Kebijakan Privasi
 router.get('/kebijakanprivasi', kebijakanPrivasi)
+
+//Menghapus Session
+router.get('/logout', (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
+  })
 
 module.exports = router
