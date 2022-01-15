@@ -8,7 +8,7 @@
 
     <body>  
         <header>
-            <%- include('./partial/header') %>
+            <%- include('./partial/header', {loggedName}, {loggedNameAdmin}) %>
         </header>
 
         <div class="homepage">
@@ -64,7 +64,7 @@
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href="/details/<%= newsEdu.id %>"><%= newsEdu.judulBerita %>></a>
+                            <a href="/details/<%= newsEdu.id %>"><%= newsEdu.judulBerita %></a>
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->

@@ -21,13 +21,13 @@
             <% berita.slice(-1).forEach(angkatbesi=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<% angkatbesi.imageBerita %>"></a>
+                    <a href=""><img src="<%= angkatbesi.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
                         <a href="">
-                            <% angkatbesi.judulBerita %>
+                            <%= angkatbesi.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
-                            <% angkatbesi.updateAt %>
+                            <%= angkatbesi.updatedAt %>
                         </div>
                     </div>
                 </div>
@@ -50,13 +50,13 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <%# ini butuh request thumbnail %>
-                            <img src="<% angkatbesi.imageBerita %>">
+                            <img src="<%= angkatbesi.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <%# ini butuh request judul %>
                                 <a href="">
-                                    <% angkatbesi.judulBerita %>
+                                    <%= angkatbesi.judulBerita %>
                                 </a>
                         </div>
                         <div class="edu-jenis-berita">
@@ -78,7 +78,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<% angkatbesi.imageBerita %>">
+                                <img src="<%= angkatbesi.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
@@ -87,7 +87,7 @@
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="/angkatbesi">
-                                    <% angkatbesi.judulBerita %>
+                                    <%= angkatbesi.judulBerita %>
                                 </a>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <%# ini butuh request thumbnail %>
-                                    <img src="<% angkatbesi.imageBerita %>">
+                                    <img src="<%= angkatbesi.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <%# ini butuh request kategori %>
@@ -111,7 +111,7 @@
                             <div class="trending-judul-berita">
                                 <%# ini butuh request judul %>
                                     <a href="/angkatbesi">
-                                        <% angkatbesi.judulBerita %>
+                                        <%= angkatbesi.judulBerita %>
                                     </a>
                             </div>
                         </div>

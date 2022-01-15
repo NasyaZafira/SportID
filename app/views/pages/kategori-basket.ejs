@@ -21,13 +21,13 @@
             <% berita.slice(-1).forEach(basket=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<% basket.imageBerita %>"></a>
+                    <a href=""><img src="<%= basket.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
                         <a href="">
-                            <% basket.judulBerita %>
+                            <%= basket.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
-                            <% basket.updateAt %>
+                            <%= basket.updatedAt %>
                         </div>
                     </div>
                 </div>
@@ -50,13 +50,13 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<% basket.imageBerita %> ">
+                        <img src="<%= basket.imageBerita %> ">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
                             <a href="">
-                                <% basket.judulBerita %>
+                                <%= basket.judulBerita %>
                             </a>
                         </div>
                         <div class="edu-jenis-berita">
@@ -78,7 +78,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<% basket.imageBerita %>">
+                                <img src="<%= basket.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
@@ -86,7 +86,7 @@
                             </div>
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="/basket">
-                                    <% basket.judulBerita %>
+                                    <%= basket.judulBerita %>
                                 </a>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<% basket.imageBerita %>">
+                                <img src="<%= basket.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -109,7 +109,7 @@
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="/basket">
-                                    <% basket.judulBerita %>
+                                    <%= basket.judulBerita %>
                                 </a>
                             </div>
                         </div>

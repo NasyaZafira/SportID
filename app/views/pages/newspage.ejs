@@ -6,11 +6,11 @@
         <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
-    <header>
-        <%- include('../partial/header') %>
-    </header>
-
+    
     <body>
+        <header>
+            <%- include('../partial/header', {loggedName}, {loggedNameAdmin}) %>
+        </header>
         <div class="all">
             <div class="container-iklan">
                 <div class="iklan1">
