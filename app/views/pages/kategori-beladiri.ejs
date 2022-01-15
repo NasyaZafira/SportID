@@ -43,30 +43,30 @@
                 </div>
                 <% }) %>
         </div>
-    </div>
 
-    <div class="edusport">
-        <p class="font-1">Edu-Sport News</p>
-        <% berita.slice(-4).forEach(beladiri=> { %>
-            <div class="edunews">
-                <div class="thumbnail-edu">
-                    <!-- <%# ini butuh request thumbnail %> -->
-                    <img src="<% beladiri.imageBerita %>">
-                </div>
-                <div class="berita-edu">
-                    <div class="edu-judul-berita">
-                        <!-- <%# ini butuh request judul %> -->
-                        <a href="">
-                            <% beladiri.judulBerita %>
-                        </a>
+        <div class="edusport">
+            <p class="font-1">Edu-Sport News</p>
+            <% berita.slice(-4).forEach(beladiri=> { %>
+                <div class="edunews">
+                    <div class="thumbnail-edu">
+                        <!-- <%# ini butuh request thumbnail %> -->
+                        <img src="<% beladiri.imageBerita %>">
                     </div>
-                    <div class="edu-jenis-berita">
-                        <!-- <%# ini butuh request kategori %> -->
-                        <a href="/beladiri" class="font-2">Bela Diri</a>
+                    <div class="berita-edu">
+                        <div class="edu-judul-berita">
+                            <!-- <%# ini butuh request judul %> -->
+                            <a href="">
+                                <% beladiri.judulBerita %>
+                            </a>
+                        </div>
+                        <div class="edu-jenis-berita">
+                            <!-- <%# ini butuh request kategori %> -->
+                            <a href="/beladiri" class="font-2">Bela Diri</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <% }) %>
+                <% }) %>
+        </div>
     </div>
 
     <div class="homepage-2">
@@ -94,35 +94,34 @@
                         <% }) %>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="terbaru-section">
-        <div class="judul-trending">Terbaru</div>
-        <div class="berita-trending">
-            <% berita.slice(-3).forEach(beladiri=> { %>
-                <div class="kolom-berita">
-                    <div class="thumbnail-trending">
-                        <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<% beladiri.imageBerita %>">
-                    </div>
-                    <div class="trending-jenis-berita">
-                        <!-- <%# ini butuh request kategori %> -->
-                        <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport
-                    </div>
-                    <div class="trending-judul-berita">
-                        <!-- <%# ini butuh request judul %> -->
-                        <a href="/beladiri">
-                            <% beladiri.judulBerita %>
-                        </a>
-                    </div>
+            <div class="terbaru-section">
+                <div class="judul-trending">Terbaru</div>
+                <div class="berita-trending">
+                    <% berita.slice(-3).forEach(beladiri=> { %>
+                        <div class="kolom-berita">
+                            <div class="thumbnail-trending">
+                                <!-- <%# ini butuh request thumbnail %> -->
+                                <img src="<% beladiri.imageBerita %>">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                <!-- <%# ini butuh request kategori %> -->
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport
+                            </div>
+                            <div class="trending-judul-berita">
+                                <!-- <%# ini butuh request judul %> -->
+                                <a href="/beladiri">
+                                    <% beladiri.judulBerita %>
+                                </a>
+                            </div>
+                        </div>
+                        <% }) %>
                 </div>
-                <% }) %>
+            </div>
         </div>
-    </div>
-    <div class="iklan">
-        <!-- <%# ini butuh request iklan (?) %> -->
-        <img src="/images/231x896.png">
-    </div>
+        <div class="iklan">
+            <!-- <%# ini butuh request iklan (?) %> -->
+            <img src="/images/231x896.png">
+        </div>
     </div>
     <!-- <%# ini butuh request iklan (?) %> -->
     <div class="iklan-2"><img src="/images/892x228.png"></div>
