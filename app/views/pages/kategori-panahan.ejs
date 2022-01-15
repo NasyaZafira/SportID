@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,13 +21,13 @@
             <% berita.slice(-1).forEach(panahan=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<% panahan.imageBerita %>"></a>
+                    <a href=""><img src="<%= panahan.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
                         <a href="">
-                            <% panahan.judulBerita %>
+                            <%= panahan.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
-                            <% panahan.updateAt %>
+                            <%= panahan.updatedAt %>
                         </div>
                     </div>
                 </div>
@@ -50,13 +50,13 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<% panahan.imageBerita %> ">
+                        <img src="<%= panahan.imageBerita %> ">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
                             <a href="">
-                                <% panahan.judulBerita %>
+                                <%= panahan.judulBerita %>
                             </a>
                         </div>
                         <div class="edu-jenis-berita">
@@ -79,7 +79,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<% panahan.imageBerita %>">
+                                <img src="<%= panahan.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
@@ -88,7 +88,7 @@
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="/panahan">
-                                    <% panahan.judulBerita %>
+                                    <%= panahan.judulBerita %>
                                 </a>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<% panahan.imageBerita %>">
+                                <img src="<%= panahan.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -111,7 +111,7 @@
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="/panahan">
-                                    <% panahan.judulBerita %>
+                                    <%= panahan.judulBerita %>
                                 </a>
                             </div>
                         </div>

@@ -1,5 +1,35 @@
-const { berita } = require('../models')
+const res = require('express/lib/response')
 const { Op } = require("sequelize");
+const { berita } = require('../models')
+
+
+
+// const katBerita = async (req, res) => {
+//     console.log(req.params.kategori)
+//     berita.findAll({
+//         where : { kategori: req.params.kategori }
+//     })
+// }
+
+// const sepakBola = async (req, res) => {
+//     berita.findAll({
+//          where: { kategori: 'sepakbola' }
+//     })
+//         .then(Berita => {
+//             res.render("pages/kategori-sepakbola", { berita: Berita, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName });
+//         })
+//         .catch(err => {
+//             console.log(err)
+//         })
+// }
+
+// module.exports = {
+//     sepakBola
+// }
+
+
+
+
 
 const angkatBesi = async (req, res) => {
     berita.findAll({
@@ -15,7 +45,8 @@ const angkatBesi = async (req, res) => {
 
 const basket = async (req, res) => {
     berita.findAll({
-        [Op.or]: [{ kategori: 'bola basket' }, { kategori: 'Bola Basket' }, { kategori: 'bolaBasket' }, { kategori: 'basket' }, { kategori: 'Basket' }]
+        [Op.or]: [ { kategori: { [Op.like]: '%basket%' }}, { kategori: 'Bola Basket' }, { kategori: 'bolaBasket' }, { kategori: 'basket' }, { kategori: 'Basket' }]
+        // [Op.or] : [ {[Op.like]: '%basket%'}, {[Op.like]: '%bola%'} ]
     })
         .then(Berita => {
             res.render("pages/kategori-basket", { berita: Berita, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName });
@@ -100,6 +131,7 @@ const sepakBola = async (req, res) => {
 const voli = async (req, res) => {
     berita.findAll({
         [Op.or]: [{ kategori: 'voli' }, { kategori: 'Bola Voli' }, { kategori: 'bola voli' }, { kategori: 'bolaVoli' }, { kategori: 'bola Voli' }]
+        // [Op.or] : [ {[Op.like]: '%voli%'}, {[Op.like]: '%bola%'} ]
     })
         .then(Berita => {
             res.render("pages/kategori-voli", { berita: Berita, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName });
