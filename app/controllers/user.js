@@ -16,7 +16,7 @@ const showEditUser = async (req, res) => {
     //Mencantumkan halaman Profile
     res.render('pages/profilePage', {
         title: 'Mengubah User',
-        User
+        User, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName
     })
 }
 

@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <Header>
-        <%- include ('../partial/header-post') %>
-    </Header>
+    <header>
+        <%- include ('../partial/header-post', {loggedName}, {loggedNameAdmin}) %>
+    </header>
 
     <div class="kotak-profile">
 
@@ -26,7 +26,7 @@
             <div>
                 <label for="nama">Nama</label>
                 <div class="input-icon-nama">
-                    <i class="fa fa-user" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
+                    <!-- <i class="fa fa-user" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i> -->
                     <input type="text" name="name" class="ganti-nama" style="font-weight:500;" value="<%= User.name %>">
                 </div>
             </div>
@@ -34,7 +34,7 @@
             <div>
                 <label for="email">Email</label>
                 <div class="input-icon-email">
-                    <i class="fas fa-envelope" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
+                    <!-- <i class="fas fa-envelope" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i> -->
                     <input type="text" name="email" readonly class="ganti-email" style="font-weight:500;"
                         value="<%= User.email %>">
                 </div>
@@ -43,7 +43,7 @@
             <div>
                 <label for="nomorhp">Nomor HP</label>
                 <div class="input-icon-hp">
-                    <i class="fas fa-phone-alt" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i>
+                    <!-- <i class="fas fa-phone-alt" style="position: absolute; padding-left: 23px; padding-top: 10px;"></i> -->
                     <input type="text" name="phoneNumber" class="ganti-nomorhp" style="font-weight:500;"
                         value="<%= User.phoneNumber %>">
                 </div>
