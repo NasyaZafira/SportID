@@ -3,6 +3,7 @@ const {user, admin} = require('../models')
 
 function register(req, res) {
   if (req.body.kodeunik == 'akumaujadiadmin') {
+    console.log(req.body)
     admin.register(req.body)
     .then(admin => {
       res.redirect("/login")

@@ -21,19 +21,19 @@
             <% berita.slice(-1).forEach(basket=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= basket.imageBerita %>"></a>
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= basket.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href="">
+                        <a href="/details/<%= basket.id %>">
                             <%= basket.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "basket"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Basket</span></a> | Sport
+                            <a href="/basket"><span style="color:#5B75EB">Basket</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -50,12 +50,12 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= basket.imageBerita %> ">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= basket.imageBerita %> ">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href="">
+                            <a href="/details/<%= basket.id %>">
                                 <%= basket.judulBerita %>
                             </a>
                         </div>
@@ -74,46 +74,42 @@
             <div class="trending-section">
                 <div class="judul-trending">Trending</div>
                 <div class="berita-trending">
-                    <% berita.slice(-3).forEach(basket=> { %>
-                        <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= basket.imageBerita %>">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Basket</span></a> | Sport
-                            </div>
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="/basket">
-                                    <%= basket.judulBerita %>
-                                </a>
-                            </div>
+                    <% beritaTrend.slice(-3).forEach(basket=> { %>
+                    <div class="kolom-berita-2">
+                        <div class="thumbnail-trending">
+                            <!-- <%# ini butuh request thumbnail %> -->
+                            <img style="width: 286px; height: 171px;" src="/images/<%= basket.imageBerita %>">
                         </div>
-                        <% }) %>
+                        <div class="trending-jenis-berita">
+                            <!-- <%# ini butuh request kategori %> -->
+                            <a href="/basket" class="font-2"><span style="color:#5B75EB">Basket</span></a> | Sport</div>
+                        <div class="trending-judul-berita">
+                            <!-- <%# ini butuh request judul %> -->
+                            <a href="/details/<%= basket.id %>"><%= basket.judulBerita %></a>
+                        </div>
+                    </div>
+                    <% }) %>
                 </div>
             </div>
             <div class="terbaru-section">
                 <div class="judul-trending">Terbaru</div>
                 <div class="berita-trending">
                     <% berita.slice(-3).forEach(basket=> { %>
-                        <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= basket.imageBerita %>">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Basket</span></a> | Sport
-                            </div>
-                            <div class="trending-judul-berita">
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="/basket">
-                                    <%= basket.judulBerita %>
-                                </a>
-                            </div>
+                    <div class="kolom-berita-2">
+                        <div class="thumbnail-trending">
+                            <!-- <%# ini butuh request thumbnail %> -->
+                            <img style="width: 286px; height: 171px;" src="/images/<%= basket.imageBerita %>">
                         </div>
-                        <% }) %>
+                        <div class="trending-jenis-berita">
+                            <!-- <%# ini butuh request kategori %> -->
+                            <a href="/basket" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
+                        <div class="trending-judul-berita">
+                            <!-- <%# ini butuh request judul %> -->
+                            <a href="/details/<%= basket.id %>"><%= basket.judulBerita %>
+                            </a>
+                        </div>
+                    </div>
+                    <% }) %>
                 </div>
             </div>
         </div>

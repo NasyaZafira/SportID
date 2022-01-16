@@ -1,0 +1,373 @@
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-B;
+    src: url(/font/Montserrat-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Med;
+    src: url(/font/Montserrat-Medium.ttf);
+  }
+
+  * {
+      transition: background-color 0.2s;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+body {
+      display: flex;
+      width: 100vw;
+      max-width: 100%;
+      background-color: #e5e5e5;
+      margin: 0;
+  }
+
+  a {
+      text-decoration: none;
+      transition: 0.3s;
+      color: inherit;
+  }
+
+  /* Scroll Bar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #15202B;
+    border-radius: 6px
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15202B;
+    border-radius: 6px
+  }
+/* Scroll Bar */
+
+/* Sidebar */
+.sidebar{
+    width: 255px;
+    height: 900px;
+    background-color: #15202B;
+    color: white;
+    font-family: Montserrat;
+}
+
+.logo-sidebar{
+    height: 50px;
+    width: 147px;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    margin-left: 54px;
+    margin-top: 39px;
+    margin-bottom: 50px;
+}
+.bar{
+    z-index:1;
+    width: 255px;
+    color: white;
+}
+
+.bar-item{
+    width:100%;
+    display:block;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0
+}
+.bar-button{
+    width:100%;
+    text-align:left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.5;
+}
+
+.bar-button:hover{
+    color:white;
+    background-color:#1d2c3b;
+    opacity: 1;
+}
+/* Sidebar end*/
+
+.profil-admin{
+    background-color: #ddebff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nama-admin{
+    height: 59px;
+    margin-left: 57px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 68px;
+}
+.admin{
+    height: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    margin-left: 57px;
+    margin-top: 9px;
+}
+.isi-1{
+    width: 100%;
+    height: 285px;
+    display: flex;
+}
+.kolom-1{
+    display: flex;
+    flex-direction: column;
+}
+.akun{
+    width: 670px;
+    height: 66px;
+    margin-left: 57px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.akun-2{
+    font-family: Montserrat-Med;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    margin-left: 30px;
+}
+.edit{
+    font-family: Montserrat-Med;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    color:#5B75EB;
+    margin-right: 30px;
+}
+.data{
+    width: 670px;
+    height: 279px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin-left: 57px;
+}
+.nama-email{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+.nama{
+    font-family: Montserrat-Med;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    margin-left: 29px;
+    margin-top: 21px;
+}
+.kolom-nama{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-left: 29px;
+    margin-top: 8px;
+}
+.nama-lengkap{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8898AA;
+    margin-left: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.kolom-sandi{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-left: 29px;
+    margin-top: 8px;
+    display: flex;
+}
+
+.password {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #8898AA;
+    margin-left: 11px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+  #eye {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 5px;
+  }
+
+  #togglePassword{
+    margin-left: 30px; 
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+.ganti-sandi{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    color: #15202B;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+.kolom-2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.biru{
+    width: 208px;
+    height: 132px;
+    background-color: #5B75EB;
+    margin-top: 50px;
+    border-radius: 8px;
+    margin-left: 30px;
+    display: flex;
+}
+.kuantitas{
+    width: 70px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 35px;
+    text-align: center;
+    margin-left: 10px;
+}
+.berita{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.postingan-laporan{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 40px;
+}
+.detail{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 3px;
+}
+.merah{
+    width: 208px;
+    height: 132px;
+    margin-top: 11px;
+    background-color: #DA3438;
+    border-radius: 8px;
+    margin-left: 30px;
+    display: flex;
+}
+.isi-2{
+    width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.tabel-informasi{
+    width: 908px;
+    height: 56px;
+    margin-left: 57px;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 54px;
+}
+.data-2{
+    width: 908px;
+    height: 320px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin-left: 57px;
+    flex-direction: column;
+}
+.kolom-alamat{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-left: 29px;
+    margin-top: 8px;
+    width: 838px;
+}
+.alamat{
+    width: 908px;
+    display: flex;
+}
+.kec-prov{
+    width: 437px;
+    display: flex;
+    flex-direction: column;
+}
+.kolom-kecamatan{
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    margin-left: 29px;
+    margin-top: 8px;
+    width: 400px;
+}

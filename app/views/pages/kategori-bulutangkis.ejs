@@ -18,45 +18,45 @@
                 <!-- a href untuk kembali ke homepage -->
                 <a href="">Home</a> > <span style="color: #5B75EB;">Bulutangkis</span>
             </div>
-            <% berita.slice(-1).forEach(bulutangkis=> { %>
+            <% Bulutangkis.slice(-1).forEach(news => { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= bulutangkis.imageBerita %>"></a>
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= news.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href="">
-                            <%= bulutangkis.judulBerita %>
+                        <a href="/details/<%= news.id %>">
+                            <%= news.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "bulu tangkis"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                            <a href="/bulutangkis"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
-                            <%= bulutangkis.updatedAt %>
+                            <%= news.updatedAt %>
                         </div>
                     </div>
                 </div>
-                <% }) %>
+            <% }) %>
         </div>
 
         <div class="edusport">
             <p class="font-1">Edu-Sport News</p>
-            <% berita.slice(-4).forEach(bulutangkis=> { %>
+            <% Bulutangkis.slice(-4).forEach(bulutangkisEdu => { %>
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= bulutangkis.imageBerita %>">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= bulutangkisEdu.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href="">
-                                <%= bulutangkis.judulBerita %>
+                            <a href="/details/<%= bulutangkisEdu.id %>">
+                                <%= bulutangkisEdu.judulBerita %>
                             </a>
                         </div>
                         <div class="edu-jenis-berita">
@@ -75,20 +75,20 @@
             <div class="trending-section">
                 <div class="judul-trending">Trending</div>
                 <div class="berita-trending">
-                    <% berita.slice(-3).forEach(bulutangkis=> { %>
+                    <% beritaTrend.slice(-3).forEach(bulutangkisTrend => { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= bulutangkis.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= bulutangkisTrend.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                                <a href="/bulutangkis" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/bulutangkis">
-                                    <%= bulutangkis.judulBerita %>
+                                <a href="/details/<%= bulutangkisTrend.id %>">
+                                    <%= bulutangkisTrend.judulBerita %>
                                 </a>
                             </div>
                         </div>
@@ -98,20 +98,20 @@
             <div class="terbaru-section">
                 <div class="judul-trending">Terbaru</div>
                 <div class="berita-trending">
-                    <% berita.slice(-3).forEach(bulutangkis=> { %>
+                    <% Bulutangkis.slice(-3).forEach(bulutangkisBaru => { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= bulutangkis.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= bulutangkisBaru.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                                <a href="/bulutangkis" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/bulutangkis">
-                                    <%= bulutangkis.judulBerita %>
+                                <a href="/details/<%= bulutangkisBaru.id %>">
+                                    <%= bulutangkisBaru.judulBerita %>
                                 </a>
                             </div>
                         </div>

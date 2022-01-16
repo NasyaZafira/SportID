@@ -1,3 +1,5 @@
+const {user} = require('../models/index')
+
 const checkLoginUser = (req, res, next) => {
     if (req.session.loggedUser){
         next()

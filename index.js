@@ -3,9 +3,8 @@ const {
     Sequelize
 } = require('sequelize')
 const router = require('./app/routes/index')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const config = require('./app/config/config.json');
-const { password } = require('pg/lib/defaults');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
@@ -22,21 +21,19 @@ appInit(app)
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`)
     const db = new Sequelize(
-        config.development.database, 
-        config.development.username,
-        config.development.password,
+        config.production.database, 
+        config.production.username,
+        config.production.password,
         {
-            host : config.development.host,
-            port: config.development.port, 
-            dialect : config.development.dialect,
-            /*
+            host : config.production.host,
+            port: config.production.port, 
+            dialect : config.production.dialect,
             dialectOptions: {
                 ssl: {
                     require: true,
                     rejectUnauthorized: false
                 }
             },
-            */
             logging : false
         }
     )
@@ -52,8 +49,8 @@ app.listen(PORT, () => {
 function appInit(app) {
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
-    app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false}));
     const oneDay = 1000 * 60 * 60;
     app.use(
         session({

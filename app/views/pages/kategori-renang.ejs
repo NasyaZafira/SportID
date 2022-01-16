@@ -20,18 +20,18 @@
                 <% berita.slice(-1).forEach(renang=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= renang.imageBerita %>"></a> 
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= renang.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href=""><%= renang.judulBerita %>
+                        <a href="/details/<%= renang.id %>"><%= renang.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "renang"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Renang</span></a> | Sport
+                            <a href="/renang"><span style="color:#5B75EB">Renang</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -48,12 +48,12 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= renang.imageBerita %>">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= renang.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href=""><%= renang.judulBerita %>=
+                            <a href="/details/<%= renang.id %>"><%= renang.judulBerita %>=
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
@@ -70,18 +70,18 @@
                 <div class="trending-section">
                     <div class="judul-trending">Trending</div>
                     <div class="berita-trending">
-                        <% berita.slice(-3).forEach(renang=> { %>
+                        <% beritaTrend.slice(-3).forEach(renang=> { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= renang.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= renang.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Renang</span></a> | Sport</div>
+                                <a href="/renang" class="font-2"><span style="color:#5B75EB">Renang</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/renang">
+                                <a href="/details/<%= renang.id %>">
                                     <%= renang.judulBerita %></a>
                             </div>
                         </div>
@@ -95,14 +95,14 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= renang.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= renang.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Renang</span></a> | Sport</div>
+                                <a href="/renang" class="font-2"><span style="color:#5B75EB">Renang</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/renang"><%= renang.judulBerita %></a>
+                                <a href="/details/<%= renang.id %>"><%= renang.judulBerita %></a>
                             </div>
                         </div>
                         <% }) %>

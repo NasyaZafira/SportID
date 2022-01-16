@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +21,7 @@
             <% berita.slice(-1).forEach(panahan=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= panahan.imageBerita %>"></a>
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= panahan.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -33,7 +33,7 @@
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "panahan"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Panahan</span></a> | Sport
+                            <a href="/panahan"><span style="color:#5B75EB">Panahan</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -50,7 +50,7 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= panahan.imageBerita %> ">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= panahan.imageBerita %> ">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -75,19 +75,19 @@
             <div class="trending-section">
                 <div class="judul-trending">Trending</div>
                 <div class="berita-trending">
-                    <% berita.slice(-3).forEach(panahan=> { %>
+                    <% beritaTrend.slice(-3).forEach(panahan=> { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= panahan.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= panahan.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Panahan</span></a> | Sport
+                                <a href="/panahan" class="font-2"><span style="color:#5B75EB">Panahan</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/panahan">
+                                <a href="/details/<%= panahan.id %>">
                                     <%= panahan.judulBerita %>
                                 </a>
                             </div>
@@ -102,15 +102,15 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= panahan.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= panahan.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Panahan</span></a> | Sport
+                                <a href="/panahan" class="font-2"><span style="color:#5B75EB">Panahan</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/panahan">
+                                <a href="/details/<%= panahan.id %>">
                                     <%= panahan.judulBerita %>
                                 </a>
                             </div>

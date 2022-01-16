@@ -51,6 +51,8 @@ const getThumbnailBerita = async (req, res) => {
         raw: true
     })
 
+    req.session.getBerita = Berita
+
     //Menampilkan bagian Berita Terkait agar sesuai dengan judul dan kategori
     const dbBerita = await berita.findAll({
         where: {

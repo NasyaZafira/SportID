@@ -20,18 +20,18 @@
                 <% berita.slice(-1).forEach(voli=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= voli.imageBerita %>"></a> 
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= voli.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href=""><%= voli.judulBerita %>
+                        <a href="/details/<%= voli.id %>"><%= voli.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "voli" nya %> -->
-                            <a href=""><span style="color:#5B75EB">Voli</span></a> | Sport
+                            <a href="/bolavoli"><span style="color:#5B75EB">Voli</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -48,16 +48,16 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= voli.imageBerita %>">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= voli.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href=""><%= voli.judulBerita %></a>
+                            <a href="/details/<%= voli.id %>"><%= voli.judulBerita %></a>
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
-                            <a href="/voli" class="font-2">Voli</a>
+                            <a href="/bolavoli" class="font-2">Voli</a>
                         </div>
                     </div>
                 </div>
@@ -75,14 +75,14 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= voli.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= voli.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Voli</span></a> | Sport</div>
+                                <a href="/bolavoli" class="font-2"><span style="color:#5B75EB">Voli</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/voli"><%= voli.judulBerita %></a>
+                                <a href="/details/<%= voli.id %>"><%= voli.judulBerita %></a>
                             </div>
                         </div>
                         <% }) %>
@@ -95,14 +95,14 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= voli.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= voli.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Voli</span></a> | Sport</div>
+                                <a href="/bolavoli" class="font-2"><span style="color:#5B75EB">Voli</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/voli"><%= voli.judulBerita %></a>
+                                <a href="/details/<%= voli.id %>"><%= voli.judulBerita %></a>
                             </div>
                         </div>
                         <% }) %>

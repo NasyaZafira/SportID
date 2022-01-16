@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/kebijakan-privasi.css">
-        <link rel="stylesheet" id="styles" type="text/css" href="/css/terms-n-cond.css">
-    </head>
 
-    <body>
-        <header>
-            <%- include ('../partial/header-post-tnc') %>
-        </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" id="styles" type="text/css" href="/css/kebijakan-privasi.css">
+  <link rel="stylesheet" id="styles" type="text/css" href="/css/terms-n-cond.css">
+</head>
 
-        <div class="kebijakanprivasi">
-            <h1 class="judul">Kebijakan dan Privasi</h1>
-            <p class="isijudul">
-              <strong>Sport ID</strong>, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh (nama blog Anda).com dan bagaimana kami
-              menggunakannya. Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk menghubungi kami
-            </p>
-      
-            <h2 class="sub">Informasi yang Kami Kumpulkan</h2>
-            <span class="divider"></span>
-            <p class="isi">
-              <strong>Sport ID</strong> mengikuti prosedur standar menggunakan file log. File-file ini mencatat pengunjung ketika mereka mengunjungi situs web. Semua perusahaan hosting melakukan ini dan merupakan bagian dari analisis layanan
-              hosting. Informasi yang dikumpulkan oleh file log termasuk alamat protokol internet (IP), jenis browser, Penyedia Layanan Internet (ISP), tanggal dan waktu, halaman rujukan/keluar, dan mungkin jumlah klik. Ini tidak terkait dengan
-              informasi apa pun yang dapat diidentifikasi secara pribadi. Tujuan informasi adalah untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di situs web, dan mengumpulkan informasi demografis.
-            </p>
-      
-            <h2 class="sub">Cookies</h2>
-            <span class="divider"></span>
-            <p class="isi">
-              Seperti situs web lainnya, <strong>Sport ID</strong> menggunakan ‘cookie’. Cookie digunakan untuk menyimpan informasi seperti preferensi pengunjung dan halaman yang diakses atau dikunjungi pengunjung pada situs web ini. Informasi
-              tersebut kami gunakan untuk mengoptimalkan pengalaman pengguna dengan menyesuaikan konten halaman web kami.
-            </p>
-      
-            <h2 class="sub">Kebijakan Privasi Pihak Ketiga</h2>
-            <span class="divider"></span>
-            <p class="isi">
-              Kebijakan Privasi (nama blog Anda).com tidak berlaku untuk pengiklan atau situs web lain. Karena itu, kami menyarankan Anda untuk membaca seksama masing-masing Kebijakan Privasi dari pihak ketiga untuk informasi yang lebih rinci.
-              Anda berhak untuk menonaktifkan cookies pada browser Anda.
-            </p>
-      
-            <h2 class="sub">Informasi Anak</h2>
-            <span class="divider"></span>
-            <p class="isi">
-              Salah satu prioritas kami adalah membantu perlindungan untuk anak-anak saat menggunakan internet. Kami mendorong orang tua dan wali untuk mengamati, berpartisipasi, memantau, dan membimbing aktivitas online mereka.
-              <br />
-              <br />
-              <strong>Sport ID</strong> tidak dengan sengaja mengumpulkan informasi identifikasi pribadi apa pun dari anak-anak di bawah umur. Jika menurut Anda anak Anda memberikan informasi semacam ini di situs web kami, kami sangat
-              menganjurkan Anda untuk segera menghubungi kami dan kami akan melakukan upaya terbaik kami untuk segera hapus informasi tersebut dari catatan kami.
-            </p>
-      
-            <h2 class="sub">Persetujuan</h2>
-            <span class="divider"></span>
-            <p class="isi">Dengan menggunakan situs web kami, Anda dengan ini menyetujui Kebijakan Privasi kami dan menyetujui syarat dan ketentuannya.</p>
-          </div>
+<body>
+  <header>
+    <%- include ('../partial/header-post-tnc', {loggedName}, {loggedNameAdmin}) %>
+  </header>
+
+  <div class="kebijakanprivasi">
+    <h1 class="judul">Kebijakan dan Privasi</h1>
+    <p class="isijudul">
+      <strong>Sport ID</strong>, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan
+      Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh (nama blog Anda).com dan bagaimana kami
+      menggunakannya. Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan
+      Privasi kami, jangan ragu untuk menghubungi kami
+    </p>
+
+    <h2 class="sub">Informasi yang Kami Kumpulkan</h2>
+    <span class="divider"></span>
+    <p class="isi">
+      <strong>Sport ID</strong> mengikuti prosedur standar menggunakan file log. File-file ini mencatat pengunjung
+      ketika mereka mengunjungi situs web. Semua perusahaan hosting melakukan ini dan merupakan bagian dari analisis
+      layanan
+      hosting. Informasi yang dikumpulkan oleh file log termasuk alamat protokol internet (IP), jenis browser, Penyedia
+      Layanan Internet (ISP), tanggal dan waktu, halaman rujukan/keluar, dan mungkin jumlah klik. Ini tidak terkait
+      dengan
+      informasi apa pun yang dapat diidentifikasi secara pribadi. Tujuan informasi adalah untuk menganalisis tren,
+      mengelola situs, melacak pergerakan pengguna di situs web, dan mengumpulkan informasi demografis.
+    </p>
+
+    <h2 class="sub">Cookies</h2>
+    <span class="divider"></span>
+    <p class="isi">
+      Seperti situs web lainnya, <strong>Sport ID</strong> menggunakan ‘cookie’. Cookie digunakan untuk menyimpan
+      informasi seperti preferensi pengunjung dan halaman yang diakses atau dikunjungi pengunjung pada situs web ini.
+      Informasi
+      tersebut kami gunakan untuk mengoptimalkan pengalaman pengguna dengan menyesuaikan konten halaman web kami.
+    </p>
+
+    <h2 class="sub">Kebijakan Privasi Pihak Ketiga</h2>
+    <span class="divider"></span>
+    <p class="isi">
+      Kebijakan Privasi (nama blog Anda).com tidak berlaku untuk pengiklan atau situs web lain. Karena itu, kami
+      menyarankan Anda untuk membaca seksama masing-masing Kebijakan Privasi dari pihak ketiga untuk informasi yang
+      lebih rinci.
+      Anda berhak untuk menonaktifkan cookies pada browser Anda.
+    </p>
+
+    <h2 class="sub">Informasi Anak</h2>
+    <span class="divider"></span>
+    <p class="isi">
+      Salah satu prioritas kami adalah membantu perlindungan untuk anak-anak saat menggunakan internet. Kami mendorong
+      orang tua dan wali untuk mengamati, berpartisipasi, memantau, dan membimbing aktivitas online mereka.
+      <br />
+      <br />
+      <strong>Sport ID</strong> tidak dengan sengaja mengumpulkan informasi identifikasi pribadi apa pun dari anak-anak
+      di bawah umur. Jika menurut Anda anak Anda memberikan informasi semacam ini di situs web kami, kami sangat
+      menganjurkan Anda untuk segera menghubungi kami dan kami akan melakukan upaya terbaik kami untuk segera hapus
+      informasi tersebut dari catatan kami.
+    </p>
+
+    <h2 class="sub">Persetujuan</h2>
+    <span class="divider"></span>
+    <p class="isi">Dengan menggunakan situs web kami, Anda dengan ini menyetujui Kebijakan Privasi kami dan menyetujui
+      syarat dan ketentuannya.</p>
+  </div>
 
 
-        <footer>
-            <%- include ('../partial/footer') %>
-        </footer>
+  <footer>
+    <%- include ('../partial/footer') %>
+  </footer>
 
-        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-        <script>
-            $('.logo').click(function (){
-                window.location.href = '/homepage' /* requesting redirect page on logo click */
-            })
-    
-            $('.logo-footer').click(function (){
-                window.location.href = '/homepage' /* requesting redirect page on logo click */
-            })
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script>
+    $('.logo').click(function () {
+      window.location.href = '/' /* requesting redirect page on logo click */
+    })
 
-        </script>
-    </body>
+    $('.logo-footer').click(function () {
+      window.location.href = '/' /* requesting redirect page on logo click */
+    })
+
+    // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+    $('.login-button').click(function () {
+      window.location.href = '/login'
+      return false
+    })
+
+    $('.register-button').click(function () {
+      window.location.href = '/register'
+      return false
+    })
+  </script>
+</body>
+
 </html>

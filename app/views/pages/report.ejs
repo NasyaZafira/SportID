@@ -8,19 +8,19 @@
     </head>
 
     <header>
-        <%- include('../partial/header-post') %>
+        <%- include('../partial/header-post', {loggedName}, {loggedNameAdmin}) %>
     </header>
 
     <body>
         <div class="main-container">
             <div class="selected-item">
                 <div class="info">
-                    <a href="" id="selected-item-title"> Komentar Pedas Shin Tae-yong Bikin Kaget Pelatih Thailand Jelang Hadapi Timnas Indonesia di Final Piala AFF 2020 </a>
-                    <a href="" id="item-category"><span style="color:#5B75EB">Sepak Bola</span> | Sport </a>
+                    <a href="/details/<%= dbBerita.id %>" id="selected-item-title"> <%= dbBerita.judulBerita %> </a>
+                    <a href="<%= dbBerita.kategori %>" id="item-category"><span style="color:#5B75EB"><%= dbBerita.kategori %></span> | Sport </a>
                 </div>
 
                 <div class="item-thumbnail">
-
+                    <img src="<%= dbBerita.imageBerita %>">
                 </div>
             </div>
             <div class="report-section">

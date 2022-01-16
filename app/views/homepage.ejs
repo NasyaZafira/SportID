@@ -16,7 +16,7 @@
                 <% berita.slice(-1).forEach(news => { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= news.imageBerita %>"></a> 
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= news.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -39,27 +39,11 @@
     
             <div class="edusport">
                 <p class="font-1">Edu-Sport News</p>
-                <!-- <div class="edunews">
-                    <div class="thumbnail-edu">
-                        
-                        <img src="/images/126x77.png">
-                    </div>
-                    <div class="berita-edu">
-                        <div class="edu-judul-berita">
-                            
-                            <a href="">EduSport : Sejarah Piala AFF Berdiri Hingga Sekarang</a>
-                        </div>
-                        <div class="edu-jenis-berita">
-                            
-                            <a href="" class="font-2">Sepak Bola</a>
-                        </div>
-                    </div>
-                </div> -->
                 <% berita.slice(-4).forEach(newsEdu => { %>
                 <div class="edunews-2">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<%= newsEdu.imageBerita %>">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= newsEdu.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -82,24 +66,11 @@
                 <div class="trending-section">
                     <div class="judul-trending">Trending</div>
                     <div class="berita-trending">
-                        <!-- <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                
-                                <img src="/images/286x171.png">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                
-                                <a href="" class="font-2"><span style="color:#5B75EB">Sepak Bola</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                
-                                <a href="">Holywings Janjikan Bonus Rp 1 M Jika Timnas Indonesia Juara Piala AFF</a>
-                            </div>
-                        </div> -->
                         <% betren.slice(-3).forEach(newsTrend => { %>
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= newsTrend.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= newsTrend.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
@@ -115,24 +86,11 @@
                 <div class="terbaru-section">
                     <div class="judul-trending">Terbaru</div>
                     <div class="berita-trending">
-                        <!-- <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                
-                                <img src="/images/286x171.png">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                
-                                <a href="" class="font-2"><span style="color:#5B75EB">Sepak Bola</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                
-                                <a href="">5 Srikandi Kalbar di PON Papua Cabang Angkat Besi dan Angkat Berat</a>
-                            </div>
-                        </div> -->
                         <% berita.slice(-3).forEach(newsNew => { %>
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= newsNew.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= newsNew.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->

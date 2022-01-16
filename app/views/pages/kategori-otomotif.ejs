@@ -21,7 +21,7 @@
             <% berita.slice(-1).forEach(otomotif=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="<%= otomotif.imageBerita %>"></a>
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= otomotif.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -51,7 +51,7 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="<% otomotif.imageBerita %>">
+                        <img style="width: 126px; height: 77px;" src="/images/<% otomotif.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -75,19 +75,19 @@
             <div class="trending-section">
                 <div class="judul-trending">Trending</div>
                 <div class="berita-trending">
-                    <% berita.slice(-3).forEach(otomotif=> { %>
+                    <% beritaTrend.slice(-3).forEach(otomotif=> { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= otomotif.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= otomotif.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Otomotif</span></a> | Sport
+                                <a href="/otomotif" class="font-2"><span style="color:#5B75EB">Otomotif</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/otomotif">
+                                <a href="/details/<%= otomotif.id %>">
                                     <%= otomotif.judulBerita %>
                                 </a>
                             </div>
@@ -102,15 +102,15 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="<%= otomotif.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= otomotif.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Otomotif</span></a> | Sport
+                                <a href="/otomotif" class="font-2"><span style="color:#5B75EB">Otomotif</span></a> | Sport
                             </div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/otomotif">
+                                <a href="/details/<%= otomotif.id %>">
                                     <%= otomotif.judulBerita %>
                                 </a>
                             </div>
