@@ -5,7 +5,6 @@ const {
 const router = require('./app/routes/index')
 const PORT = process.env.PORT || 3000
 const config = require('./app/config/config.json');
-const { password } = require('pg/lib/defaults');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const session = require('express-session');

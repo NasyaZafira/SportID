@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const multer = require('multer')
 const path = require('path')
+const jwt = require('jsonwebtoken')
 
 //Import Middleware
 const { checkLoginUser, checkLoginAdmin } = require('../middleware/checkLogin')
@@ -21,6 +22,10 @@ const controllerLogin = require("../controllers/controllerLogin");
 const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
 const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
 const {showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser} = require('../controllers/admin')
+const {showForgetPassword, forgetPassword} = require('../controllers/forgetPassword')
+const {showUpdatePassword, updatePassword} = require('../controllers/updatePassword')
+
+let token = jwt.sign({email: 'resetPassword', iat: Math.floor(Date.now() / 1000) - 30}, 'resetPassword')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -118,6 +123,11 @@ router.get('/kebijakanprivasi', kebijakanPrivasi)
 router.get('/logout', (req, res) => {
     req.session.destroy()
     res.redirect('/')
-  })
+})
+
+router.get('/reset-password', showForgetPassword)
+router.post('/reset-password/success', forgetPassword)
+router.get(`/${token}/update-password`, showUpdatePassword)
+router.post('/update-password', updatePassword)
 
 module.exports = router

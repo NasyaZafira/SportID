@@ -55,7 +55,7 @@
                                 <div class="kolom-nama">
                                     <div class="col">
                                         <input type="text" class="form-control" name="email" placeholder="Email"
-                                            value="<%= Admin.email %>" required>
+                                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<%= Admin.email %>" required>
                                     </div>
                                     <!-- <div class="nama-lengkap">
                                      butuh request email admin

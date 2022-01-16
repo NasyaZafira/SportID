@@ -26,17 +26,18 @@
       <input class="form-content" placeholder="Nama Belakang" type="text" name="lastName" autocomplete="on" required />
       <!--Kolom Email-->
       <input id="user-email" class="form-content" placeholder="Email" type="email" name="email" autocomplete="on"
-        required />
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
       <!--Kolom No Hp-->
-      <input id="user-nohp" class="form-content" placeholder="No Hp" type="text" name="phoneNumber" autocomplete="on"
+      <input id="user-nohp" class="form-content" placeholder="No Telepon" type="text" name="phoneNumber" autocomplete="on"
         required />
       <!--Kolom Password-->
       <div class="container">
         <span onclick="togglePass()">
           <i class="fa fa-eye-slash" id="eye"></i>
         </span>
-        <input type="password" autocomplete="off" placeholder="Password" class="password" name="password" />
-        <p class="karakter">Kata sandi minimal 8 karakter berisi angka dan huruf</p>
+        <input type="password" autocomplete="off" placeholder="Kata Sandi" 
+        class="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+        <p class="karakter">Minimal 8 karakter berisi satu angka dan satu huruf besar dan kecil</p>
         <p class="admin">*Khusus Admin</p>
       </div>
       <!--Kolom Kode Unik-->

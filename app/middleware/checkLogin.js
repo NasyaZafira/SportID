@@ -1,3 +1,5 @@
+const {user} = require('../models/index')
+
 const checkLoginUser = (req, res, next) => {
     if (req.session.loggedUser){
         next()
@@ -14,6 +16,12 @@ const checkLoginAdmin = (req, res, next) => {
     }
 }
 
+const sessionPassword = (req, res) => {
+    const dbUser = user.findAll()
+
+    req.session.emailUser = user.email
+}
+
 module.exports = {
-    checkLoginUser, checkLoginAdmin
+    checkLoginUser, checkLoginAdmin, sessionPassword
 }
