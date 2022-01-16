@@ -40,7 +40,7 @@ const forgetPassword = async (req, res) => {
         from: 'notreply.sportid@gmail.com',
         to: email,
         subject: 'Reset Password - SportID',
-        html: `<p>Anda meminta untuk mengatur ulang kata sandi, dan untuk mengatur ulang kata sandi Anda, silakan gunakan link di bawah ini <a href="http://localhost:3000/${token}/update-password">http://localhost:3000/${token}/update-password</a> </p>`
+        html: `<p>Anda meminta untuk mengatur ulang kata sandi, dan untuk mengatur ulang kata sandi Anda, silakan gunakan link di bawah ini <a href="http://sportid.herokuapp.com/${token}/update-password">http://sportid.herokuapp.com/${token}/update-password</a> </p>`
     }
 
     mail.sendMail(mailOptions, function(error, info){

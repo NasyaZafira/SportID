@@ -7,9 +7,27 @@
   <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
+  <style type="text/css">
+    body {
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
+      background-color: #e5e5e5;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.5s;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    a:hover {
+      color: #5B75EB;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,6 +77,13 @@
     <!--kemarin
       <input id="submit-btn-register" type="submit" name="submit" value="Register" />
       -->
+
+    <div class="login-medsos-register">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-apple"></a>
+    </div>
+
     <br />
     <div>
       <!--Apabila sudah punya akun-->
@@ -72,6 +97,10 @@
   <script src="js/register.js"></script>
 
   <footer><%- include ('../partial/footer') %></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 </body>
 
 <!--Dark Mode-->

@@ -16,12 +16,6 @@ const checkLoginAdmin = (req, res, next) => {
     }
 }
 
-const sessionPassword = (req, res) => {
-    const dbUser = user.findAll()
-
-    req.session.emailUser = user.email
-}
-
 module.exports = {
-    checkLoginUser, checkLoginAdmin, sessionPassword
+    checkLoginUser, checkLoginAdmin
 }
