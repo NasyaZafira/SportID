@@ -10,7 +10,7 @@ const { checkLoginUser, checkLoginAdmin } = require('../middleware/checkLogin')
 //Import Controller
 const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
-const { addLaporan } = require('../controllers/controllerLaporan');
+const { addLaporan, showBerita } = require('../controllers/controllerLaporan');
 const {showEditUser, editUser} = require('../controllers/user')
 const { tentangKami } = require('../controllers/tentangKami')
 const {getThumbnailBerita} = require('../controllers/newspage')
@@ -19,9 +19,11 @@ const {createBerita, showFormUpload, showAllBerita,
 const  {lihatsemua} = require('../controllers/controllerBeritaHomepage')
 const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
 const controllerLogin = require("../controllers/controllerLogin");
+// const {sepakBola} = require('../controllers/kategoriBerita')
 const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
 const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
-const {showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser} = require('../controllers/admin')
+const {showAllUser, showUpdateAdmin, updateAdmin, 
+    showUpdatePasswordUser, updatePasswordUser, showReport, deleteLaporan} = require('../controllers/admin')
 const {showForgetPassword, forgetPassword} = require('../controllers/forgetPassword')
 const {showUpdatePassword, updatePassword} = require('../controllers/updatePassword')
 
@@ -67,12 +69,7 @@ router.post('/register', register)
 router.get('/', lihatsemua );
 
 //Router untuk Controller Laporan
-router.get('/laporan', function(req, res) {
-    res.render('pages/report', {
-        loggedName: req.session.userName, 
-        loggedNameAdmin: req.session.adminName
-    });
-});
+router.get('/laporan', showBerita);
 router.post('/laporan', addLaporan);
 
 //Router untuk Pusat Bantuan
@@ -100,6 +97,8 @@ router.get('/admin/list-berita/delete/:id', checkLoginAdmin, deleteBerita)
 router.get('/admin/list-user', checkLoginAdmin, showAllUser)
 router.get('/admin/list-user/update/:id', checkLoginAdmin, showUpdatePasswordUser)
 router.post('/admin/list-user/update/:id/success', updatePasswordUser)
+router.get('/admin/list-laporan', checkLoginAdmin, showReport)
+router.get('/admin/list-laporan/delete/:id', checkLoginAdmin, deleteLaporan)
 
 //Router untuk Controller Login
 router.get("/login", controllerLogin.getLogin);
@@ -115,6 +114,8 @@ router.get('/panahan', panahan)
 router.get('/renang', renang)
 router.get('/sepakbola', sepakBola)
 router.get('/bolavoli', voli)
+
+// router.get('/:kategori', katBerita)
 
 //Router untuk Kebijakan Privasi
 router.get('/kebijakanprivasi', kebijakanPrivasi)

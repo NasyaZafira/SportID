@@ -7,7 +7,7 @@
     </head>
 
     <header>
-        <%- include('../partial/header-tnc') %>
+        <%- include('../partial/header-tnc', {loggedName}, {loggedNameAdmin}) %>
     </header>
 
     <body>
@@ -80,10 +80,29 @@
                 </ol>
             </div>
         </div>
+        <footer>
+            <%- include('../partial/footer') %>
+        </footer>
+        <script>
+            $('.logo').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
+
+    $('.logo-footer').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
+
+    // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+    $('.login-button').click(function () {
+        window.location.href = '/login'
+        return false
+    })
+
+    $('.register-button').click(function () {
+        window.location.href = '/register'
+        return false
+    })
+        </script>
     </body>
-
-    <footer>
-        <%- include('../partial/footer') %>
-    </footer>
-
 </html>

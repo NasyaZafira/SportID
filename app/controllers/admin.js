@@ -9,7 +9,8 @@ const showAllUser = async (req, res) => {
                 ['createdAt', 'DESC']
             ]
         })
-        res.status(200).render('pages/admin-user', {dbUser: dbUser})
+        const Admin = await admin.findAll()
+        res.status(200).render('pages/admin-user', {dbUser: dbUser, Admin})
     }
     catch(err) {
         res.status(503).json({
@@ -91,7 +92,9 @@ const showUpdatePasswordUser = async (req, res) => {
         raw: true
     })
 
-    res.render('pages/admin-userUpdate', {User})
+    const Admin = await admin.findAll()
+
+    res.render('pages/admin-userUpdate', {User, Admin})
 }
 
 const updatePasswordUser = async (req, res) => {
@@ -122,6 +125,41 @@ const updatePasswordUser = async (req, res) => {
     res.status(200).redirect('/admin/list-user')
 }
 
+const showReport = async (req, res) => {
+    try {
+        const dbLaporan = await laporan.findAll({
+            order: [
+                ['createdAt', 'DESC']
+            ]
+        })
+
+        const Admin = await admin.findAll()
+        res.status(200).render('pages/admin/reportBerita', {dbLaporan, Admin})
+    }
+    catch(err) {
+        res.status(503).json({
+            message: 'Internal server error'
+        })
+    }
+}
+
+const deleteLaporan = async (req, res) => {
+    const {id} = req.params
+    const Laporan = await laporan.destroy({
+        where: {
+            id: id
+        },
+        raw: true
+    })
+
+    if(!Laporan){
+        res.status(403).send('Data gagal dihapus')
+        return
+    }
+
+    res.redirect('/admin/list-laporan')
+}
+
 module.exports = {
-    showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser
+    showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser, showReport, deleteLaporan
 }

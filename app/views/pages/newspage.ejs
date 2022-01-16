@@ -6,11 +6,10 @@
         <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
-    <header>
-        <%- include('../partial/header', {loggedName}, {loggedNameAdmin}) %>
-    </header>
-
     <body>
+        <header>
+            <%- include('../partial/header', {loggedName}, {loggedNameAdmin}) %>
+        </header>
         <div class="all">
             <div class="container-iklan">
                 <div class="iklan1">
@@ -30,7 +29,7 @@
                 </div>
                 <div class="thumbnail">
                     <!-- butuh request thumbnail -->
-                    <img src="<%= Berita.imageBerita %>">
+                    <img src="/images/<%= Berita.imageBerita %>">
                     <!-- /images/925x621.png -->
                 </div>
                 <div class="penulis">
@@ -75,7 +74,7 @@
                             <div class="baris-berita">
                                 <div class="thumbnail-berita">
                                     <!-- ini butuh request thumbnail -->
-                                    <img src="<%= news.imageBerita %>">
+                                    <img src="/images/<%= news.imageBerita %>">
                                 </div>
                                 <div class="judul-kategori-berita-terkait">
                                     <div class="judul-berita-terkait">

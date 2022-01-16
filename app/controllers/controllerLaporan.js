@@ -1,5 +1,22 @@
 const db = require('../models/laporan');
-const {laporan} = require('../models')
+const {laporan, berita} = require('../models')
+
+const showBerita = async (req, res) => {
+    const {id} = req.session.getBerita
+
+    const dbBerita = await berita.findOne({
+        where: {
+            id: id
+        },
+        raw: true
+    })
+    
+    res.status(200).render('pages/report', {
+        dbBerita,
+        loggedName: req.session.userName, 
+        loggedNameAdmin: req.session.adminName
+    })
+}
 
 const addLaporan = async (req, res) => {
     console.log(req.body);
@@ -22,5 +39,5 @@ const addLaporan = async (req, res) => {
 }
 
 module.exports = {
-    addLaporan
+    addLaporan, showBerita
 }

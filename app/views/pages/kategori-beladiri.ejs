@@ -17,97 +17,52 @@
                     <!-- a href untuk kembali ke homepage -->
                     <a href="">Home</a> > <span style="color: #5B75EB;">Bela Diri</span>
                 </div>
+                <% berita.slice(-1).forEach(beladiri=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img src="/images/796x437.png"></a> 
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= beladiri.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href="">Timnas Indonesia Kalah Telak 4-0 dari Thailand di Leg I Final Piala AFF 2020
+                        <a href="/details/<%= beladiri.id %>"><%= beladiri.judulBerita %>
                         </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "sepak bola"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Bela Diri</span></a> | Sport
+                            <a href="/beladiri"><span style="color:#5B75EB">Bela Diri</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
-                            28 Desember 2021 20:49 WIB
+                            <%= beladiri.updatedAt %>
                         </div>
                     </div>
                 </div>
+                <% }) %>
             </div>
     
             <div class="edusport">
                 <p class="font-1">Edu-Sport News</p>
-                <div class="edunews">
+                <% berita.slice(-4).forEach(beladiri=> { %>
+                <div class="edunews-2">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="/images/126x77.png">
+                        <img style="width: 126px; height: 77px;" src="/images/<%= beladiri.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
                             <!-- <%# ini butuh request judul %> -->
-                            <a href="">EduSport : Sejarah Piala AFF Berdiri Hingga Sekarang</a>
+                            <a href="/details/<%= beladiri.id %>"><%= beladiri.judulBerita %></a>
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
-                            <a href="" class="font-2">Bela Diri</a>
+                            <a href="/beladiri" class="font-2"><% beladiri.kategori %></a>
                         </div>
                     </div>
                 </div>
-                <div class="edunews-2">
-                    <div class="thumbnail-edu">
-                        <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="/images/126x77.png">
-                    </div>
-                    <div class="berita-edu">
-                        <div class="edu-judul-berita">
-                            <!-- <%# ini butuh request judul %> -->
-                            <a href="">EduSport : Kisah di Balik Prestasi 5 Atlet Indonesia, dari Menjadi Buruh Cuci hingga Tukang Lipat Parasut</a>
-                        </div>
-                        <div class="edu-jenis-berita">
-                            <!-- <%# ini butuh request kategori %> -->
-                            <a href="" class="font-2">Bela Diri</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="edunews-2">
-                    <div class="thumbnail-edu">
-                        <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="/images/126x77.png">
-                    </div>
-                    <div class="berita-edu">
-                        <div class="edu-judul-berita">
-                            <!-- <%# ini butuh request judul %> -->
-                            <a href="">EduSport : Teknik Pukulan dalam Permainan Bulu Tangkis</a>
-                        </div>
-                        <div class="edu-jenis-berita">
-                            <!-- <%# ini butuh request kategori %>  -->
-                            <a href="" class="font-2">Bela Diri</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="edunews-2">
-                    <div class="thumbnail-edu">
-                        <!-- <%# ini butuh request thumbnail %> -->
-                        <img src="/images/126x77.png">
-                    </div>
-                    <div class="berita-edu">
-                        <div class="edu-judul-berita">
-                            <!-- <%# ini butuh request judul %> -->
-                            <a href="">EduSport : Bercita-cita Jadi Atlet, Ini lho Masa Depan Cerah yang Menanti!</a>
-                        </div>
-                        <div class="edu-jenis-berita">
-                            <!-- <%# ini butuh request kategori %>  -->
-                            <a href="" class="font-2">Bela Diri</a>
-                        </div>
-                    </div>
-                </div>
+                <% }) %>
             </div>
-        
         </div>
 
         <div class="homepage-2">
@@ -115,90 +70,42 @@
                 <div class="trending-section">
                     <div class="judul-trending">Trending</div>
                     <div class="berita-trending">
-                        <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="">Holywings Janjikan Bonus Rp 1 M Jika Timnas Indonesia Juara Piala AFF</a>
-                            </div>
-                        </div>
+                        <% berita.slice(-3).forEach(beladiri=> { %>
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= beladiri.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
+                                <a href="/beladiri" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">Jadwal Final Liga 2 2021 - RANS Cilegon FC vs Persis Solo, Duel Klub Sultan Berebut Status Jawara</a>
+                                <a href="/details/<%= beladiri.id %>"><%= beladiri.judulBerita %></a>
                             </div>
                         </div>
-                        <div class="kolom-berita-2">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">                       
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="">Trauma AFF 2010 yang Merekah Usai Ketum PSSI Mau Masuk Ruang Ganti Timnas</a>
-                            </div>
-                        </div>
+                        <% }) %>
                     </div>
                 </div>
                 <div class="terbaru-section">
                     <div class="judul-trending">Terbaru</div>
                     <div class="berita-trending">
-                        <div class="kolom-berita">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="">Persija Jakarta Kenalkan Makan Konate dan 3 Pemain Baru</a>
-                            </div>
-                        </div>
+                        <% berita.slice(-3).forEach(beladiri=> { %>
                         <div class="kolom-berita-2">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
+                                <img style="width: 286px; height: 171px;" src="/images/<%= beladiri.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
+                                <a href="/beladiri" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">Apa Timnas Indonesia Bisa Balas Kekalahan Telak dari Thailand? Ini Jawaban Shin Tae-yong
+                                <a href="/details/<%= beladiri.id %>"><%= beladiri.judulBerita %>
                                 </a>
                             </div>
                         </div>
-                        <div class="kolom-berita-2">
-                            <div class="thumbnail-trending">
-                                <!-- <%# ini butuh request thumbnail %> -->
-                                <img src="/images/286x171.png">
-                            </div>
-                            <div class="trending-jenis-berita">
-                                <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
-                            <div class="trending-judul-berita">
-                                <!-- <%# ini butuh request judul %> -->
-                                <a href="">Hasil Undian Piala AFF U-23 2022 - Timnas Indonesia Segrup dengan Malaysia, Vietnam Masuk Grup Berat</a>
-                            </div>
-                        </div>
+                        <% }) %>
                     </div>
                 </div>
             </div>
@@ -231,24 +138,24 @@
             }
         });
 
-        $('.logo').click(function (){
-            window.location.href = '/' /* requesting redirect page on logo click */
-        })
+        $('.logo').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
 
-        $('.logo-footer').click(function (){
-            window.location.href = '/' /* requesting redirect page on logo click */
-        })
+    $('.logo-footer').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
 
-        // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+    // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
 
-        $('.login-button').click(function () {
-            window.location.href = '/login'
-            return false
-        })
+    $('.login-button').click(function () {
+        window.location.href = '/login'
+        return false
+    })
 
-        $('.register-button').click(function () {
-            window.location.href = '/register'
-            return false
-        })
+    $('.register-button').click(function () {
+        window.location.href = '/register'
+        return false
+    })
     </script>
 </html>

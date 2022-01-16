@@ -222,6 +222,7 @@ body {
       width: 286px;
       display: flex;
       flex-direction: column;
+      margin-left: 7px;
   }
   
   .kolom-berita-2 {

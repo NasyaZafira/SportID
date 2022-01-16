@@ -23,7 +23,7 @@
   </div>
   <div class="admin-user">
     <div class="kolom-atas">
-      <div class="pengaturan">Pengaturan User</div>
+      <div class="pengaturan">Pengaturan Berita</div>
       <div class="profil">
         <div class="logo-profil"></div>
         <div class="nama-profil">
@@ -39,34 +39,29 @@
       <div class="row">
         <div class="col-11">
           <div class="kolom-putih">
-            <div class="akun-user">Akun User</div>
+            <div class="akun-user">Tabel Laporan</div>
             <div class="tabel">
               <table class="table table-striped">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>No. Telepon</th>
-                    <th>Kata Sandi</th>
+                    <th>Isi Laporan</th>
+                    <th>Tipe Laporan</th>
                     <th>Created At</th>
                     <th>Update At</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <% dbUser.forEach((row) => { %>
+                  <% dbLaporan.forEach((row) => { %>
                   <tr>
                     <td><%= row.id %></td>
-                    <td><%= row.name %></td>
-                    <td><%= row.email %></td>
-                    <td><%= row.phoneNumber %></td>
-                    <td><%= row.password %></td>
+                    <td><%= row.isilaporan %></td>
+                    <td><%= row.tipelaporan %></td>
                     <td><%= row.createdAt %></td>
                     <td><%= row.updatedAt %></td>
                     <td>
-                      <a href="/admin/list-user/update/<%= row.id %>" type="button" class="btn btn-success btn-sm">Edit</a>
-                      <a href="/admin/list-user/delete/<%= row.id %>" type="button" class="btn btn-danger btn-sm">Hapus</a>
+                      <a href="/admin/list-laporan/delete/<%= row.id %>" type="button" class="btn btn-danger btn-sm">Hapus</a>
                     </td>
                   </tr>
                   <% }) %>
@@ -86,5 +81,4 @@
     }
   </script>
 </body>
-
 </html>

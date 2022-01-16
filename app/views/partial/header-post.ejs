@@ -47,7 +47,7 @@
                 <div id="moon_light"></div>
             </div>
         </form>
-
+        <% if (loggedName) { %>
         <div class="access-user">
             <div class="sublogo" id="user">
                 <%# request profile pict from database on the css %>
@@ -55,7 +55,7 @@
             </div>
             <ul>
                 <li id="select-sizing-user">
-                    <a href="#!" class="nama-user"><%= User.name %>
+                    <a href="#!" class="nama-user"><%= loggedName %>
                         <div class="arrow-down-user"></div>
                     </a>
                     <div class="access-user-dropdownContain">
@@ -70,6 +70,35 @@
                 </li>
             </ul>
         </div>
+        <% } else if (loggedNameAdmin) { %>
+            <div class="access-user">
+                <div class="sublogo" id="user">
+                    <%# request profile pict from database on the css %>
+    
+                </div>
+                <ul>
+                    <li id="select-sizing-user">
+                        <a href="#!" class="nama-user"><%= loggedNameAdmin %>
+                            <div class="arrow-down-user"></div>
+                        </a>
+                        <div class="access-user-dropdownContain">
+                            <div class="dropOut">
+                                <div class="triangle"></div>
+                                <ul>
+                                    <%# request direct page to lists below %>
+                                    <li><a href="/logout">Keluar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        <% } else { %>
+            <form class="access">
+                <button type="submit" class="login-button"> Log In </button>
+                <button type="submit" class="register-button"> Register </button>
+            </form>
+        <% } %>
 </body>
 
 </html>
