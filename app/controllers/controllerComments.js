@@ -1,5 +1,5 @@
 const db = require('../models/comments');
-const {comments} = require('../models')
+const {comments, berita} = require('../models')
 
 
 
@@ -18,7 +18,16 @@ const addKomen = async (req, res) => {
         return
     }
 
-    res.status(200).redirect('/')
+    const {id} = req.session.getBerita
+
+    const dbBerita = await berita.findOne({
+        where: {
+            id: id
+        },
+        raw: true
+    })
+    
+    res.status(200).redirect(`/details/${id}`)
 }
 
 module.exports = {
