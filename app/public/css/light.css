@@ -2,9 +2,11 @@
   @import "homepage-light.css";
   @import "report-light.css";
   @import "register-light.css";
+  @import "kategori-light.css";
+  @import "newspageLight.css";
   @import "login-light.css";
   @import "profile-light.css";
-
+  
   @font-face {
     font-family: Montserrat;
     src: url(/font/Montserrat-Regular.ttf);
@@ -13,6 +15,11 @@
   @font-face {
     font-family: Montserrat-Bold;
     src: url(/font/Montserrat-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-B;
+    src: url(/font/Montserrat-Bold.ttf);
   }
 
   @font-face {

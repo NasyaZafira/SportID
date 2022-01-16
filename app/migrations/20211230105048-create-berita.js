@@ -35,6 +35,9 @@ module.exports = {
           key: 'nama'
         }
       },
+      isTrending : {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.STRING

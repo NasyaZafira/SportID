@@ -1,21 +1,23 @@
-const db = require('../models/comments');
+const db = require('../models/laporan');
 const {laporan} = require('../models')
 
 const addLaporan = async (req, res) => {
-    const {Report} = req.body;
+    console.log(req.body);
+    const radiobutton = req.body.radiobutton;
+    const isipesan = req.body.isipesan;
 
-    const data = await laporan.create({
-        isilaporan: Report
+    const dataLaporan = await laporan.create({
+        isilaporan: radiobutton,
+        tipelaporan: isipesan
     })
-    console.log(data)
-    if(!data){
+    console.log(dataLaporan)
+    if(!dataLaporan){
         res.status(400).json({
             message: 'laporan gagal',
             type: 'danger'
         })
         return
     }
-    
     res.status(200).redirect('/')
 }
 

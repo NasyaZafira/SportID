@@ -6,26 +6,31 @@
         <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
-    <body>  
-        <header>
-            <%- include('../partial/header') %>
-        </header>
+    <header>
+        <%- include('../partial/header') %>
+    </header>
 
+    <body>  
         <div class="homepage">
             <div class="flex-container-2">
+                <div class="home-kategori">
+                    <!-- a href untuk kembali ke homepage -->
+                    <a href="">Home</a> > <span style="color: #5B75EB;">Bela Diri</span>
+                </div>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <img src="/images/796x437.png">
+                    <a href=""><img src="/images/796x437.png"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
                         <!-- <%# ini butuh request judul %> -->
-                        <a href="">Komentar Pedas Shin Tae-yong Bikin Kaget Pelatih Thailand Jelang Hadapi Timnas Indonesia di Final Piala AFF 2020</a>
+                        <a href="">Timnas Indonesia Kalah Telak 4-0 dari Thailand di Leg I Final Piala AFF 2020
+                        </a>
                     </div>
                     <div class="flex-item-2-2-2">
                         <div class="sepak-bola">
                             <!-- <%# ini butuh request kategori berita di "sepak bola"nya %> -->
-                            <a href=""><span style="color:#5B75EB">Sepak Bola</span></a> | Sport
+                            <a href=""><span style="color:#5B75EB">Bela Diri</span></a> | Sport
                         </div>
                         <div class="tanggal">
                             <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
@@ -49,7 +54,7 @@
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
-                            <a href="" class="font-2">Sepak Bola</a>
+                            <a href="" class="font-2">Bela Diri</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +70,7 @@
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %> -->
-                            <a href="" class="font-2">Olahraga</a>
+                            <a href="" class="font-2">Bela Diri</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +86,7 @@
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %>  -->
-                            <a href="" class="font-2">Bulutangkis</a>
+                            <a href="" class="font-2">Bela Diri</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +102,7 @@
                         </div>
                         <div class="edu-jenis-berita">
                             <!-- <%# ini butuh request kategori %>  -->
-                            <a href="" class="font-2">Olahraga</a>
+                            <a href="" class="font-2">Bela Diri</a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +122,7 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport</span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="">Holywings Janjikan Bonus Rp 1 M Jika Timnas Indonesia Juara Piala AFF</a>
@@ -130,10 +135,10 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport </span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">Candra Wijaya Harap Bulu Tangkis Indonesia Terus Cetak Prestasi di 2024-2028</a>
+                                <a href="">Jadwal Final Liga 2 2021 - RANS Cilegon FC vs Persis Solo, Duel Klub Sultan Berebut Status Jawara</a>
                             </div>
                         </div>
                         <div class="kolom-berita-2">
@@ -143,7 +148,7 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport</span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
                                 <a href="">Trauma AFF 2010 yang Merekah Usai Ketum PSSI Mau Masuk Ruang Ganti Timnas</a>
@@ -161,10 +166,10 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport</span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">5 Srikandi Kalbar di PON Papua Cabang Angkat Besi dan Angkat Berat</a>
+                                <a href="">Persija Jakarta Kenalkan Makan Konate dan 3 Pemain Baru</a>
                             </div>
                         </div>
                         <div class="kolom-berita-2">
@@ -174,10 +179,11 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport</span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">Tim Softball Lampung Optimis Raih Emas di PON Papua 2021</a>
+                                <a href="">Apa Timnas Indonesia Bisa Balas Kekalahan Telak dari Thailand? Ini Jawaban Shin Tae-yong
+                                </a>
                             </div>
                         </div>
                         <div class="kolom-berita-2">
@@ -187,10 +193,10 @@
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->
-                                <a href="" class="font-2">Sepak Bola</a> <span id="category"> | Sport</span></div>
+                                <a href="" class="font-2"><span style="color:#5B75EB">Bela Diri</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="">Olimpiade 2020: Indonesia Loloskan Wakil di 4 Nomor Cabang Panahan</a>
+                                <a href="">Hasil Undian Piala AFF U-23 2022 - Timnas Indonesia Segrup dengan Malaysia, Vietnam Masuk Grup Berat</a>
                             </div>
                         </div>
                     </div>
@@ -203,49 +209,46 @@
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
         <div class="iklan-2"><img src="/images/892x228.png"></div>    
-
-        <footer>
-            <%- include('../partial/footer') %>
-        </footer>
     </body>
+
+    <footer>
+        <%- include('../partial/footer') %>
+    </footer>
 
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
     <script>
-        
-        var flag = localStorage.getItem('flag');
-        console.log(flag);
-
-            $('#moon_light').click(function () { // Switching between light and dark mode 
-                if (flag) {
-                    flag = false
-                    $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                    $('link#styles').attr('href', '/css/Dark.css');
-                    localStorage.setItem('flag', false);
-                } else {
-                    flag = true
-                    $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                    $('link#styles').attr('href', '/css/Light.css');
-                    localStorage.setItem('flag', true);
-                }
-            });
+        let flag = true
+        $('#moon_light').click(function () {
+            if (flag == true) {
+                flag = false
+                $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+                $('link#styles').attr('href', '/css/dark.css');
+            } else {
+                flag = true
+                $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+                $('link#styles').attr('href', '/css/light.css');
+            }
+        });
 
         $('.logo').click(function (){
-            window.location.href = '/homepage' /* requesting redirect page on logo click */
+            window.location.href = '/' /* requesting redirect page on logo click */
         })
 
         $('.logo-footer').click(function (){
-            window.location.href = '/homepage' /* requesting redirect page on logo click */
+            window.location.href = '/' /* requesting redirect page on logo click */
         })
 
         // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
 
         $('.login-button').click(function () {
             window.location.href = '/login'
+            return false
         })
 
         $('.register-button').click(function () {
             window.location.href = '/register'
+            return false
         })
     </script>
 </html>

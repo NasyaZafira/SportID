@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>Dashboard Berita</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #1d2c3b;">
+        <a class="navbar-brand logo-sidebar" href="/"></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin" style="margin-left: 50px;">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/list-user">User</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-expanded="false">
+                        News
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/admin/list-berita">List Berita</a>
+                        <a class="dropdown-item" href="/admin/list-berita/upload">Upload Berita</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" style="background-color: #ddebff;">
+            <div class="col-11">
+                <div class="admin-berita">
+                    <div class="kolom-atas">
+                        <div class="pengaturan">Pengaturan Berita</div>
+                        <div class="profil">
+                            <div class="logo-profil"></div>
+                            <div class="nama-profil">
+                                <div class="nama-adminnya">
+                                    <!-- request nama admin -->
+                                    Nama
+                                </div>
+                                <div class="detail">Lihat detail</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tombol-add">
+                        <button type="button" class="btn btn-dark" onclick="addbutton()">Tulis Berita Baru</button>
+                    </div>
+                    <div class="kolom-putih">
+                        <div class="akun-user">Tabel Berita</div>
+                        <div class="tabel">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Judul Berita</th>
+                                        <th>Isi</th>
+                                        <th>Kategori</th>
+                                        <th>Admin</th>
+                                        <th>Created At</th>
+                                        <th>Update At</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% dbBerita.forEach((row) => { %>
+                                    <tr>
+                                        <td>
+                                            <!-- request ID user -->
+                                            <%= row.id %>
+                                        </td>
+                                        <td>
+                                            <%= row.imageBerita %>
+                                        </td>
+                                        <td>
+                                            <!-- request nama user -->
+                                            <%= row.judulBerita %>
+                                        </td>
+                                        <td style="text-align: justify;">
+                                            <%= row.isiBerita %>
+                                            <!-- request email user -->
+                                        </td>
+                                        <td>
+                                            <%= row.kategori %>
+                                            <!-- request no telepon user -->
+                                        </td>
+                                        <td>
+                                            <%= row.admin_name %>
+                                            <!-- request kata sandi user -->
+                                        </td>
+                                        <td>
+                                            <%= row.createdAt %>
+                                            <!-- request created at -->
+                                        </td>
+                                        <td>
+                                            <%= row.updatedAt %>
+                                            <!-- request update at -->
+                                        </td>
+                                        <td>
+                                            <a href="/admin/list-berita/update/<%= row.id %>" type="button"
+                                                class="btn btn-success btn-sm">Edit</a>
+                                            <a href="/admin/list-berita/delete/<%= row.id %>" type="button"
+                                                class="btn btn-danger btn-sm">Hapus</a>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        function addbutton() {
+            window.location.href = '/admin/list-berita/upload'
+            return false
+        }
+    </script>
+</body>
+
+</html>

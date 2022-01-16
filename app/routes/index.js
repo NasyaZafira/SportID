@@ -2,6 +2,12 @@ const express = require('express')
 const router = express.Router()
 const multer = require('multer')
 const path = require('path')
+const jwt = require('jsonwebtoken')
+
+//Import Middleware
+const { checkLoginUser, checkLoginAdmin } = require('../middleware/checkLogin')
+
+//Import Controller
 const { addKomen } = require('../controllers/controllerComments')
 const {register}= require('../controllers/register')
 const { addLaporan } = require('../controllers/controllerLaporan');
@@ -13,6 +19,13 @@ const {createBerita, showFormUpload, showAllBerita,
 const  {lihatsemua} = require('../controllers/controllerBeritaHomepage')
 const { pusatBantuan } = require('../controllers/controlerPusatBantuan')
 const controllerLogin = require("../controllers/controllerLogin");
+const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
+const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
+const {showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser} = require('../controllers/admin')
+const {showForgetPassword, forgetPassword} = require('../controllers/forgetPassword')
+const {showUpdatePassword, updatePassword} = require('../controllers/updatePassword')
+
+let token = jwt.sign({email: 'resetPassword', iat: Math.floor(Date.now() / 1000) - 30}, 'resetPassword')
 
 //Deklarasi lokasi penyimpanan gambar dan nama gambar
 const storage = multer.diskStorage({
@@ -41,10 +54,13 @@ const upload = multer({
 })
 
 //Router untuk Controller Comments
-router.post('/comments', addKomen);
+router.post('/details/:id', checkLoginUser, addKomen);
     
 //Router untuk Controller Register
-router.get('/register', (req, res) => res.render('pages/register'))
+router.get('/register', (req, res) => res.render('pages/register', {
+    loggedName: req.session.userName, 
+    loggedNameAdmin: req.session.adminName
+}))
 router.post('/register', register)
 
 //Router untuk Memanggil homepage.ejs
@@ -52,7 +68,10 @@ router.get('/', lihatsemua );
 
 //Router untuk Controller Laporan
 router.get('/laporan', function(req, res) {
-    res.render('pages/laporan');
+    res.render('pages/report', {
+        loggedName: req.session.userName, 
+        loggedNameAdmin: req.session.adminName
+    });
 });
 router.post('/laporan', addLaporan);
 
@@ -62,22 +81,53 @@ router.get('/pusatbantuan', pusatBantuan)
 //Router untuk tentang kami
 router.get('/tentangKami', tentangKami)
 
-router.get('/profile/:id', showEditUser)
-router.post('/profile/:id/success', editUser)
+//Router untuk Controller User
+router.get('/profile', checkLoginUser, showEditUser)
+router.post('/profile/success', editUser)
 
 //Router untuk Controller Newspage
 router.get('/details/:id', getThumbnailBerita)
 
 //Router untuk Controller Admin
-router.get('/admin', showAllBerita)
-router.post('/admin/upload', upload.single('imageBerita'), createBerita)
-router.get('/admin/upload', showFormUpload)
-router.get('/admin/update/:id', showUpdateBerita)
-router.post('/admin/success/:id', upload.single('imageBeritaUpdate'), updateBerita)
-router.get('/admin/delete/:id', deleteBerita)
+router.get('/admin', checkLoginAdmin, showUpdateAdmin)
+router.post('/admin/update', updateAdmin)
+router.get('/admin/list-berita', checkLoginAdmin, showAllBerita)
+router.post('/admin/list-berita/upload', upload.single('imageBerita'), createBerita)
+router.get('/admin/list-berita/upload', checkLoginAdmin, showFormUpload)
+router.get('/admin/list-berita/update/:id', checkLoginAdmin, showUpdateBerita)
+router.post('/admin/list-berita/update/:id/success', upload.single('imageBeritaUpdate'), updateBerita)
+router.get('/admin/list-berita/delete/:id', checkLoginAdmin, deleteBerita)
+router.get('/admin/list-user', checkLoginAdmin, showAllUser)
+router.get('/admin/list-user/update/:id', checkLoginAdmin, showUpdatePasswordUser)
+router.post('/admin/list-user/update/:id/success', updatePasswordUser)
 
 //Router untuk Controller Login
 router.get("/login", controllerLogin.getLogin);
 router.post("/login", controllerLogin.postLogin);
+
+//Router untuk Kategori Berita
+router.get('/angkatbesi', angkatBesi)
+router.get('/basket', basket)
+router.get('/beladiri', belaDiri)
+router.get('/bulutangkis', buluTangkis)
+router.get('/otomotif', otomotif)
+router.get('/panahan', panahan)
+router.get('/renang', renang)
+router.get('/sepakbola', sepakBola)
+router.get('/bolavoli', voli)
+
+//Router untuk Kebijakan Privasi
+router.get('/kebijakanprivasi', kebijakanPrivasi)
+
+//Menghapus Session
+router.get('/logout', (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
+})
+
+router.get('/reset-password', showForgetPassword)
+router.post('/reset-password/success', forgetPassword)
+router.get(`/${token}/update-password`, showUpdatePassword)
+router.post('/update-password', updatePassword)
 
 module.exports = router

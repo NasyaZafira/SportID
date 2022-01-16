@@ -3,11 +3,11 @@ const {
     Sequelize
 } = require('sequelize')
 const router = require('./app/routes/index')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const config = require('./app/config/config.json');
-const { password } = require('pg/lib/defaults');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const session = require('express-session');
 
 module.exports = config
 const bodyParser = require("body-parser");
@@ -16,49 +16,24 @@ const bodyParser = require("body-parser");
 const app = express()
 
 //Memanggil fungsi appInit
-const user = {
-    user_name: 'tes username kevin',
-    email: 'kevin@mail.com',
-    password: '123456',
-} 
-
-const token = bcrypt.compare(user.password, user.password)
 appInit(app)
-
-
-
-app.get('/register', function(req, res) {
-    res.render('pages/register');
-});
-
-app.get('/report', function(req, res) {
-    res.render('pages/report');
-});
-app.get('/tentang-kami', function(req, res) {
-    res.render('pages/tentang-kami');
-});
-app.get('/kebijakan-privasi', function(req, res) {
-    res.render('pages/kebijakan-privasi');
-});
 
 app.listen(PORT, () => {
     console.log(`App running on http://localhost:${PORT}`)
     const db = new Sequelize(
-        config.development.database, 
-        config.development.username,
-        config.development.password,
+        config.production.database, 
+        config.production.username,
+        config.production.password,
         {
-            host : config.development.host,
-            port: config.development.port, 
-            dialect : config.development.dialect,
-            /*
+            host : config.production.host,
+            port: config.production.port, 
+            dialect : config.production.dialect,
             dialectOptions: {
                 ssl: {
                     require: true,
                     rejectUnauthorized: false
                 }
             },
-            */
             logging : false
         }
     )
@@ -74,8 +49,17 @@ app.listen(PORT, () => {
 function appInit(app) {
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
-    app.use(bodyParser.urlencoded({ extended: false}));
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false}));
+    const oneDay = 1000 * 60 * 60;
+    app.use(
+        session({
+            secret: 'thisSecretKey',
+            saveUninitialized: true,
+            cookie: { maxAge: oneDay },
+            resave: false
+        })
+    )
     
     //Static Files
     app.use(express.static('app/public'))

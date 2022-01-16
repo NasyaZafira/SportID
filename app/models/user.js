@@ -5,6 +5,9 @@ const {
 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const moment = require('moment')
+const wib = ' WIB'
+const isDateTime = moment().locale('id').format('DD MMMM YYYY HH:mm:ss')
 
 module.exports = (sequelize, DataTypes) => {
   class user extends Model {
@@ -22,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     static register = ({ firstName, lastName, email, phoneNumber, password }) => {
       const encryptedPassword = this.#encrypt(password)
 
-      return this.create({ name: `${firstName} ${lastName}`, email, phoneNumber, password: encryptedPassword })
+      return this.create({ name: `${firstName} ${lastName}`, email, phoneNumber, password: encryptedPassword, createdAt: isDateTime + wib, updatedAt: isDateTime + wib })
     }
 
   };
@@ -31,7 +34,9 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     phoneNumber: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    createdAt: DataTypes.STRING,
+    updatedAt: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'user',

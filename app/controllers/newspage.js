@@ -74,8 +74,7 @@ const getThumbnailBerita = async (req, res) => {
             ]
         })
     
-
-    res.render('pages/newspage', { Berita, dbBerita, dbKomentar })
+    res.render('pages/newspage', { Berita, dbBerita, dbKomentar, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName })
 }
 
 

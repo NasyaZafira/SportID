@@ -5,7 +5,7 @@ const db = require('../models/index')
 
 // Menampilkan Form Edit
 const showEditUser = async (req, res) => {
-    const {id} = await req.params;
+    const {id} = req.session.loggedUser;
     const User = await db.user.findOne({
         where: {
             id: id
@@ -22,7 +22,7 @@ const showEditUser = async (req, res) => {
 
 // Melakukan Edit User
 const editUser = async (req, res) => {
-    const {id} = req.params
+    const {id} = req.session.loggedUser
     const {name, email, phoneNumber, password} = req.body;
 
     const data = await db.user.update({
@@ -43,7 +43,7 @@ const editUser = async (req, res) => {
         return
     }
 
-    res.status(200).redirect(`/profile/${id}`)
+    res.status(200).redirect(`/profile`)
 }
 
 module.exports = {

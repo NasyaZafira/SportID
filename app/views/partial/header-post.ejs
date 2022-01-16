@@ -14,9 +14,9 @@
         <%# highlight category tray request direct page sesuai kategori %>
         <div class="highlight-ctgr">
             <ul>
-                <li class="highlight-ctgr-items"><a href="#!">Sepak Bola</a></li>
-                <li class="highlight-ctgr-items"><a href="#!">Bulutangkis</a></li>
-                <li class="highlight-ctgr-items"><a href="#!">Basket</a></li>
+                <li class="highlight-ctgr-items"><a href="/sepakbola">Sepak Bola</a></li>
+                <li class="highlight-ctgr-items"><a href="/bulutangkis">Bulutangkis</a></li>
+                <li class="highlight-ctgr-items"><a href="/basket">Basket</a></li>
                 <li class="highlight-ctgr-items" id="select-sizing">
                     <a href="#!" class="head"> Lainnya &nbsp;
                         <div class="arrow-down"></div>
@@ -25,12 +25,12 @@
                         <div class="dropOut">
                             <div class="triangle"></div>
                             <ul>
-                                <li><a href="#!">Voli</a></li>
-                                <li><a href="#!">Panahan</a></li>
-                                <li><a href="#!">Renang</a></li>
-                                <li><a href="#!">Bela Diri</a></li>
-                                <li><a href="#!">Angkat Besi</a></li>
-                                <li><a href="#!">Otomotif</a></li>
+                                <li><a href="/bolavoli">Voli</a></li>
+                                <li><a href="/panahan">Panahan</a></li>
+                                <li><a href="/renang">Renang</a></li>
+                                <li><a href="/beladiri">Bela Diri</a></li>
+                                <li><a href="/angkatbesi">Angkat Besi</a></li>
+                                <li><a href="/otomotif">Otomotif</a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
             </div>
             <ul>
                 <li id="select-sizing-user">
-                    <a href="#!" class="nama-user"> Nama User <%# request user first and second name from database %>
+                    <a href="#!" class="nama-user"><%= User.name %>
                         <div class="arrow-down-user"></div>
                     </a>
                     <div class="access-user-dropdownContain">
@@ -63,8 +63,7 @@
                             <div class="triangle"></div>
                             <ul>
                                 <%# request direct page to lists below %>
-                                <li> <a href="#!">Ubah Profile</a></li>
-                                <li><a href="#!">Keluar</a></li>
+                                <li><a href="/logout">Keluar</a></li>
                             </ul>
                         </div>
                     </div>

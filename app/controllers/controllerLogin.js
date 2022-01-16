@@ -2,17 +2,16 @@ const { user } = require("../models/index");
 const { admin } = require("../models/index");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { password } = require("pg/lib/defaults");
 const { Op } = require("sequelize");
 
 module.exports = {
   getLogin(req, res) {
-    res.render("login.ejs");
+    res.render("pages/login", {loggedName: req.session.userName, loggedNameAdmin: req.session.adminName});
   },
   postLogin(req, res) {
       user.findOne({
         where: {
-          [Op.or]: [{email: req.body.email}, {phoneNumber: req.body.email}]
+          [Op.or]: [{email: req.body.username}, {phoneNumber: req.body.username}]
         },
       })
       .then(function(data) {
@@ -23,15 +22,17 @@ module.exports = {
             function(err, result) {
               if(result) {
                 const token = jwt.sign({data}, 'pass');
+                req.session.userName = data.name
+                req.session.loggedUser = data
                 console.log("Berhasil Login")
-                res.status(200).render("successLogin.ejs", {token}); 
+                res.redirect("/"); 
               }
             }
           )
         } else {
           admin.findOne({
             where: {
-              [Op.or]: [{email: req.body.email}, {nomorHp: req.body.email}]
+              [Op.or]: [{email: req.body.username}, {nomorHp: req.body.username}]
             },
           })
           .then(function(dataadm) {
@@ -42,8 +43,10 @@ module.exports = {
                 function(err, result) {
                   if(result) {
                     const token = jwt.sign({dataadm}, 'pass');
-                    console.log("Berhasil Login")
-                    res.status(200).render("successLogin.ejs", {token}); 
+                    req.session.adminName = dataadm.nama
+                    req.session.loggedAdmin = dataadm
+                    console.log("Berhasil Login") 
+                    res.redirect('/admin');
                   }
                 }
               )

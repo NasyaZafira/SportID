@@ -4,11 +4,11 @@ const {comments} = require('../models')
 
 
 const addKomen = async (req, res) => {
-    const {Komentar, token} = req.body;
+    const {Komentar, id_berita} = req.body;
 
     const data = await comments.create({
         isi_komen: Komentar,
-        user_name: token
+        user_name: req.session.userName
     })
     if(!data){
         res.status(400).json({
