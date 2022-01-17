@@ -1,6 +1,10 @@
 # SportID - Mini Project SYNRGY Academy
 ## Deskripsi
 Pada mini proyek ini tim kami akan membuat sebuah produk berbasis web yang bertujuan untuk untuk mempermudah masyarakat yang memiliki hobi olahraga dan ingin melihat berita seputar olahraga di Indonesia.   
+
+## Dokumentasi API
+![foto1](https://data.terabox.com/thumbnail/9496b36c1eb30de15c7ec75854559a74?fid=1661265616-250528-999915388200724&time=1642442400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-r2r%2FSdtPP2ncltfNNH6VKFPunYY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=396283651377118943&dp-callid=0&size=c1600_u1600&quality=100&vuk=-&ft=video)
+![foto2](https://data.terabox.com/thumbnail/d87680f7b430c1a677ba77e49815142e?fid=1661265616-250528-689339244688748&time=1642442400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-wBmI0zkTuCNLTQpuu4UHCBZUTfU%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=396352288814744150&dp-callid=0&size=c1600_u1600&quality=100&vuk=-&ft=video)
 ## Cara Instalasi
    1. Clone this repository to your local computer
    2. Install all dependencies
