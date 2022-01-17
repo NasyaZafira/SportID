@@ -45,7 +45,7 @@ const upload = multer({
     storage: storage,
     fileFilter: (req, file, callback) => {
         let ext = path.extname(file.originalname)
-        if(ext !== '.png' && ext !== '.jpg' && ext !== 'jpeg') {
+        if(ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
             return callback(new Error('Only images are allowed'))
         }
         callback(null, true)
