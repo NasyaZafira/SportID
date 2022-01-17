@@ -14,7 +14,7 @@ const lihatsemua = async (req, res) => {
 
         const dbBerita = await berita.findAll({
           order: [
-            ['createdAt', 'DESC']
+            ['updatedAt', 'DESC']
           ]
         })
 
