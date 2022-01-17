@@ -1,0 +1,36 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "root",
+    "database": "berita",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": 5432,
+    "_dialectOptions": {
+      "_ssl": {
+        "_require": true,
+        "_rejectUnauthorized": false
+      }
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "uweagrbvcjqokw",
+    "password": "95285d660ffdf446ad4a56b0a30fbedfe345187ff6937841e47311b0ddffb182",
+    "database": "d17ngdv1jnnoqj",
+    "host": "ec2-54-220-166-184.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+      }
+    }
+  }
+}

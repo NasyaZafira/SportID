@@ -1,0 +1,425 @@
+
+* {
+    transition: background-color 0.5s;
+    max-width: 100%;
+}
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: #e5e5e5;
+    margin: 0;
+}
+.all{
+    width: 100vw;
+}
+.container-iklan{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 16px;
+}
+.iklan1{
+    width: 740px;
+    height: 189px;
+    margin-top: 16px;
+    margin-left: 313px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.home-berita{
+    width: 150px;
+    margin-top: 58px;
+    margin-left: 114px;
+    font-family: Montserrat-B;
+}
+.content{
+    width: 1051px;
+    background-color: white;
+    margin-left: 114px;
+    margin-top: 8px;
+}
+.judul{
+    width: 897px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 45px;
+    margin-left: 63px;
+    padding-top: 45px;
+}
+.thumbnail{
+    width: 952px;
+    height: 631px;
+    border-radius: 12px;
+    margin-left: 63px;
+    margin-top: 32px;
+}
+.thumbnail img {
+  width: 925px;
+  height: 621px;
+}
+.penulis{
+    display: flex;
+    width: 925px;
+    height: 34px;
+    margin-left: 68px;
+    margin-top: 32px;
+    padding-bottom: 12px;
+    box-shadow: 0 1.5px 0 0 #C4C4C4;
+    justify-content: space-between;
+}
+.profil{
+    height: 34px;
+    display: flex;
+}
+.logo-profil{
+    width: 34px;
+    height: 34px;
+    background-image: url(/icon/profile-writer_ic.svg);
+}
+.penulis-2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.laporkan{
+    display: flex;
+}
+.logo-bendera{
+    width: 15px;
+    height: 15px;
+    background-image: url(/icon/flag_ic.svg);
+}
+.laporkan-berita{
+    font-size: 12px;
+    line-height: 16px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.nama-penulis{
+    font-size: 12px;
+    line-height: 16px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+}
+.jabatan{
+    font-size: 11px;
+    margin-top: 5px;
+    line-height: 10px;
+    font-weight: lighter;
+    font-family: Montserrat-B;
+    font-style: normal;
+}
+.tanggal-komentar{
+    display: flex;
+    width:580px;
+    height: 59px;
+    justify-content: space-between;
+}
+.tanggal-1{
+    margin-left: 79px;
+    margin-top: 7px;
+    height: 15px;
+    width: 183px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+.logo-komentar-link{
+    margin-top: 18px;
+    display: flex;
+}
+.logo-komentar{
+    width: 26px;
+    height: 26px;
+    background-image: url(/icon/comment_ic.svg);
+}
+.logo-link{
+    margin-left: 5px;
+    width: 28px;
+    height: 28px;
+    background-image: url(/icon/link_ic.svg);
+}
+.berita-section{
+    width: 1051px;
+    margin-top: 17px;
+    display: flex;
+    padding-bottom: 58px;
+}
+.berita{
+    margin-left: 100px;
+    width: 480px;
+    padding-right: 50px;
+    box-shadow: 1.5px 0 0 0 #C4C4C4;
+    overflow: auto;
+    height: 550px;
+}
+.berita::-webkit-scrollbar {
+    display: none;
+}
+.isi-berita{
+    width: 480px;
+    font-weight: lighter;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;
+    font-family: Montserrat;
+}
+.berita-terkait{
+    display: flex;
+    background-color:white;
+    flex-direction: column;
+    width: 371px;
+    height: 487px;
+    margin-left: 37px;
+}
+.font{
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color: #5B75EB;
+}
+.kolom-berita-terkait{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.baris-berita{
+    display: flex;
+    margin-top: 15px;
+}
+.thumbnail-berita{
+    width: 126px;
+    height: 77px;
+}
+.judul-kategori-berita-terkait{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+.judul-berita-terkait{
+    width: 219px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+}
+.kategori-berita-terkait{
+    width: 84px;
+    height: 20px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5B75EB;
+    margin-top: 3px;
+}
+.baris-berita-2{
+    display: flex;
+    margin-top: 28px;
+}
+#komentar{
+    width: 126px;
+    height: 29px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    background-color: #E5E5E5;
+    margin-top: 30px;
+    margin-left: 114px;
+}
+.content-2{
+    display: flex;
+    width: 1051px;
+    height: 377px;
+    background-color: #E5E5E5;
+    margin-left: 114px;
+    margin-top: 45px;
+    margin-top: 12px;
+}
+.komentar-section{
+    width: 614px;
+    height: 288px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.tulis-komentar{
+    width: 518px;
+    height: 79px;
+    box-shadow: 0 1.5px 0 0 #C4C4C4;
+    margin-left: 45px;
+    display: flex;
+}
+.profil-komentar{
+    margin-top: 23px;
+    width: 34px;
+    height: 34px;
+    background-image: url(/icon/profile-writer_ic.svg);
+}
+.kolom-komentar{ 
+    margin-left: 8px; 
+    margin-top: 23px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+} 
+form.kolom-komentar input[type=text] { 
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    border: 1px solid rgb(233, 233, 233); 
+    float: left; 
+    width: 420px;
+    height: 35px;
+    background: rgb(233, 233, 233); 
+    border-radius: 5px;
+    padding-left: 10px;
+} 
+
+form.kolom-komentar::after { 
+   content: ""; 
+   clear: both; 
+   display: table; 
+} 
+.send{
+    margin-top: 8px;
+    width: 24px;
+    height: 24px;
+    margin-left: 444px;
+    background-image: url(/icon/send_ic.svg);
+}
+.seluruh-komentar{
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: 180px;
+    overflow: auto;
+    margin-top: 15px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(73, 73, 73);
+    border-radius: 6px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(56, 56, 56);
+    border-radius: 6px
+}
+
+.tampilan-komentar{
+    display: flex;
+    margin-left: 45px;
+    margin-bottom: 20px;
+}
+.profil-tampilan-komentar{
+    width: 29px;
+    height: 29px;
+    background-image: url(/icon/profile-writer-ic-29px.svg);
+}
+.nama-dan-komentar{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-left: 14px;
+}
+.nama{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Montserrat-B;
+    font-style: normal;
+}
+.komentarnya{
+    background-color: #E5E5E5;
+    margin-top: 6px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: lighter;
+    padding: 10px;
+    width: 360px;
+    border-radius: 5px;
+}
+.iklan2{
+    width: 423px;
+    height: 288px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+    margin-left: 16px;
+    
+}
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #5B75EB;
+    cursor: pointer;
+}
+.font-2{
+    font-size: 12px;
+    line-height: 15px;
+    color: #5B75EB;
+}
+.popUp{
+    width: 157px;
+    height: 24px;
+    border-radius: 5px;
+    font-family: Montserrat-B;
+    font-size: 12px;
+    color: white;
+    align-items: center;
+    padding: 10px 15px 20px 15px;
+    margin-left: 636px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #4CAF50;
+    position: fixed;
+    bottom: 50px;
+}
+
+  #down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 
+
+#popUp{
+    display: none;
+}

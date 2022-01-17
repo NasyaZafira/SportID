@@ -96,3 +96,5 @@ Pada mini proyek ini tim kami akan membuat sebuah produk berbasis web yang bertu
        Merupakan halaman untuk menampilkan informasi seputar kebijakan dan privasi dalam penggunaan web SportID
    13. Fitur Laporkan Berita  :
        Fitur ini digunakan untuk melaporkan berita yang kurang pantas untuk ditayangkan di web SportID
+   14. Fitur Reset Password :
+       Fitur ini digunakan untuk melakukan reset password jika user lupa terhadap password nya

@@ -1,0 +1,247 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(/font/Montserrat-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Bold;
+    src: url(/font/Montserrat-ExtraBold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-B;
+    src: url(/font/Montserrat-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: Montserrat-Med;
+    src: url(/font/Montserrat-Medium.ttf);
+  }
+
+  * {
+      transition: background-color 0.2s;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+body {
+      display: flex;
+      width: 100vw;
+      max-width: 100%;
+      background-color: #ddebff;
+      margin: 0;
+  }
+
+  a {
+      text-decoration: none;
+      transition: 0.3s;
+      color: inherit;
+  }
+
+  /* Scroll Bar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #15202B;
+    border-radius: 6px
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #15202B;
+    border-radius: 6px
+  }
+/* Scroll Bar */
+
+/* Sidebar */
+.sidebar{
+    width: 255px;
+    height: 900px;
+    background-color: #15202B;
+    color: white;
+    font-family: Montserrat;
+}
+
+.logo-sidebar{
+    height: 50px;
+    width: 147px;
+    background-image: url(/icon/logo_dark_mode.svg);
+    background-repeat: no-repeat;
+    margin-left: 54px;
+    margin-top: 39px;
+    margin-bottom: 50px;
+}
+.bar{
+    z-index:1;
+    width: 255px;
+    color: white;
+}
+
+.bar-item{
+    width:100%;
+    display:block;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0
+}
+.bar-button{
+    width:100%;
+    text-align:left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.5;
+}
+
+.bar-button:hover{
+    color:white;
+    background-color:#1d2c3b;
+    opacity: 1;
+}
+/* Sidebar end*/
+
+.admin-user{
+    background-color: #ddebff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.kolom-atas{
+    display: flex;
+    justify-content: space-between;
+}
+.pengaturan{
+    width: 350px;
+    height: 44px;
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    margin-top: 58px;
+    margin-left: 34px;
+}
+.profil{
+    display: flex;
+    margin-right: 69px;
+    margin-top: 68px;
+}
+.logo-profil{
+    width: 29px;
+    height: 29px;
+    background-image: url(/icon/profile_ic_light_29px.svg);
+}
+.nama-profil{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.nama-adminnya{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #252733;
+}
+.detail{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    margin-top: 3px;
+}
+.kolom-putih{
+    width: 100%;
+    /* height: 700px; */
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 34px;
+    margin-top: 40px;
+}
+.akun-user{
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 32px;
+    margin-left: 42px;
+}
+.table{
+    margin-top: 15px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    width: 870px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.table::-webkit-scrollbar {
+    display: none;
+}
+
+.form-group label {
+    font-family: Montserrat-B;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+/* table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left:15px;
+}
+  
+  th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #DFE0EB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #898989;
+  }
+  td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-bottom: 1px solid #DFE0EB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.2px;
+    color: black;
+  } */

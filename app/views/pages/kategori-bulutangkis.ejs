@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
+</head>
+
+<header>
+    <%- include('../partial/header') %>
+</header>
+
+<body>
+    <div class="homepage">
+        <div class="flex-container-2">
+            <div class="home-kategori">
+                <!-- a href untuk kembali ke homepage -->
+                <a href="">Home</a> > <span style="color: #5B75EB;">Bulutangkis</span>
+            </div>
+            <% Bulutangkis.slice(-1).forEach(news => { %>
+                <div class="flex-item-2-1">
+                    <!-- <%# ini butuh request thumbnail %> -->
+                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= news.imageBerita %>"></a>
+                </div>
+                <div class="flex-item-2-2">
+                    <div class="flex-item-2-2-1">
+                        <!-- <%# ini butuh request judul %> -->
+                        <a href="/details/<%= news.id %>">
+                            <%= news.judulBerita %>
+                        </a>
+                    </div>
+                    <div class="flex-item-2-2-2">
+                        <div class="sepak-bola">
+                            <!-- <%# ini butuh request kategori berita di "bulu tangkis"nya %> -->
+                            <a href="/bulutangkis"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                        </div>
+                        <div class="tanggal">
+                            <!-- <%# ini butuh request tanggal dan jam upload berita %> -->
+                            <%= news.updatedAt %>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+
+        <div class="edusport">
+            <p class="font-1">Edu-Sport News</p>
+            <% Bulutangkis.slice(-4).forEach(bulutangkisEdu => { %>
+                <div class="edunews">
+                    <div class="thumbnail-edu">
+                        <!-- <%# ini butuh request thumbnail %> -->
+                        <img style="width: 126px; height: 77px;" src="/images/<%= bulutangkisEdu.imageBerita %>">
+                    </div>
+                    <div class="berita-edu">
+                        <div class="edu-judul-berita">
+                            <!-- <%# ini butuh request judul %> -->
+                            <a href="/details/<%= bulutangkisEdu.id %>">
+                                <%= bulutangkisEdu.judulBerita %>
+                            </a>
+                        </div>
+                        <div class="edu-jenis-berita">
+                            <!-- <%# ini butuh request kategori %> -->
+                            <a href="/bulutangkis" class="font-2">Bulutangkis</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+
+    </div>
+
+    <div class="homepage-2">
+        <div class="bagian-berita">
+            <div class="trending-section">
+                <div class="judul-trending">Trending</div>
+                <div class="berita-trending">
+                    <% beritaTrend.slice(-3).forEach(bulutangkisTrend => { %>
+                        <div class="kolom-berita">
+                            <div class="thumbnail-trending">
+                                <!-- <%# ini butuh request thumbnail %> -->
+                                <img style="width: 286px; height: 171px;" src="/images/<%= bulutangkisTrend.imageBerita %>">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                <!-- <%# ini butuh request kategori %>  -->
+                                <a href="/bulutangkis" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                            </div>
+                            <div class="trending-judul-berita">
+                                <!-- <%# ini butuh request judul %> -->
+                                <a href="/details/<%= bulutangkisTrend.id %>">
+                                    <%= bulutangkisTrend.judulBerita %>
+                                </a>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+            <div class="terbaru-section">
+                <div class="judul-trending">Terbaru</div>
+                <div class="berita-trending">
+                    <% Bulutangkis.slice(-3).forEach(bulutangkisBaru => { %>
+                        <div class="kolom-berita">
+                            <div class="thumbnail-trending">
+                                <!-- <%# ini butuh request thumbnail %> -->
+                                <img style="width: 286px; height: 171px;" src="/images/<%= bulutangkisBaru.imageBerita %>">
+                            </div>
+                            <div class="trending-jenis-berita">
+                                <!-- <%# ini butuh request kategori %> -->
+                                <a href="/bulutangkis" class="font-2"><span style="color:#5B75EB">Bulutangkis</span></a> | Sport
+                            </div>
+                            <div class="trending-judul-berita">
+                                <!-- <%# ini butuh request judul %> -->
+                                <a href="/details/<%= bulutangkisBaru.id %>">
+                                    <%= bulutangkisBaru.judulBerita %>
+                                </a>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+        <div class="iklan">
+            <!-- <%# ini butuh request iklan (?) %> -->
+            <img src="/images/231x896.png">
+        </div>
+    </div>
+    <!-- <%# ini butuh request iklan (?) %> -->
+    <div class="iklan-2"><img src="/images/892x228.png"></div>
+</body>
+
+<footer>
+    <%- include('../partial/footer') %>
+</footer>
+
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<script>
+    let flag = true
+    $('#moon_light').click(function () {
+        if (flag == true) {
+            flag = false
+            $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
+            $('link#styles').attr('href', '/css/dark.css');
+        } else {
+            flag = true
+            $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
+            $('link#styles').attr('href', '/css/light.css');
+        }
+    });
+
+    $('.logo').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
+
+    $('.logo-footer').click(function () {
+        window.location.href = '/' /* requesting redirect page on logo click */
+    })
+
+    // PERLU TINJAU ULANG JS UNTUK CLICK LOGIN DAN REGISTER //
+
+    $('.login-button').click(function () {
+        window.location.href = '/login'
+        return false
+    })
+
+    $('.register-button').click(function () {
+        window.location.href = '/register'
+        return false
+    })
+</script>
+
+</html>
