@@ -58,20 +58,8 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="kategori" style="margin-top: 32px;">Kategori</label>
-                                        <!-- <input type="text" class="form-control" name="kategori"
-                                        value="" required> -->
-                                        <select class="form-control" name="kategori">
-                                            <option selected hidden><%= Berita.kategori %></option>
-                                            <option>sepakbola</option>
-                                            <option>bulutangkis</option>
-                                            <option>basket</option>
-                                            <option>bolavoli</option>
-                                            <option>panahan</option>
-                                            <option>renang</option>
-                                            <option>beladiri</option>
-                                            <option>angkatbesi</option>
-                                            <option>otomotif</option>
-                                        </select>
+                                        <input type="text" class="form-control" name="kategori"
+                                        value="<%= Berita.kategori %>" required>
                                     </div>
                                 </div>
 
