@@ -65,7 +65,7 @@ const getThumbnailBerita = async (req, res) => {
             ]
         },
         order: [
-            ['createdAt', 'DESC']
+            ['updatedAt', 'DESC']
         ]
     })
     

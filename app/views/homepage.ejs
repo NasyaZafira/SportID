@@ -16,7 +16,7 @@
                 <% dbBerita.slice(0, 1).forEach(news => { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= news.imageBerita %>"></a> 
+                    <a href="/details/<%= news.id %>"><img style="width: 796px; height: 437px;" src="/images/<%= news.imageBerita %>"></a> 
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -106,11 +106,11 @@
             </div>
             <div class="iklan">
                 <!-- <%# ini butuh request iklan (?) %> -->
-                <img src="/images/231x896.png">
+                <img src="/ads/iklan-231x896.png">
             </div>
         </div>
         <!-- <%# ini butuh request iklan (?) %> -->
-        <div class="iklan-2"><img src="/images/892x228.png"></div>    
+        <div class="iklan-2"><img src="/ads/iklan-892x228.png"></div>    
 
         <footer>
             <%- include('./partial/footer', {loggedName}, {loggedNameAdmin}) %>
