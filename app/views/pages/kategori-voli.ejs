@@ -17,7 +17,7 @@
                     <!-- a href untuk kembali ke homepage -->
                     <a href="">Home</a> > <span style="color: #5B75EB;">Voli</span>
                 </div>
-                <% berita.slice(-1).forEach(voli=> { %>
+                <% berita.slice(0, 1).forEach(voli=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
                     <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= voli.imageBerita %>"></a> 
@@ -44,7 +44,7 @@
     
             <div class="edusport">
                 <p class="font-1">Edu-Sport News</p>
-                <% berita.slice(-4).forEach(voli=> { %>
+                <% berita.slice(0, 4).forEach(voli=> { %>
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
@@ -71,7 +71,7 @@
                 <div class="trending-section">
                     <div class="judul-trending">Trending</div>
                     <div class="berita-trending">
-                        <% berita.slice(-3).forEach(voli=> { %>
+                        <% berita.slice(0, 3).forEach(voli=> { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
@@ -91,7 +91,7 @@
                 <div class="terbaru-section">
                     <div class="judul-trending">Terbaru</div>
                     <div class="berita-trending">
-                        <% berita.slice(-3).forEach(voli=> { %>
+                        <% berita.slice(0, 3).forEach(voli=> { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->

@@ -17,7 +17,7 @@
                     <!-- a href untuk kembali ke homepage -->
                     <a href="">Home</a> > <span style="color: #5B75EB;">Sepak Bola</span>
                 </div>
-                <% Berita.slice(-1).forEach(sepakbola => { %>
+                <% Berita.slice(0, 1).forEach(sepakbola => { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
                     <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= sepakbola.imageBerita %>"></a> 
@@ -42,7 +42,7 @@
             </div>
             <div class="edusport">
                 <p class="font-1">Edu-Sport News</p>
-                <% Berita.slice(-4).forEach(sepakbola => { %>
+                <% Berita.slice(0, 4).forEach(sepakbola => { %>
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <!-- <%# ini butuh request thumbnail %> -->
@@ -69,7 +69,7 @@
                 <div class="trending-section">
                     <div class="judul-trending">Trending</div>
                     <div class="berita-trending">
-                        <% beritaTrend.slice(-3).forEach(sepakbola => { %>
+                        <% beritaTrend.slice(0, 3).forEach(sepakbola => { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
@@ -89,7 +89,7 @@
                 <div class="terbaru-section">
                     <div class="judul-trending">Terbaru</div>
                     <div class="berita-trending">
-                        <% Berita.slice(-3).forEach(sepakbola => { %>
+                        <% Berita.slice(0, 3).forEach(sepakbola => { %>
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
@@ -100,7 +100,7 @@
                                 <a href="/sepakbola" class="font-2"><span style="color:#5B75EB">Sepak Bola</span></a> | Sport</div>
                             <div class="trending-judul-berita">
                                 <!-- <%# ini butuh request judul %> -->
-                                <a href="/details/<%= sepakbola.id %>"><%= sepakbola.judulBerita %> </a>>
+                                <a href="/details/<%= sepakbola.id %>"><%= sepakbola.judulBerita %> </a>
                             </div>
                         </div>
                         <% }) %>
