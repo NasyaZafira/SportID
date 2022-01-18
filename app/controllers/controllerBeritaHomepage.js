@@ -2,27 +2,18 @@ const res = require('express/lib/response');
 const { berita } = require('../models')
 
 const lihatsemua = async (req, res) => {
-  await berita.findAll({
-      order: [
-          ['createdAt', 'DESC']
-        ]
-      })
-      .then(async (Berita) => {
-        const betren = await berita.findAll({
-          where : { isTrending : 'True' }
-        })
+  const betren = await berita.findAll({
+    where : { isTrending : 'True' },
+    order: [ ['updatedAt', 'DESC'] ]
+  })
 
-        const dbBerita = await berita.findAll({
-          order: [
-            ['createdAt', 'DESC']
-          ]
-        })
+  const dbBerita = await berita.findAll({
+    order: [
+      ['updatedAt', 'DESC']
+    ]
+  })
 
-        res.render("homepage" , {berita:dbBerita, betren, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName});
-      })
-      .catch(err => {
-        console.log(err)
-      })
-   } 
+  res.status(200).render("homepage" , {dbBerita, betren, loggedName: req.session.userName, loggedNameAdmin: req.session.adminName});
+} 
 
 module.exports = {lihatsemua}
