@@ -1,3 +1,7 @@
+header {
+  width: 100% !important;
+}
+
 .box_register {
   display: flex;
   flex-flow: column wrap;

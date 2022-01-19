@@ -7,11 +7,11 @@
         <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css">
     </head>
 
-    <header>
-        <%- include('../partial/header-post', {loggedName}, {loggedNameAdmin}) %>
-    </header>
-
+    
     <body>
+        <header>
+            <%- include('../partial/header-post', {loggedName}, {loggedNameAdmin}) %>
+        </header>
         <div class="main-container">
             <div class="selected-item">
                 <div class="info">
@@ -37,16 +37,12 @@
                             </span>
                         </label>
 
-                        <br>
-
                         <label for="rep1"> 
                             <input type="radio" id="rep1" name="radiobutton" value="Mengandung Pornografi atau asusila" required>
                             <span id="form-control">
                                 Mengandung Pornografi atau asusila
                             </span>
                         </label>
-
-                        <br>
 
                         <label for="rep2"> 
                             <input type="radio" id="rep2" name="radiobutton" value="Membahayakan atau menjurus tindakan berbahaya" required>
@@ -55,16 +51,12 @@
                             </span>
                         </label>
 
-                        <br>
-
                         <label for="rep3"> 
                             <input type="radio" id="rep3" name="radiobutton" value="Menyinggung SARA" required>
                             <span id="form-control">
                                 Menyinggung SARA
                             </span>                            
                         </label>
-
-                        <br>
 
                         <label for="rep4"> 
                             <input name="radiobutton" value="Lainnya" type="radio" id="rep4" required>
@@ -90,28 +82,15 @@
             </div>
        
         </div>
-    </body>
-
     <footer>
         <%- include('../partial/footer') %>
     </footer>
 
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
-    <script>
+    <script src="/js/darkmode.js"></script>
 
-        let flag = true;
-        $('#moon_light').click(function () { // Switching between light and dark mode 
-            if (flag) {
-                flag = false
-                $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                $('link#styles').attr('href', '/css/dark.css');
-            } else {
-                flag = true
-                $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                $('link#styles').attr('href', '/css/light.css');
-            }
-        });
+    <script>
 
         for (let i = 0; i < 5; i++) {
             $('#rep' + i).click(function () {
@@ -156,4 +135,6 @@
             window.location.href = '/' /* requesting redirect page on logo click */
         })
     </script>
+    </body>
+
 </html>

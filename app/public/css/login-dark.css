@@ -1,22 +1,26 @@
-html body {
-    display: flex;
-    width: 100vw;
-    max-width: 100%;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: rgb(25, 39, 52);
-    margin: 0;
-}
-
 a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+    text-decoration: none !important;
 }
 
-a:hover {
-    color: #5B75EB;
-    cursor: pointer;
+header {
+    width: 100% !important;
+}
+
+.highlight-ctgr-items a {
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+
+.highlight-ctgr-items a:hover {
+    color: #5B75EB !important;
+}
+
+.dropOut li a {
+    color: #000 !important;
+  }
+  
+.dropOut li:hover {
+    text-decoration: none 2px !important;
 }
 
 /* Kotak Login Start */
@@ -64,6 +68,7 @@ label {
 .form_login {
     box-sizing: border-box;
     border: none;
+    color: #FFFFFF !important;
     border-bottom: 1.5px solid white;
     background-color: #15202B;
     font-size: 16px;
@@ -82,12 +87,12 @@ label {
     font-weight: 600;
     font-size: 13px;
     line-height: 16px;
-    color: white;
+    color: white !important;
     padding: 0;
 }
 
 input:focus::placeholder {
-    color: transparent;
+    color: transparent !important;
 }
 
 input[type=text] {

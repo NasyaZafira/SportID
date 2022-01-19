@@ -8,6 +8,10 @@ html body {
     margin: 0;
 }
 
+header {
+    width: 100% !important;
+}
+
 a {
     text-decoration: none;
     color: white;

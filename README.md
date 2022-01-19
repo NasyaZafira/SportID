@@ -101,4 +101,12 @@ Pada mini proyek ini tim kami akan membuat sebuah produk berbasis web yang bertu
    13. Fitur Laporkan Berita  :
        Fitur ini digunakan untuk melaporkan berita yang kurang pantas untuk ditayangkan di web SportID
    14. Fitur Reset Password :
+<<<<<<< HEAD
+<<<<<<< HEAD
        Fitur ini digunakan untuk melakukan reset password jika user lupa terhadap password nya
+=======
+       Fitur ini digunakan untuk melakukan reset password jika user lupa terhadap password nya
+>>>>>>> 9719bca574e5128bbb7820df1b9279a323857ea6
+=======
+       Fitur ini digunakan untuk melakukan reset password jika user lupa terhadap password nya
+>>>>>>> master

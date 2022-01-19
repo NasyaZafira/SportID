@@ -119,24 +119,9 @@
 
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
-    <script>
-        
-        var flag = localStorage.getItem('flag');
-        console.log(flag);
+    <script src="/js/darkmode.js"></script>
 
-            $('#moon_light').click(function () { // Switching between light and dark mode 
-                if (flag) {
-                    flag = false
-                    $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-                    $('link#styles').attr('href', '/css/dark.css');
-                    localStorage.setItem('flag', false);
-                } else {
-                    flag = true
-                    $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-                    $('link#styles').attr('href', '/css/light.css');
-                    localStorage.setItem('flag', true);
-                }
-            });
+    <script>
 
         $('.logo').click(function (){
             window.location.href = '/' /* requesting redirect page on logo click */
