@@ -37,40 +37,22 @@ const createBerita = async (req, res) => {
 
     //Modifikasi datetime pada createdAt dan updatedAt agar sesuai timezone Indonesia
     const wib = ' WIB'
-    const isDateTime = moment().locale('id').format('DD MMMM YYYY HH:mm')
+    const isDateTime = moment().locale('id').format('LL LT')
 
-    if(!req.file) {
-        const dbBerita = await berita.create({
-            judulBerita: judul,
-            imageBerita: imageUrl,
-            admin_name: author,
-            isiBerita: isi,
-            kategori: kategori,
-            createdAt: isDateTime + wib,
-            updatedAt: isDateTime + wib
+    const dbBerita = await berita.create({
+        judulBerita: judul,
+        imageBerita: imageUrl,
+        admin_name: author,
+        isiBerita: isi,
+        kategori: kategori,
+        createdAt: isDateTime + wib,
+        updatedAt: isDateTime + wib
+    })
+    if(!dbBerita){
+        res.status(400).json({
+            message: 'data gagal ditambahkan'
         })
-        if(!dbBerita){
-            res.status(400).json({
-                message: 'data gagal ditambahkan'
-            })
-        }
-    } else {
-        const dbBerita = await berita.create({
-            judulBerita: judul,
-            imageBerita: req.file.filename,
-            admin_name: author,
-            isiBerita: isi,
-            kategori: kategori,
-            createdAt: isDateTime + wib,
-            updatedAt: isDateTime + wib
-        })
-        if(!dbBerita){
-            res.status(400).json({
-                message: 'data gagal ditambahkan'
-            })
-        }
     }
-
     res.status(200).redirect('/admin/list-berita')
 }
 
@@ -94,7 +76,7 @@ const showUpdateBerita = async (req, res) => {
 //Deklarasi untuk update Berita
 const updateBerita = async (req, res) => {
     const {id} = req.params
-    const {judul, isi, kategori, author, updatedAt} = req.body
+    const {judul, isi, kategori, author, imageUrl} = req.body
     const selector = {
         where: {
             id: id
@@ -102,9 +84,9 @@ const updateBerita = async (req, res) => {
     }
 
     const wib = ' WIB'
-    const isDateTime = moment().locale('id').format('DD MMMM YYYY HH:mm')
+    const isDateTime = moment().locale('id').format('LL LT')
 
-    if (!req.file) {
+    if (!req.url) {
         const data = await berita.update({
             judulBerita: judul,
             isiBerita: isi,
@@ -120,7 +102,7 @@ const updateBerita = async (req, res) => {
         }
     } else {
         const data = await berita.update({
-            imageBerita: req.file.filename,
+            imageBerita: imageUrl,
             judulBerita: judul,
             isiBerita: isi,
             kategori: kategori,

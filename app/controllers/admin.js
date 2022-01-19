@@ -19,6 +19,21 @@ const showAllUser = async (req, res) => {
     }
 }
 
+const deleteUser = async (req, res) =>{
+    const {id} = req.params
+    const User = await user.destroy({
+        where: {
+            id: id
+        }
+    })
+    if(!User){
+        res.status(400).send('Data gagal dihapus')
+        return
+    }
+
+    res.redirect('/admin/list-user')
+}
+
 const showUpdateAdmin = async (req, res) => {
     const {id} = req.session.loggedAdmin
     const Admin = await admin.findOne({
@@ -161,5 +176,5 @@ const deleteLaporan = async (req, res) => {
 }
 
 module.exports = {
-    showAllUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser, showReport, deleteLaporan
+    showAllUser, deleteUser, showUpdateAdmin, updateAdmin, showUpdatePasswordUser, updatePasswordUser, showReport, deleteLaporan
 }
