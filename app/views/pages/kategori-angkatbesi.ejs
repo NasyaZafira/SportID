@@ -16,12 +16,12 @@
         <div class="flex-container-2">
             <div class="home-kategori">
                 <!-- a href untuk kembali ke homepage -->
-                <a href="">Home</a> > <span style="color: #5B75EB;">Angkat Besi</span>
+                <a href="/">Home</a> > <span style="color: #5B75EB;">Angkat Besi</span>
             </div>
             <% berita.slice(0, 1).forEach(angkatbesi=> { %>
                 <div class="flex-item-2-1">
                     <!-- <%# ini butuh request thumbnail %> -->
-                    <a href=""><img style="width: 796px; height: 437px;" src="/images/<%= angkatbesi.imageBerita %>"></a>
+                    <a href="/details/<%= angkatbesi.id %>"><img style="width: 796px; height: 437px;" src="<%= angkatbesi.imageBerita %>"></a>
                 </div>
                 <div class="flex-item-2-2">
                     <div class="flex-item-2-2-1">
@@ -50,7 +50,7 @@
                 <div class="edunews">
                     <div class="thumbnail-edu">
                         <%# ini butuh request thumbnail %>
-                            <img style="width: 126px; height: 77px;" src="/images/<%= angkatbesi.imageBerita %>">
+                            <img style="width: 126px; height: 77px;" src="<%= angkatbesi.imageBerita %>">
                     </div>
                     <div class="berita-edu">
                         <div class="edu-judul-berita">
@@ -78,7 +78,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <!-- <%# ini butuh request thumbnail %> -->
-                                <img style="width: 286px; height: 171px;" src="/images/<%= angkatbesi.imageBerita %>">
+                                <img style="width: 286px; height: 171px;" src="<%= angkatbesi.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %>  -->
@@ -102,7 +102,7 @@
                         <div class="kolom-berita">
                             <div class="thumbnail-trending">
                                 <%# ini butuh request thumbnail %>
-                                    <img style="width: 286px; height: 171px;" src="/images/<%= angkatbesi.imageBerita %>">
+                                    <img style="width: 286px; height: 171px;" src="<%= angkatbesi.imageBerita %>">
                             </div>
                             <div class="trending-jenis-berita">
                                 <!-- <%# ini butuh request kategori %> -->

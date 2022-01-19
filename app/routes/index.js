@@ -22,7 +22,7 @@ const controllerLogin = require("../controllers/controllerLogin");
 // const {sepakBola} = require('../controllers/kategoriBerita')
 const { angkatBesi, basket, belaDiri, buluTangkis, otomotif, panahan, renang, sepakBola, voli } = require('../controllers/kategoriBerita')
 const { kebijakanPrivasi } = require('../controllers/kebijakan-privasi')
-const {showAllUser, showUpdateAdmin, updateAdmin, 
+const {showAllUser, deleteUser, showUpdateAdmin, updateAdmin, 
     showUpdatePasswordUser, updatePasswordUser, showReport, deleteLaporan} = require('../controllers/admin')
 const {showForgetPassword, forgetPassword} = require('../controllers/forgetPassword')
 const {showUpdatePassword, updatePassword} = require('../controllers/updatePassword')
@@ -97,6 +97,7 @@ router.get('/admin/list-berita/delete/:id', checkLoginAdmin, deleteBerita)
 router.get('/admin/list-user', checkLoginAdmin, showAllUser)
 router.get('/admin/list-user/update/:id', checkLoginAdmin, showUpdatePasswordUser)
 router.post('/admin/list-user/update/:id/success', updatePasswordUser)
+router.get('/admin/list-user/delete/:id', deleteUser)
 router.get('/admin/list-laporan', checkLoginAdmin, showReport)
 router.get('/admin/list-laporan/delete/:id', checkLoginAdmin, deleteLaporan)
 
