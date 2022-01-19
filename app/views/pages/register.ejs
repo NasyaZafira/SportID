@@ -7,31 +7,10 @@
   <link rel="stylesheet" id="styles" type="text/css" href="/css/light.css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     type="text/css" />
-  <style type="text/css">
-    body {
-      display: flex;
-      flex-flow: column wrap;
-      align-content: center;
-      background-color: #e5e5e5;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      transition: background-color 0.5s;
-      max-width: 100%;
-    }
-
-    a {
-      text-decoration: none !important;
-    }
-
-    a:hover {
-      color: #5B75EB;
-    }
-  </style>
 </head>
 
 <body>
-  <header><%- include ('../partial/header', {loggedName}, {loggedNameAdmin}) %></header>
+  <header class="container-fluid"><%- include ('../partial/header', {loggedName}, {loggedNameAdmin}) %></header>
 
   <div class="box_register">
     <!--Logo-->
@@ -94,34 +73,19 @@
   </div>
 
   <!--Toggle Password on click-->
-  <script src="js/register.js"></script>
-
+  
   <footer><%- include ('../partial/footer') %></footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-</body>
+  
 
 <!--Dark Mode-->
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="/js/darkmode.js"></script>
+<script src="js/register.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
 
 <script>
-  let flag = true;
-  $('#moon_light').click(function () {
-    // Switching between light and dark mode
-    if (flag) {
-      flag = false;
-      $('#moon_light').attr('src', '/icon/moon_ic_dark.svg');
-      $('link#styles').attr('href', '/css/dark.css');
-      $('.logo_register').attr('src', '/icon/logo_dark_mode.svg');
-    } else {
-      flag = true;
-      $('#moon_light').attr('src', '/icon/moon_ic_light.svg');
-      $('link#styles').attr('href', '/css/light.css');
-      $('.logo_register').attr('src', '/icon/logo_light_mode.svg');
-    }
-  });
 
   $('.logo').click(function () {
     window.location.href = '/' /* requesting redirect page on logo click */
@@ -141,5 +105,6 @@
     return false
   })
 </script>
+</body>
 
 </html>

@@ -1,21 +1,26 @@
-html body {
-    display: flex;
-    width: 100vw;
-    max-width: 100%;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: #e5e5e5;
-    margin: 0;
+header {
+    width: 100% !important;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
+    text-decoration: none !important;
 }
 
-a:hover {
-    color: #5B75EB;
+.highlight-ctgr-items a {
+    text-decoration: none !important;
+    color: #000000 !important;
+}
+
+.highlight-ctgr-items a:hover {
+    color: #5B75EB !important;
+}
+
+.dropOut li a {
+    color: white !important;
+  }
+  
+.dropOut li:hover {
+    text-decoration: none 2px !important;
 }
 
 /* Kotak Login Start */
